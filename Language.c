@@ -1,5 +1,5 @@
-#include<stdio.h>
-//This code is to print namaste or bonjour
+#include <stdio.h>
+// This code is to print namaste or bonjour
 void printnamaste();
 void printbonjour();
 
@@ -7,21 +7,25 @@ int main()
 {
     char ch;
     printf("Write i for Indian and f for French : ");
-    scanf("%s",&ch);
+    scanf("%s", &ch);
 
-    if(ch=='i') {
+    if (ch == 'i')
+    {
         printnamaste();
     }
-    else  {
+    else
+    {
         printbonjour();
     }
     return 0;
 }
 
-void printnamaste() {
+void printnamaste()
+{
     printf("Nameste!");
 }
 
-void printbonjour() {
+void printbonjour()
+{
     printf("Bonjour!");
 }
