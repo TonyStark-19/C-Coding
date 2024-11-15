@@ -1,5 +1,5 @@
-#include<stdio.h>
-//This program prints the multiplication of matrix
+#include <stdio.h>
+// This program prints the multiplication of matrix
 int main()
 {
     int a[3][3];
@@ -8,33 +8,42 @@ int main()
 
     printf("Enter value of first Matrix :\n");
     printf("\n");
-    for(int i = 0; i<3; i++) {
-        for(int j = 0; j<3; j++) {
-            scanf("%d",&a[i][j]);
+    for (int i = 0; i < 3; i++)
+    {
+        for (int j = 0; j < 3; j++)
+        {
+            scanf("%d", &a[i][j]);
         }
     }
     printf("\n");
     printf("Enter value of second Matrix :\n");
     printf("\n");
-    for(int i = 0; i<3; i++) {
-        for(int j = 0; j<3; j++) {
-            scanf("%d",&b[i][j]);
+    for (int i = 0; i < 3; i++)
+    {
+        for (int j = 0; j < 3; j++)
+        {
+            scanf("%d", &b[i][j]);
         }
     }
-    
-    for(int i = 0; i<3; i++) {
-        for(int j = 0; j<3; j++) {
+
+    for (int i = 0; i < 3; i++)
+    {
+        for (int j = 0; j < 3; j++)
+        {
             c[i][j] = 0;
-            for (int k = 0; k < 3; k++) {
+            for (int k = 0; k < 3; k++)
+            {
                 c[i][j] += a[i][k] * b[k][j];
             }
         }
     }
     printf("\nMultiplication of A and B Matrix is :\n");
     printf("\n");
-    for(int i = 0; i<3; i++) {
-        for(int j = 0; j<3; j++) {
-            printf(" %d\t",c[i][j]);
+    for (int i = 0; i < 3; i++)
+    {
+        for (int j = 0; j < 3; j++)
+        {
+            printf(" %d\t", c[i][j]);
         }
         printf("\n");
     }
