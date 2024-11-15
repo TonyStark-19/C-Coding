@@ -1,20 +1,23 @@
-#include<stdio.h>
-//This code is to find the smallest number amongst given two numbers
+#include <stdio.h>
+// This code is to find the smallest number amongst given two numbers
 int main()
 {
-    int a,b;
+    int a, b;
     printf("Enter first number : ");
-    scanf("%d",&a);
+    scanf("%d", &a);
     printf("Enter second number : ");
-    scanf("%d",&b);
+    scanf("%d", &b);
 
-    if(a>b) {
-        printf("%d is smaller",b);
+    if (a > b)
+    {
+        printf("%d is smaller", b);
     }
-    else if(b>a) {
-        printf("%d is smaller",a);
+    else if (b > a)
+    {
+        printf("%d is smaller", a);
     }
-    else {
+    else
+    {
         printf("Both are equal");
     }
 }
