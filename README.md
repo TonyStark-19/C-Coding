@@ -52,7 +52,7 @@ This repository contains a collection of **C programming exercises and projects*
 > **Description:** Programs with moderate logic and complexity.  
 > **Difficulty:** Medium  
 
-#### 🔹 Loops & Functions
+#### 🔹 More than basic programs
 
 - [ ] **2D array** - 2d array implementation using tables
 - [ ] **Array in ascending order** - sorting array in ascending order
@@ -103,7 +103,7 @@ This repository contains a collection of **C programming exercises and projects*
 > **Description:** Challenging programs with advanced logic and longer code.  
 > **Difficulty:** High  
 
-#### 🔹 Data Structures & Algorithms
+#### 🔹 Advanced programs
 
 - [ ] **Armstrong or not** - to check if a number is armstrong or not
 - [ ] **Calculator version 1** - calcuator using functions
