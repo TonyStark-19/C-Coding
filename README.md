@@ -125,3 +125,13 @@ This repository contains a collection of **C programming exercises and projects*
 - [ ] **Upper to lowercase** - upper to lowercase conversion using functions
 
 ---
+
+## 🔧 Prerequisites  
+
+To run the programs in this repository, you need:  
+
+- A C compiler (e.g., GCC, Clang, or MSVC).  
+- Basic knowledge of C programming, pointers etc.  
+- A code editor (e.g., VS Code, CodeBlocks, or Dev-C++).
+
+---
