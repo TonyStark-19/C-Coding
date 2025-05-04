@@ -15,6 +15,6 @@ int main()
 
     k = p * r * t;
 
-    printf("\nAfter %f years\n\nYou will gain %f interest\n", t, k / 100);
-    printf("\nSo your amount will become %f\nafter %f years", k / 100 + p, t);
+    printf("\nAfter %f years\n\nYou will gain %f rupees interest\n", t, k / 100);
+    printf("\nSo your amount will become %f rupees\nafter %f years", k / 100 + p, t);
 }

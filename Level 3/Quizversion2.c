@@ -79,7 +79,7 @@ int main()
         count;
     }
     printf("\nfor %s", name2);
-    printf("\nQ3: Value of √256 is?\nAns: ");
+    printf("\nQ3: Value of root 256 is?\nAns: ");
     scanf("%d", &c2);
     if (c2 == 16)
     {
@@ -101,7 +101,7 @@ int main()
         count;
     }
     printf("\nfor %s", name2);
-    printf("\nQ4: 4×6+8 is?\nAns: ");
+    printf("\nQ4: 4*6+8 is?\nAns: ");
     scanf("%d", &d2);
     if (d2 == 32)
     {
@@ -112,7 +112,7 @@ int main()
         count;
     }
     printf("\nfor %s", name1);
-    printf("\nQ5: 7-8÷2?\nAns: ");
+    printf("\nQ5: 7-8/2?\nAns: ");
     scanf("%d", &e1);
     if (e1 == 3)
     {

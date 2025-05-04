@@ -7,7 +7,7 @@ int main()
 
     printf("Enter value of first Matrix :\n");
     printf("\n");
-    
+
     for (int i = 0; i < 3; i++)
     {
         for (int j = 0; j < 3; j++)

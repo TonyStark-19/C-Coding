@@ -106,7 +106,7 @@ int main()
     scanf("%d", &E);
     if (E == 2)
     {
-        printf("\nCorrect answer :(\n");
+        printf("\nCorrect answer :)\n");
         printf("\nNote : Burj khalifa has a total Height of\n828 metres (2,716.5 feet) and more than\n160 stories is present!!\n");
         count++;
     }
@@ -127,13 +127,13 @@ int main()
     if (F == 1)
     {
         printf("\nCorrect answer :)\n");
-        printf("\nNote : Jaipur is known as “The Pink City”\nwhen, in 1876, Maharaja Ram Singh had most\nof the buildings painted pink—the color of hospitality—in preparation for a visit by\nBritain's Queen Victoria\n");
+        printf("\nNote : Jaipur is known as The Pink City\nwhen, in 1876, Maharaja Ram Singh had most\nof the buildings painted pink—the color of hospitality in preparation for a visit by\nBritain's Queen Victoria\n");
         count++;
     }
     else
     {
         printf("\nWrong answer :( Correct answer is option 1!\n");
-        printf("\nNote : Jaipur is known as “The Pink City”\nwhen, in 1876, Maharaja Ram Singh had most\nof the buildings painted pink—the color of hospitality—in preparation for a visit by\nBritain's Queen Victoria\n");
+        printf("\nNote : Jaipur is known as The Pink City\nwhen, in 1876, Maharaja Ram Singh had most\nof the buildings painted pink—the color of hospitality in preparation for a visit by\nBritain's Queen Victoria\n");
         count;
     }
     printf("\nQ7: Closest star to the planet eartt?\n");
@@ -167,16 +167,16 @@ int main()
     if (H == 2)
     {
         printf("\nCorrect answer :)\n");
-        printf("\nNote : There are seven continents on our\nplanet Namely : Asia,Africa,South America,\nNorth America,Europe,Antartica,Australia\n");
+        printf("\nNote : There are seven continents on our\nplanet Namely : Asia, Africa, South America,\nNorth America, Europe, Antartica, Australia\n");
         count++;
     }
     else
     {
         printf("\nWrong answer :( Correct answer is option 2!\n");
-        printf("\nNote : There are seven continents on our\nplanet Namely : Asia,Africa,South America,\nNorth America,Europe,Antartica,Australia\n");
+        printf("\nNote : There are seven continents on our\nplanet Namely : Asia, Africa, South America,\nNorth America, Europe, Antartica, Australia\n");
         count;
     }
-    printf("\nQ9: Which planet in the solar system is not    named after a Roman God?\n");
+    printf("\nQ9: Which planet in the solar system is not named after a Roman God?\n");
     printf("\n1 : Mars");
     printf("\n2 : Mercury");
     printf("\n3 : Earth");

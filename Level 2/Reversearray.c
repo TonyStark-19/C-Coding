@@ -9,6 +9,7 @@ int main()
     reverse(arr, 5);
     printarr(arr, 5);
 }
+
 void reverse(int arr[], int n)
 {
     for (int i = 0; i < n / 2; i++)
@@ -19,11 +20,12 @@ void reverse(int arr[], int n)
         arr[n - i - 1] = firstval;
     }
 }
+
 void printarr(int arr[], int n)
 {
     for (int i = 0; i < n; i++)
     {
-        printf("%d\t", arr[i]);
+        printf("%d ", arr[i]);
     }
     printf("\n");
 }

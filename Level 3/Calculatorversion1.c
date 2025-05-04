@@ -41,22 +41,27 @@ int main()
         printf("\nEnter valid input only :(\n");
     }
 }
+
 int sum(int a, int b)
 {
     return a + b;
 }
+
 int minus(int a, int b)
 {
     return a - b;
 }
+
 int product(int a, int b)
 {
     return a * b;
 }
+
 float divide(float a, float b)
 {
     return a / b;
 }
+
 int power(int a, int b)
 {
     return pow(a, b);

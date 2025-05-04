@@ -19,7 +19,7 @@ void printFibonacci(int n)
 
     for (int i = 1; i <= n; i++)
     {
-        printf("\nFibonacci Sequence of %d is : %d\n", i, a);
+        printf("%d ", a);
         c = a + b;
         a = b;
         b = c;

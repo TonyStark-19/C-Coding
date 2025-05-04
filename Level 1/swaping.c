@@ -2,16 +2,16 @@
 // This code is to swap the digits
 int main()
 {
-    int a, b, c;
+    int a, b;
 
     printf("Enter first digit : ");
     scanf("%d", &a);
     printf("Enter second digit : ");
     scanf("%d", &b);
 
-    c = b;
-    b = a;
-    a = c;
+    a = a + b;
+    b = a - b;
+    a = a - b;
 
-    printf("Value is : %d%d ", a, b);
+    printf("Value is : %d %d ", a, b);
 }

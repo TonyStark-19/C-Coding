@@ -11,8 +11,9 @@ int main()
 
     removespaces(str);
 
-    printf("\nString after removing spaces :\n \n%s", str);
+    printf("\nString after removing spaces : %s", str);
 }
+
 void removespaces(char *str)
 {
     int count = 0;

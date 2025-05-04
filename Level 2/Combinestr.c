@@ -7,7 +7,7 @@ int main()
 
     printf("Enter first string : ");
     gets(a);
-    printf("\nEnter second string : ");
+    printf("Enter second string : ");
     gets(b);
 
     while (a[i] != '\0')
@@ -22,6 +22,5 @@ int main()
     }
     a[i] = '\0';
 
-    printf("\nCombined string is\n");
-    printf("\n%s\n", a);
+    printf("\nCombined string is : %s", a);
 }

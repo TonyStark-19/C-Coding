@@ -6,7 +6,7 @@ int main()
 
     printf("Enter numerator : ");
     scanf("%d", &a);
-    printf("Enter denominator ; ");
+    printf("Enter denominator : ");
     scanf("%d", &b);
 
     printf("\nQuotient : %d", c = a / b);

@@ -28,5 +28,5 @@ int main()
         break;
     default:
         printf("Invalid operator\n");
-    } /*End of switch*/
-} /*End of main()*/
+    }
+}

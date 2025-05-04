@@ -8,7 +8,7 @@ int main()
     printf("Enter the number : ");
     scanf("%f", &n);
 
-    int power = pow(n, 3);
+    float power = pow(n, 3);
 
     printf("The cube of the number is : %f", power);
 }

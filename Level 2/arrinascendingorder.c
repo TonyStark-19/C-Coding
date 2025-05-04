@@ -25,6 +25,7 @@ int main()
     }
     printf("\n");
 }
+
 void selectionsort(int arr[], int n)
 {
     int smallest, c;

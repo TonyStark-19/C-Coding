@@ -22,7 +22,7 @@ int main()
         quantity1 = 0.1 * quantity;
         quantity = quantity - quantity1;
         printf("\nDiscount is applied");
-        printf("\nFinal price after discount is %f\nrupees", quantity);
+        printf("\nFinal price after discount is %f rupees", quantity);
     }
     else
     {

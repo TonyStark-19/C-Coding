@@ -7,16 +7,16 @@ int main()
 
     for (int i = 1; i <= 3; i++)
     {
-        printf("%d\t", i);
+        printf("%d  ", i);
     }
     printf("\n");
     for (int i = 4; i <= 6; i++)
     {
-        printf("%d\t", i);
+        printf("%d  ", i);
     }
     printf("\n");
     for (int i = 7; i <= 9; i++)
     {
-        printf("%d\t", i);
+        printf("%d  ", i);
     }
 }

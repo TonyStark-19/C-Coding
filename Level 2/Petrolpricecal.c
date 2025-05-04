@@ -8,11 +8,12 @@ int main()
     scanf("%f", &a);
     printf("Enter the value of average of your vehicle : ");
     scanf("%f", &b);
-    printf("How much distance you want to cover by yourvehicle :");
+    printf("How much distance you want to cover by your vehicle : ");
     scanf("%f", &c);
 
     d = 1 / b;
     e = d * c;
+
     printf("\nSo you will need %f litres of petrol\n", e);
-    printf("\nSo for %f km you have to pay\n%f rupees", c, e * a);
+    printf("So for %f km you have to pay : %f rupees\n", c, e * a);
 }

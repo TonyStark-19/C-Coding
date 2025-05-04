@@ -4,13 +4,12 @@ float temp(float celcius);
 
 int main()
 {
-
     float celcius;
 
     printf("Enter value of temperature in celcius : ");
     scanf("%f", &celcius);
 
-    printf("Temperature is : %f°F", temp(celcius));
+    printf("Temperature is : %f F", temp(celcius));
 }
 
 float temp(float celcius)

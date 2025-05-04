@@ -11,6 +11,7 @@ int main()
 
     countvowels(str);
 }
+
 int countvowels(char str[])
 {
     int count = 0;
