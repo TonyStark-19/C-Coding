@@ -40,11 +40,15 @@ This repository contains a collection of **C programming exercises and projects*
 - [ ] **Int avg** - average using int
 - [ ] **Odd Even** - to check a number is odd or even
 - [ ] **Pass or Fail** - to check if a student is pass or fail
+- [ ] **Pass or Fail 2** - to check if a student is pass or fail (ternary operator)
 - [ ] **Q and R** - quotient and remainder
 - [ ] **Rectangle perimeter** - perimeter of rectangle
 - [ ] **Remainder** - remainder only
+- [ ] **Smallest number** - to check which number is smallest between a and b
+- [ ] **Sum calculation** - to add numbers
 - [ ] **Swapping** - swapping digits
 - [ ] **Tables** - printing tables of number
+- [ ] **Upper or lower case** - to check char is lowercase or uppercase
 
 ---
 
@@ -86,14 +90,13 @@ This repository contains a collection of **C programming exercises and projects*
 - [ ] **Remove spaces** - to remove spaces from a string
 - [ ] **Reverse array** - to reverse an array
 - [ ] **SI** - simple interest calculation
-- [ ] **Smallest number** - to check which number is smallest between a and b
 - [ ] **Specific operator** - specifix operations using switch case
 - [ ] **Square root of a number** - to find square root of a number
-- [ ] **Sum calculation** - to add numbers
+- [ ] **Sum of matrix** - sum of two matrix
 - [ ] **Temperature conversion** - to convert  celcius to fahrenheit
 - [ ] **Total price** - total price of items
+- [ ] **Transpose of matrix** - transpose of a matrix
 - [ ] **Upper case conversion** - to convert string to uppercase
-- [ ] **Upper to lower case** - to convert string to lowercase
 - [ ] **Various input** - details input using structure
 - [ ] **Vowels count** - to count vowels in a string
 
@@ -120,8 +123,6 @@ This repository contains a collection of **C programming exercises and projects*
 - [ ] **Quiz version 3** - Quiz version 1
 - [ ] **Specific area** - specific area calculation using function
 - [ ] **Specific operations 2** - specific operations using switch
-- [ ] **Sum of matrix** - sum of two matrix
-- [ ] **Transpose of matrix** - transpose of a matrix
 - [ ] **Upper to lowercase** - upper to lowercase conversion using functions
 
 ---
