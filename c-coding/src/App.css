@@ -6,3 +6,121 @@
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
 }
+
+/* container */
+
+.container {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: #121418;
+}
+
+/* navbar */
+
+.navbar {
+    background: #121418;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 15px 30px;
+    border-bottom: 1px solid #fff;
+}
+
+/* nav element wrap */
+
+.nav-element-wrap {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+.nav-element-wrap .nav-icon,
+.nav-element-wrap p {
+    color: #fff;
+}
+
+.nav-element-wrap .nav-icon {
+    font-size: 25px;
+}
+
+.nav-element-wrap p {
+    font-size: 23px;
+    font-weight: 600;
+}
+
+/* star button */
+
+.star-btn {
+    /* position: absolute;
+    right: 30px; */
+    user-select: none;
+    outline: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.star-btn button {
+    padding: 10px 15px;
+    font-size: 16px;
+    border-radius: 15px;
+    cursor: pointer;
+    color: #fff;
+    border: 1px solid #fff;
+    /* text gradient effect */
+    background: linear-gradient(135deg, #16C47F 0%, #FFD65A 25%, #FF9D23 50%, #F93827 75%, #FFB22C 100%);
+    background-size: 400%;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: animate 10s linear infinite;
+}
+
+@keyframes animate {
+    100% {
+        background-position: 400%;
+    }
+}
+
+/* home container */
+
+.home-container {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* content */
+
+.content {
+    color: #ffffff;
+    width: 800px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.content h1 {
+    font-size: 40px;
+    text-align: center;
+}
+
+.content h2 {
+    text-align: center;
+    font-size: 18px;
+    margin: 10px 0 25px;
+}
+
+/* get started button */
+
+.get-started-button {
+    padding: 10px 20px;
+    color: #000;
+    background-color: #ffffff;
+    border-radius: 10px;
+    border: 0;
+    font-size: 18px;
+    cursor: pointer;
+}
