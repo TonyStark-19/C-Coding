@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+/* container */
+
+.container {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* levels-container */
+
+.levels-container {
+    background:
+        radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.05), transparent 70%),
+        radial-gradient(circle at bottom right, rgba(255, 0, 150, 0.1), transparent 50%),
+        radial-gradient(circle at top left, rgba(0, 200, 255, 0.1), transparent 60%),
+        #000000;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* heading */
+
+.levels-container h1 {
+    color: #ffffff;
+    font-size: 50px;
+    margin: 0 0 30px;
+}
+
+/* levels grid */
+
+.levels-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* level card */
+
+.level-card {
+    color: #ffffff;
+    background-color: rgba(31, 32, 42, 0.6);
+    padding: 20px 30px;
+    border-radius: 10px;
+    width: 800px;
+}
