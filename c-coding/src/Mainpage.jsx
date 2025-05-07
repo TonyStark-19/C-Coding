@@ -7,6 +7,7 @@ import { Link } from 'react-router-dom';
 // react icons
 import { FaLaptopCode } from "react-icons/fa6";
 
+// main page
 export default function MainPage() {
     return (
         <div className='container'>
