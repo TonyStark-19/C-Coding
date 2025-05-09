@@ -1,6 +1,9 @@
 // css
 import './levels.css';
 
+// react icons
+import { LiaTagSolid } from "react-icons/lia";
+
 // router
 import { Link } from 'react-router-dom';
 
@@ -31,7 +34,11 @@ function Levels() {
                         <p>Number of Programs: 22</p>
 
                         <div className='topics'>
-                            <div className='topics-head'>Topics</div>
+                            <div className="topics-head">
+                                Topics
+                                <LiaTagSolid className='topic-icon' />
+                            </div>
+
                             <div className='topics-box'>Variables</div>
                             <div className='topics-box'>Operators</div>
                             <div className='topics-box'>Input/Output</div>
@@ -48,7 +55,11 @@ function Levels() {
                         <p>Number of Programs: 41</p>
 
                         <div className='topics'>
-                            <div className='topics-head'>Topics</div>
+                            <div className="topics-head">
+                                Topics
+                                <LiaTagSolid className='topic-icon' />
+                            </div>
+
                             <div className='topics-box'>Arrays</div>
                             <div className='topics-box'>Strings</div>
                             <div className='topics-box'>Recursion</div>
@@ -67,7 +78,11 @@ function Levels() {
                         <p>Number of Programs: 16</p>
 
                         <div className='topics'>
-                            <div className='topics-head'>Topics</div>
+                            <div className="topics-head">
+                                Topics
+                                <LiaTagSolid className='topic-icon' />
+                            </div>
+
                             <div className='topics-box'>Recursion</div>
                             <div className='topics-box'>Functions</div>
                             <div className='topics-box'>Matrices</div>
