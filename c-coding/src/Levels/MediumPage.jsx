@@ -1,6 +1,13 @@
 // css
 import '../level-page.css';
 
+// AOS animations
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
+// import use effect
+import { useEffect } from 'react';
+
 // react icons
 import { FaCode } from "react-icons/fa6";
 import { LiaTagSolid } from "react-icons/lia";
@@ -10,6 +17,14 @@ import { Navbar } from '../Mainpage';
 
 // main page
 export default function EasyPage() {
+
+    useEffect(() => {
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+    }, []);
+
     return (
         <div className='container'>
             <Navbar />
@@ -231,11 +246,11 @@ const programs = [
 function Medium() {
     return (
         <div className='easy-level-container'>
-            <h1>Level 2 : Intermediate</h1>
+            <h1 data-aos="fade-down">Level 2 : Intermediate</h1>
 
             <div className='programs-wrap'>
                 {programs.map((prog, idx) => (
-                    <div className="program-box" key={idx}>
+                    <div className="program-box" data-aos="fade-up" key={idx}>
                         <h3>{prog.title}</h3>
                         <p>{prog.description}</p>
                         <div className="topics">
