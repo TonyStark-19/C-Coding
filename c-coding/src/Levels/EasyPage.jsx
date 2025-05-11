@@ -26,6 +26,7 @@ export const programs = [
         topics: ["Variables", "Arithmetic", "Input/Output"],
         slug: "aandbsquare",
         path: "Level 1/aandbsquare.c",
+        link: "/levels/easy",
     },
     {
         title: "All arithmetic operations",
@@ -33,6 +34,7 @@ export const programs = [
         topics: ["Operators", "Variables", "Input/Output"],
         slug: "Allopatsametime",
         path: "Level 1/Allopatsametime.c",
+        link: "/levels/easy",
     },
     {
         title: "Area of circle",
@@ -40,6 +42,7 @@ export const programs = [
         topics: ["Math.PI", "Multiplication"],
         slug: "Areaofcircle",
         path: "Level 1/Areaofcircle.c",
+        link: "/levels/easy",
     },
     {
         title: "Area of rectangle",
@@ -47,6 +50,7 @@ export const programs = [
         topics: ["Multiplication", "Variables"],
         slug: "Areaofrectangle",
         path: "Level 1/Areaofrectangle.c",
+        link: "/levels/easy",
     },
     {
         title: "Area of square",
@@ -54,6 +58,7 @@ export const programs = [
         topics: ["Multiplication", "Variables"],
         slug: "Areaofsquare",
         path: "Level 1/Areaofsquare.c",
+        link: "/levels/easy",
     },
     {
         title: "Average (float)",
@@ -61,6 +66,7 @@ export const programs = [
         topics: ["Float", "Input/Output", "Operators"],
         slug: "avgfinder2",
         path: "Level 1/avgfinder2.c",
+        link: "/levels/easy",
     },
     {
         title: "Cube of a number",
@@ -68,6 +74,7 @@ export const programs = [
         topics: ["Multiplication", "Input"],
         slug: "cubeofanynumber",
         path: "Level 1/cubeofanynumber.c",
+        link: "/levels/easy",
     },
     {
         title: "Cube using pow()",
@@ -75,6 +82,7 @@ export const programs = [
         topics: ["Math.pow()", "Input"],
         slug: "cubeofanynumber2",
         path: "Level 1/cubeofanynumber2.c",
+        link: "/levels/easy",
     },
     {
         title: "License eligibility",
@@ -82,6 +90,7 @@ export const programs = [
         topics: ["Conditional Statements", "Age Check"],
         slug: "eligibleforlicense",
         path: "Level 1/eligibleforlicense.c",
+        link: "/levels/easy",
     },
     {
         title: "Find your age",
@@ -89,6 +98,7 @@ export const programs = [
         topics: ["Subtraction", "Input", "Current Year"],
         slug: "Findyourage",
         path: "Level 1/Findyourage.c",
+        link: "/levels/easy",
     },
     {
         title: "Average (int)",
@@ -96,6 +106,7 @@ export const programs = [
         topics: ["Integer Division", "Input"],
         slug: "intavg",
         path: "Level 1/intavg.c",
+        link: "/levels/easy",
     },
     {
         title: "Odd or Even",
@@ -103,6 +114,7 @@ export const programs = [
         topics: ["Modulo Operator", "Conditionals"],
         slug: "oddeven",
         path: "Level 1/oddeven.c",
+        link: "/levels/easy",
     },
     {
         title: "Pass or Fail",
@@ -110,6 +122,7 @@ export const programs = [
         topics: ["If-Else", "Comparison"],
         slug: "Passorfail1",
         path: "Level 1/Passorfail1.c",
+        link: "/levels/easy",
     },
     {
         title: "Pass or Fail (ternary)",
@@ -117,6 +130,7 @@ export const programs = [
         topics: ["Ternary", "Conditionals"],
         slug: "PassorFail2",
         path: "Level 1/PassorFail2.c",
+        link: "/levels/easy",
     },
     {
         title: "Quotient and Remainder",
@@ -124,6 +138,7 @@ export const programs = [
         topics: ["Division", "Modulo"],
         slug: "QandR",
         path: "Level 1/QandR.c",
+        link: "/levels/easy",
     },
     {
         title: "Rectangle perimeter",
@@ -131,6 +146,7 @@ export const programs = [
         topics: ["Addition", "Multiplication"],
         slug: "rectangleperimeter",
         path: "Level 1/rectangleperimeter.c",
+        link: "/levels/easy",
     },
     {
         title: "Remainder only",
@@ -138,6 +154,7 @@ export const programs = [
         topics: ["Modulo", "Input"],
         slug: "Remainder",
         path: "Level 1/Remainder.c",
+        link: "/levels/easy",
     },
     {
         title: "Smallest number",
@@ -145,6 +162,7 @@ export const programs = [
         topics: ["Conditionals", "Comparison"],
         slug: "smallestnum",
         path: "Level 1/smallestnum.c",
+        link: "/levels/easy",
     },
     {
         title: "Sum calculation",
@@ -152,6 +170,7 @@ export const programs = [
         topics: ["Addition", "Input/Output"],
         slug: "Sumcal",
         path: "Level 1/Sumcal.c",
+        link: "/levels/easy",
     },
     {
         title: "Swapping",
@@ -159,6 +178,7 @@ export const programs = [
         topics: ["Temp Variable", "Input"],
         slug: "swapping",
         path: "Level 1/swapping.c",
+        link: "/levels/easy",
     },
     {
         title: "Multiplication table",
@@ -166,6 +186,7 @@ export const programs = [
         topics: ["Loops", "Multiplication"],
         slug: "Tables",
         path: "Level 1/Tables.c",
+        link: "/levels/easy",
     },
     {
         title: "Upper or Lower case",
@@ -173,6 +194,7 @@ export const programs = [
         topics: ["ASCII", "Conditionals"],
         slug: "Upperorlowercase",
         path: "Level 1/Upperorlowercase.c",
+        link: "/levels/easy",
     },
 ];
 
