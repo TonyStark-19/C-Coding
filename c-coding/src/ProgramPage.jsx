@@ -1,5 +1,8 @@
+// css
+import './Program-page.css';
+
 // router
-import { useParams, Link } from 'react-router-dom';
+import { useParams, Link, useNavigate } from 'react-router-dom';
 
 // use effect
 import { useEffect, useState } from 'react';
@@ -8,16 +11,36 @@ import { useEffect, useState } from 'react';
 import { Light as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { docco } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 
-// import programs
-import { programs } from './Levels/EasyPage';
+// import navbar
+import { Navbar } from './Mainpage';
 
+// AOS animations
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
+// import programs
+import { programs as easyPrograms } from './Levels/EasyPage';
+import { programs as mediumPrograms } from './Levels/MediumPage';
+import { programs as hardPrograms } from './Levels/HardPage';
+
+// program page
 export default function ProgramPage() {
+
+    useEffect(() => {
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+    }, []);
+
     const { slug } = useParams();
     const [code, setCode] = useState('');
     const [program, setProgram] = useState(null);
+    const navigate = useNavigate();
 
     useEffect(() => {
-        const prog = programs.find(p => p.slug === slug);
+        const allPrograms = [...easyPrograms, ...mediumPrograms, ...hardPrograms];
+        const prog = allPrograms.find(p => p.slug === slug);
         setProgram(prog);
 
         if (prog) {
@@ -31,15 +54,26 @@ export default function ProgramPage() {
     if (!program) return <p>Loading program...</p>;
 
     return (
-        <div className="program-page">
-            <h1>{program.title}</h1>
-            <p>{program.description}</p>
+        <>
+            <Navbar />
+            <div className="program-page">
+                <h1 data-aos="fade-down">Code for the program</h1>
+                <h2 data-aos="fade-up">Program name : {program.title}</h2>
+                <p data-aos="fade-up">Description : {program.description}</p>
 
-            <SyntaxHighlighter language="c" style={docco}>
-                {code}
-            </SyntaxHighlighter>
+                <SyntaxHighlighter data-aos="fade-up" language="c" style={docco}>
+                    {code}
+                </SyntaxHighlighter>
 
-            <Link to="/" className="back-link">← Back to Programs</Link>
-        </div>
+                <div className='buttons-wrap'>
+
+                    <button onClick={() => navigate(program.link, { replace: true })} data-aos="zoom-in" data-aos-delay="400" data-aos-duration="800" className="back-button">Back to Programs</button>
+
+                    <Link to="/">
+                        <button data-aos="zoom-in" data-aos-delay="400" data-aos-duration="800" className="raw-button">Check code on Github</button>
+                    </Link>
+                </div>
+            </div>
+        </>
     );
 }
