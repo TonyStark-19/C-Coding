@@ -17,6 +17,9 @@ import { Link } from 'react-router-dom';
 // import navbar
 import { Navbar } from './Mainpage';
 
+// import footer
+import { Footer } from './Mainpage';
+
 // main page
 export default function LevelPage() {
 
@@ -31,6 +34,7 @@ export default function LevelPage() {
         <div className='container'>
             <Navbar />
             <Levels />
+            <Footer />
         </div>
     )
 }
