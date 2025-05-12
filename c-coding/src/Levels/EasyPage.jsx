@@ -18,6 +18,9 @@ import { LiaTagSolid } from "react-icons/lia";
 // import navbar
 import { Navbar } from '../Mainpage';
 
+// import footer
+import { Footer } from '../Mainpage';
+
 // programs array
 export const programs = [
     {
@@ -27,6 +30,7 @@ export const programs = [
         slug: "aandbsquare",
         path: "Level 1/aandbsquare.c",
         link: "/levels/easy",
+        gitUrl: "https://github.com/TonyStark-19/C-Coding/blob/main/c-coding/public/code/Level%201/aandbsquare.c",
     },
     {
         title: "All arithmetic operations",
@@ -35,6 +39,7 @@ export const programs = [
         slug: "Allopatsametime",
         path: "Level 1/Allopatsametime.c",
         link: "/levels/easy",
+        gitUrl: "https://github.com/TonyStark-19/C-Coding/blob/main/c-coding/public/code/Level%201/Allopatsametime.c",
     },
     {
         title: "Area of circle",
@@ -43,6 +48,7 @@ export const programs = [
         slug: "Areaofcircle",
         path: "Level 1/Areaofcircle.c",
         link: "/levels/easy",
+        gitUrl: "https://github.com/TonyStark-19/C-Coding/blob/main/c-coding/public/code/Level%201/Areaofcircle.c",
     },
     {
         title: "Area of rectangle",
@@ -51,6 +57,7 @@ export const programs = [
         slug: "Areaofrectangle",
         path: "Level 1/Areaofrectangle.c",
         link: "/levels/easy",
+        gitUrl: "https://github.com/TonyStark-19/C-Coding/blob/main/c-coding/public/code/Level%201/Areaofrectangle.c",
     },
     {
         title: "Area of square",
@@ -59,6 +66,7 @@ export const programs = [
         slug: "Areaofsquare",
         path: "Level 1/Areaofsquare.c",
         link: "/levels/easy",
+        gitUrl: "https://github.com/TonyStark-19/C-Coding/blob/main/c-coding/public/code/Level%201/Areaofsquare.c",
     },
     {
         title: "Average (float)",
@@ -67,6 +75,7 @@ export const programs = [
         slug: "avgfinder2",
         path: "Level 1/avgfinder2.c",
         link: "/levels/easy",
+        gitUrl: "https://github.com/TonyStark-19/C-Coding/blob/main/c-coding/public/code/Level%201/avgfinder2.c",
     },
     {
         title: "Cube of a number",
@@ -75,6 +84,7 @@ export const programs = [
         slug: "cubeofanynumber",
         path: "Level 1/cubeofanynumber.c",
         link: "/levels/easy",
+        gitUrl: "https://github.com/TonyStark-19/C-Coding/blob/main/c-coding/public/code/Level%201/cubeofanynumber.c",
     },
     {
         title: "Cube using pow()",
@@ -83,6 +93,7 @@ export const programs = [
         slug: "cubeofanynumber2",
         path: "Level 1/cubeofanynumber2.c",
         link: "/levels/easy",
+        gitUrl: "https://github.com/TonyStark-19/C-Coding/blob/main/c-coding/public/code/Level%201/cubeofanynumber2.c",
     },
     {
         title: "License eligibility",
@@ -91,6 +102,7 @@ export const programs = [
         slug: "eligibleforlicense",
         path: "Level 1/eligibleforlicense.c",
         link: "/levels/easy",
+        gitUrl: "https://github.com/TonyStark-19/C-Coding/blob/main/c-coding/public/code/Level%201/eligibleforlicense.c",
     },
     {
         title: "Find your age",
@@ -99,6 +111,7 @@ export const programs = [
         slug: "Findyourage",
         path: "Level 1/Findyourage.c",
         link: "/levels/easy",
+        gitUrl: "https://github.com/TonyStark-19/C-Coding/blob/main/c-coding/public/code/Level%201/Findyourage.c",
     },
     {
         title: "Average (int)",
@@ -107,6 +120,7 @@ export const programs = [
         slug: "intavg",
         path: "Level 1/intavg.c",
         link: "/levels/easy",
+        gitUrl: "https://github.com/TonyStark-19/C-Coding/blob/main/c-coding/public/code/Level%201/intavg.c",
     },
     {
         title: "Odd or Even",
@@ -115,6 +129,7 @@ export const programs = [
         slug: "oddeven",
         path: "Level 1/oddeven.c",
         link: "/levels/easy",
+        gitUrl: "https://github.com/TonyStark-19/C-Coding/blob/main/c-coding/public/code/Level%201/oddeven.c",
     },
     {
         title: "Pass or Fail",
@@ -123,6 +138,7 @@ export const programs = [
         slug: "Passorfail1",
         path: "Level 1/Passorfail1.c",
         link: "/levels/easy",
+        gitUrl: "https://github.com/TonyStark-19/C-Coding/blob/main/c-coding/public/code/Level%201/Passorfail1.c",
     },
     {
         title: "Pass or Fail (ternary)",
@@ -131,6 +147,7 @@ export const programs = [
         slug: "PassorFail2",
         path: "Level 1/PassorFail2.c",
         link: "/levels/easy",
+        gitUrl: "https://github.com/TonyStark-19/C-Coding/blob/main/c-coding/public/code/Level%201/PassorFail2.c",
     },
     {
         title: "Quotient and Remainder",
@@ -139,14 +156,16 @@ export const programs = [
         slug: "QandR",
         path: "Level 1/QandR.c",
         link: "/levels/easy",
+        gitUrl: "https://github.com/TonyStark-19/C-Coding/blob/main/c-coding/public/code/Level%201/QandR.c",
     },
     {
         title: "Rectangle perimeter",
-        description: "Calculate perimeter",
+        description: "Calculate perimeter of rectangle",
         topics: ["Addition", "Multiplication"],
         slug: "rectangleperimeter",
         path: "Level 1/rectangleperimeter.c",
         link: "/levels/easy",
+        gitUrl: "https://github.com/TonyStark-19/C-Coding/blob/main/c-coding/public/code/Level%201/rectangleperimeter.c",
     },
     {
         title: "Remainder only",
@@ -155,6 +174,7 @@ export const programs = [
         slug: "Remainder",
         path: "Level 1/Remainder.c",
         link: "/levels/easy",
+        gitUrl: "https://github.com/TonyStark-19/C-Coding/blob/main/c-coding/public/code/Level%201/Remainder.c",
     },
     {
         title: "Smallest number",
@@ -163,6 +183,7 @@ export const programs = [
         slug: "smallestnum",
         path: "Level 1/smallestnum.c",
         link: "/levels/easy",
+        gitUrl: "https://github.com/TonyStark-19/C-Coding/blob/main/c-coding/public/code/Level%201/smallestnum.c",
     },
     {
         title: "Sum calculation",
@@ -171,6 +192,7 @@ export const programs = [
         slug: "Sumcal",
         path: "Level 1/Sumcal.c",
         link: "/levels/easy",
+        gitUrl: "https://github.com/TonyStark-19/C-Coding/blob/main/c-coding/public/code/Level%201/Sumcal.c",
     },
     {
         title: "Swapping",
@@ -179,6 +201,7 @@ export const programs = [
         slug: "swapping",
         path: "Level 1/swapping.c",
         link: "/levels/easy",
+        gitUrl: "https://github.com/TonyStark-19/C-Coding/blob/main/c-coding/public/code/Level%201/swaping.c",
     },
     {
         title: "Multiplication table",
@@ -187,14 +210,16 @@ export const programs = [
         slug: "Tables",
         path: "Level 1/Tables.c",
         link: "/levels/easy",
+        gitUrl: "https://github.com/TonyStark-19/C-Coding/blob/main/c-coding/public/code/Level%201/Tables.c",
     },
     {
         title: "Upper or Lower case",
         description: "Check case of a character",
-        topics: ["ASCII", "Conditionals"],
+        topics: ["If-else", "Conditionals"],
         slug: "Upperorlowercase",
         path: "Level 1/Upperorlowercase.c",
         link: "/levels/easy",
+        gitUrl: "https://github.com/TonyStark-19/C-Coding/blob/main/c-coding/public/code/Level%201/Upperorlowercase.c",
     },
 ];
 
@@ -212,6 +237,7 @@ export default function EasyPage() {
         <div className='container'>
             <Navbar />
             <Easy />
+            <Footer />
         </div>
     )
 }

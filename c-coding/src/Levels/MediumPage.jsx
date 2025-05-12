@@ -18,6 +18,9 @@ import { LiaTagSolid } from "react-icons/lia";
 // import navbar
 import { Navbar } from '../Mainpage';
 
+// import footer
+import { Footer } from '../Mainpage';
+
 // programs array
 export const programs = [
     {
@@ -27,6 +30,7 @@ export const programs = [
         slug: "2Darr",
         path: "Level 2/2Darr.c",
         link: "/levels/medium",
+        gitUrl: "https://github.com/TonyStark-19/C-Coding/blob/main/c-coding/public/code/Level%202/2Darr.c",
     },
     {
         title: "Array (ascending order)",
@@ -35,14 +39,16 @@ export const programs = [
         slug: "arrinascendingorder",
         path: "Level 2/arrinascendingorder.c",
         link: "/levels/medium",
+        gitUrl: "https://github.com/TonyStark-19/C-Coding/blob/main/c-coding/public/code/Level%202/arrinascendingorder.c",
     },
     {
-        title: "Matrix operations",
+        title: "Matrix",
         description: "Basic matrix implementation",
         tags: ["Matrix", "Operations", "2D Array"],
         slug: "Codeformatrix",
         path: "Level 2/Codeformatrix.c",
         link: "/levels/medium",
+        gitUrl: "https://github.com/TonyStark-19/C-Coding/blob/main/c-coding/public/code/Level%202/Codeformatrix.c",
     },
     {
         title: "Combine strings",
@@ -51,6 +57,7 @@ export const programs = [
         slug: "Combinestr",
         path: "Level 2/Combinestr.c",
         link: "/levels/medium",
+        gitUrl: "https://github.com/TonyStark-19/C-Coding/blob/main/c-coding/public/code/Level%202/Combinestr.c",
     },
     {
         title: "Days switch-case",
@@ -59,6 +66,7 @@ export const programs = [
         slug: "Days",
         path: "Level 2/Days.c",
         link: "/levels/medium",
+        gitUrl: "https://github.com/TonyStark-19/C-Coding/blob/main/c-coding/public/code/Level%202/Days.c",
     },
     {
         title: "Details input",
@@ -67,6 +75,7 @@ export const programs = [
         slug: "detailsinput",
         path: "Level 2/detailsinput.c",
         link: "/levels/medium",
+        gitUrl: "https://github.com/TonyStark-19/C-Coding/blob/main/c-coding/public/code/Level%202/detailsinput.c",
     },
     {
         title: "Digits sum",
@@ -75,6 +84,7 @@ export const programs = [
         slug: "Digitssum",
         path: "Level 2/Digitssum.c",
         link: "/levels/medium",
+        gitUrl: "https://github.com/TonyStark-19/C-Coding/blob/main/c-coding/public/code/Level%202/Digitssum.c",
     },
     {
         title: "Discount check 1",
@@ -83,6 +93,7 @@ export const programs = [
         slug: "Discount1",
         path: "Level 2/Discount1.c",
         link: "/levels/medium",
+        gitUrl: "https://github.com/TonyStark-19/C-Coding/blob/main/c-coding/public/code/Level%202/Discount1.c",
     },
     {
         title: "Discount check 2",
@@ -91,6 +102,7 @@ export const programs = [
         slug: "Discount2",
         path: "Level 2/Discount2.c",
         link: "/levels/medium",
+        gitUrl: "https://github.com/TonyStark-19/C-Coding/blob/main/c-coding/public/code/Level%202/Discount2.c",
     },
     {
         title: "Factorial (loop)",
@@ -99,6 +111,7 @@ export const programs = [
         slug: "Factorial",
         path: "Level 2/Factorial.c",
         link: "/levels/medium",
+        gitUrl: "https://github.com/TonyStark-19/C-Coding/blob/main/c-coding/public/code/Level%202/Factorial.c",
     },
     {
         title: "Factorial (recursion)",
@@ -107,14 +120,16 @@ export const programs = [
         slug: "Factorial2",
         path: "Level 2/Factorial2.c",
         link: "/levels/medium",
+        gitUrl: "https://github.com/TonyStark-19/C-Coding/blob/main/c-coding/public/code/Level%202/Factorial2.c",
     },
     {
         title: "Factors of a number",
-        description: "Print all factors",
+        description: "Print all factors of a nmuber",
         tags: ["Math", "Loops"],
         slug: "Factorofnumber",
         path: "Level 2/Factorofnumber.c",
         link: "/levels/medium",
+        gitUrl: "https://github.com/TonyStark-19/C-Coding/blob/main/c-coding/public/code/Level%202/Factorofnumber.c",
     },
     {
         title: "GCD",
@@ -123,6 +138,7 @@ export const programs = [
         slug: "GCD",
         path: "Level 2/GCD.c",
         link: "/levels/medium",
+        gitUrl: "https://github.com/TonyStark-19/C-Coding/blob/main/c-coding/public/code/Level%202/GCD.c",
     },
     {
         title: "Grades",
@@ -131,6 +147,7 @@ export const programs = [
         slug: "Grades",
         path: "Level 2/Grades.c",
         link: "/levels/medium",
+        gitUrl: "https://github.com/TonyStark-19/C-Coding/blob/main/c-coding/public/code/Level%202/Grades.c",
     },
     {
         title: "Insert into array",
@@ -139,14 +156,16 @@ export const programs = [
         slug: "Insertinarray",
         path: "Level 2/Insertinarray.c",
         link: "/levels/medium",
+        gitUrl: "https://github.com/TonyStark-19/C-Coding/blob/main/c-coding/public/code/Level%202/Insertinarray.c",
     },
     {
         title: "Is digit or not",
-        description: "Check if input is a digit",
+        description: "Check if input is a digit or not",
         tags: ["Validation", "Characters"],
         slug: "Isdigitornot",
         path: "Level 2/Isdigitornot.c",
         link: "/levels/medium",
+        gitUrl: "https://github.com/TonyStark-19/C-Coding/blob/main/c-coding/public/code/Level%202/Isdigitornot.c",
     },
     {
         title: "Language output",
@@ -155,14 +174,16 @@ export const programs = [
         slug: "Language",
         path: "Level 2/Language.c",
         link: "/levels/medium",
+        gitUrl: "https://github.com/TonyStark-19/C-Coding/blob/main/c-coding/public/code/Level%202/Language.c",
     },
     {
         title: "Largest in array",
-        description: "Find largest element",
+        description: "Find largest element in a array",
         tags: ["Arrays", "Comparison"],
         slug: "Largestinanaaray",
         path: "Level 2/Largestinanaaray.c",
         link: "/levels/medium",
+        gitUrl: "https://github.com/TonyStark-19/C-Coding/blob/main/c-coding/public/code/Level%202/Largestinanaaray.c",
     },
     {
         title: "Multiple results",
@@ -171,14 +192,16 @@ export const programs = [
         slug: "Multipleresults",
         path: "Level 2/Multipleresults.c",
         link: "/levels/medium",
+        gitUrl: "https://github.com/TonyStark-19/C-Coding/blob/main/c-coding/public/code/Level%202/Multipleresults.c",
     },
     {
         title: "Sum of natural numbers",
-        description: "Using loop",
+        description: "Natural sum using loop",
         tags: ["Loops", "Math"],
         slug: "nNaturalsum",
         path: "Level 2/nNaturalsum.c",
         link: "/levels/medium",
+        gitUrl: "https://github.com/TonyStark-19/C-Coding/blob/main/c-coding/public/code/Level%202/nNaturalsum.c",
     },
     {
         title: "Sum (recursion)",
@@ -187,14 +210,16 @@ export const programs = [
         slug: "nNaturalsum2",
         path: "Level 2/nNaturalsum2.c",
         link: "/levels/medium",
+        gitUrl: "https://github.com/TonyStark-19/C-Coding/blob/main/c-coding/public/code/Level%202/nNaturalsum2.c",
     },
     {
         title: "Odd input stopper",
-        description: "Input until odd number entered",
+        description: "Input until odd number is entered",
         tags: ["Loops", "Conditional"],
         slug: "OddorEveninp",
         path: "Level 2/OddorEveninp.c",
         link: "/levels/medium",
+        gitUrl: "https://github.com/TonyStark-19/C-Coding/blob/main/c-coding/public/code/Level%202/OddorEveninp.c",
     },
     {
         title: "Palindrome check",
@@ -203,22 +228,25 @@ export const programs = [
         slug: "Palindromeornot",
         path: "Level 2/Palindromeornot.c",
         link: "/levels/medium",
+        gitUrl: "https://github.com/TonyStark-19/C-Coding/blob/main/c-coding/public/code/Level%202/Palindromeornot.c",
     },
     {
         title: "Patterns",
-        description: "Print square pattern",
+        description: "Print square star pattern",
         tags: ["Loops", "Patterns"],
         slug: "Patterns",
         path: "Level 2/Patterns.c",
         link: "/levels/medium",
+        gitUrl: "https://github.com/TonyStark-19/C-Coding/blob/main/c-coding/public/code/Level%202/Patterns.c",
     },
     {
         title: "Petrol price calculator",
-        description: "Price calculation",
+        description: "Price calculation for pertrol",
         tags: ["Math", "Operators"],
         slug: "Petrolpricecal",
         path: "Level 2/Petrolpricecal.c",
         link: "/levels/medium",
+        gitUrl: "https://github.com/TonyStark-19/C-Coding/blob/main/c-coding/public/code/Level%202/Petrolpricecal.c",
     },
     {
         title: "Pointer syntax",
@@ -227,6 +255,7 @@ export const programs = [
         slug: "Pointersyntaxx",
         path: "Level 2/Pointersyntaxx.c",
         link: "/levels/medium",
+        gitUrl: "https://github.com/TonyStark-19/C-Coding/blob/main/c-coding/public/code/Level%202/Pointersyntaxx.c",
     },
     {
         title: "Power function",
@@ -235,6 +264,7 @@ export const programs = [
         slug: "Powerfunction",
         path: "Level 2/Powerfunction.c",
         link: "/levels/medium",
+        gitUrl: "https://github.com/TonyStark-19/C-Coding/blob/main/c-coding/public/code/Level%202/Powerfunction.c",
     },
     {
         title: "Prime in range",
@@ -243,6 +273,7 @@ export const programs = [
         slug: "Primenumberinarange",
         path: "Level 2/Primenumberinarange.c",
         link: "/levels/medium",
+        gitUrl: "https://github.com/TonyStark-19/C-Coding/blob/main/c-coding/public/code/Level%202/Primenumberinarange.c",
     },
     {
         title: "Prime check",
@@ -251,6 +282,7 @@ export const programs = [
         slug: "Primeornot",
         path: "Level 2/Primeornot.c",
         link: "/levels/medium",
+        gitUrl: "https://github.com/TonyStark-19/C-Coding/blob/main/c-coding/public/code/Level%202/Primeornot.c",
     },
     {
         title: "Remove spaces",
@@ -259,6 +291,7 @@ export const programs = [
         slug: "Removespaces",
         path: "Level 2/Removespaces.c",
         link: "/levels/medium",
+        gitUrl: "https://github.com/TonyStark-19/C-Coding/blob/main/c-coding/public/code/Level%202/Removespaces.c",
     },
     {
         title: "Reverse array",
@@ -267,6 +300,7 @@ export const programs = [
         slug: "Reversearray",
         path: "Level 2/Reversearray.c",
         link: "/levels/medium",
+        gitUrl: "https://github.com/TonyStark-19/C-Coding/blob/main/c-coding/public/code/Level%202/Reversearray.c",
     },
     {
         title: "Simple Interest",
@@ -275,22 +309,25 @@ export const programs = [
         slug: "SI",
         path: "Level 2/SI.c",
         link: "/levels/medium",
+        gitUrl: "https://github.com/TonyStark-19/C-Coding/blob/main/c-coding/public/code/Level%202/SI.c",
     },
     {
         title: "Specific operator",
-        description: "Use switch for specific operations",
+        description: "Use switch for specific math operations",
         tags: ["Switch", "Math"],
         slug: "specificoperator",
         path: "Level 2/specificoperator.c",
         link: "/levels/medium",
+        gitUrl: "https://github.com/TonyStark-19/C-Coding/blob/main/c-coding/public/code/Level%202/specificoperator.c",
     },
     {
         title: "Square root",
-        description: "Calculate square root",
+        description: "Calculate square root of a number",
         tags: ["Math", "Functions"],
         slug: "Squarerootofanynumber",
         path: "Level 2/Squarerootofanynumber.c",
         link: "/levels/medium",
+        gitUrl: "https://github.com/TonyStark-19/C-Coding/blob/main/c-coding/public/code/Level%202/Squarerootofanynumber.c",
     },
     {
         title: "Sum of matrices",
@@ -299,14 +336,16 @@ export const programs = [
         slug: "Sumofmatrix",
         path: "Level 2/Sumofmatrix.c",
         link: "/levels/medium",
+        gitUrl: "https://github.com/TonyStark-19/C-Coding/blob/main/c-coding/public/code/Level%202/Sumofmatrix.c",
     },
     {
         title: "Temperature conversion",
-        description: "Celsius to Fahrenheit",
+        description: "Celsius to Fahrenheit convertor",
         tags: ["Math", "Conversion"],
         slug: "Temperatureconv",
         path: "Level 2/Temperatureconv.c",
         link: "/levels/medium",
+        gitUrl: "https://github.com/TonyStark-19/C-Coding/blob/main/c-coding/public/code/Level%202/Temperatureconv.c",
     },
     {
         title: "Total price",
@@ -315,6 +354,7 @@ export const programs = [
         slug: "Totalprice",
         path: "Level 2/Totalprice.c",
         link: "/levels/medium",
+        gitUrl: "https://github.com/TonyStark-19/C-Coding/blob/main/c-coding/public/code/Level%202/Totalprice.c",
     },
     {
         title: "Transpose of matrix",
@@ -323,14 +363,16 @@ export const programs = [
         slug: "Transposeofmatrix",
         path: "Level 2/Transposeofmatrix.c",
         link: "/levels/medium",
+        gitUrl: "https://github.com/TonyStark-19/C-Coding/blob/main/c-coding/public/code/Level%202/Transposeofmatrix.c",
     },
     {
         title: "Uppercase conversion",
-        description: "Convert to uppercase",
+        description: "Convert given string to uppercase",
         tags: ["Strings", "Text Processing"],
         slug: "uppercaseconversion",
         path: "Level 2/uppercaseconversion.c",
         link: "/levels/medium",
+        gitUrl: "https://github.com/TonyStark-19/C-Coding/blob/main/c-coding/public/code/Level%202/uppercaseconversion.c",
     },
     {
         title: "Various input (struct)",
@@ -339,6 +381,7 @@ export const programs = [
         slug: "Variousinput",
         path: "Level 2/Variousinput.c",
         link: "/levels/medium",
+        gitUrl: "https://github.com/TonyStark-19/C-Coding/blob/main/c-coding/public/code/Level%202/Variousinput.c",
     },
     {
         title: "Vowel count",
@@ -347,6 +390,7 @@ export const programs = [
         slug: "vowelscount",
         path: "Level 2/vowelscount.c",
         link: "/levels/medium",
+        gitUrl: "https://github.com/TonyStark-19/C-Coding/blob/main/c-coding/public/code/Level%202/vowelscount.c",
     }
 ];
 
@@ -364,6 +408,7 @@ export default function EasyPage() {
         <div className='container'>
             <Navbar />
             <Medium />
+            <Footer />
         </div>
     )
 }

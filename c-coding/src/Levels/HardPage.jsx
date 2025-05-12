@@ -18,15 +18,19 @@ import { LiaTagSolid } from "react-icons/lia";
 // import navbar
 import { Navbar } from '../Mainpage';
 
+// import footer
+import { Footer } from '../Mainpage';
+
 // program array
 export const programs = [
     {
         title: "Armstrong number",
-        description: "Check if a number is Armstrong",
+        description: "Check if a number is Armstrong or not",
         tags: ["Math", "Loops", "Conditional"],
         slug: "Armstrongnumornot",
         path: "Level 3/Armstrongnumornot.c",
         link: "/levels/hard",
+        gitUrl: "https://github.com/TonyStark-19/C-Coding/blob/main/c-coding/public/code/Level%203/Armstrongnumornot.c",
     },
     {
         title: "Calculator v1",
@@ -35,14 +39,16 @@ export const programs = [
         slug: "Calculatorversion1",
         path: "Level 3/Calculatorversion1.c",
         link: "/levels/hard",
+        gitUrl: "https://github.com/TonyStark-19/C-Coding/blob/main/c-coding/public/code/Level%203/Calculatorversion1.c",
     },
     {
-        title: "Determinant",
+        title: "Determinant ( Logic )",
         description: "Find determinant of matrix",
         tags: ["Matrix", "Determinant", "Math"],
         slug: "Determinant",
         path: "Level 3/Determinant.c",
         link: "/levels/hard",
+        gitUrl: "https://github.com/TonyStark-19/C-Coding/blob/main/c-coding/public/code/Level%203/Determinant.c",
     },
     {
         title: "Fibonacci (recursion)",
@@ -51,14 +57,16 @@ export const programs = [
         slug: "Fibnacciseq",
         path: "Level 3/Fibnacciseq.c",
         link: "/levels/hard",
+        gitUrl: "https://github.com/TonyStark-19/C-Coding/blob/main/c-coding/public/code/Level%203/Fibnacciseq.c",
     },
     {
         title: "Fibonacci (function)",
-        description: "Fibonacci using function call",
+        description: "Fibonacci using function and logic",
         tags: ["Functions", "Loops", "Math"],
         slug: "Fibnaccisequence2",
         path: "Level 3/Fibnaccisequence2.c",
         link: "/levels/hard",
+        gitUrl: "https://github.com/TonyStark-19/C-Coding/blob/main/c-coding/public/code/Level%203/Fibnaccisequence2.c",
     },
     {
         title: "Highest char frequency",
@@ -67,22 +75,25 @@ export const programs = [
         slug: "highfreqchar",
         path: "Level 3/highfreqchar.c",
         link: "/levels/hard",
+        gitUrl: "https://github.com/TonyStark-19/C-Coding/blob/main/c-coding/public/code/Level%203/highfreqchar.c",
     },
     {
-        title: "Inverse of matrix",
+        title: "Inverse",
         description: "Inverse of a matrix",
         tags: ["Matrix", "Inverse", "Math"],
         slug: "Inverse",
         path: "Level 3/Inverse.c",
         link: "/levels/hard",
+        gitUrl: "https://github.com/TonyStark-19/C-Coding/blob/main/c-coding/public/code/Level%203/Inverse.c",
     },
     {
         title: "Matrix multiplication (logic)",
-        description: "Matrix multiplication using loops",
+        description: "Matrix multiplication using logic",
         tags: ["Matrix", "Loops", "Multiplication"],
         slug: "Multiplicationofmatrix",
         path: "Level 3/Multiplicationofmatrix.c",
         link: "/levels/hard",
+        gitUrl: "https://github.com/TonyStark-19/C-Coding/blob/main/c-coding/public/code/Level%203/Multiplicationofmatrix.c",
     },
     {
         title: "Matrix multiplication (arrays)",
@@ -91,6 +102,7 @@ export const programs = [
         slug: "Multiplicationofmatrixusingarr",
         path: "Level 3/Multiplicationofmatrixusingarr.c",
         link: "/levels/hard",
+        gitUrl: "https://github.com/TonyStark-19/C-Coding/blob/main/c-coding/public/code/Level%203/Multiplicationofmatrixusingarr.c",
     },
     {
         title: "Number system converter",
@@ -99,6 +111,7 @@ export const programs = [
         slug: "Numbersystemversion1",
         path: "Level 3/Numbersystemversion1.c",
         link: "/levels/hard",
+        gitUrl: "https://github.com/TonyStark-19/C-Coding/blob/main/c-coding/public/code/Level%203/Numbersystemversion1.c",
     },
     {
         title: "Quiz v1",
@@ -107,6 +120,7 @@ export const programs = [
         slug: "Quizversion1",
         path: "Level 3/Quizversion1.c",
         link: "/levels/hard",
+        gitUrl: "https://github.com/TonyStark-19/C-Coding/blob/main/c-coding/public/code/Level%203/Quizversion1.c",
     },
     {
         title: "Quiz v2",
@@ -115,6 +129,7 @@ export const programs = [
         slug: "Quizversion2",
         path: "Level 3/Quizversion2.c",
         link: "/levels/hard",
+        gitUrl: "https://github.com/TonyStark-19/C-Coding/blob/main/c-coding/public/code/Level%203/Quizversion2.c",
     },
     {
         title: "Quiz v3",
@@ -123,6 +138,7 @@ export const programs = [
         slug: "Quizversion3",
         path: "Level 3/Quizversion3.c",
         link: "/levels/hard",
+        gitUrl: "https://github.com/TonyStark-19/C-Coding/blob/main/c-coding/public/code/Level%203/Quizversion3.c",
     },
     {
         title: "Specific area calculator",
@@ -131,6 +147,7 @@ export const programs = [
         slug: "Specificarea",
         path: "Level 3/Specificarea.c",
         link: "/levels/hard",
+        gitUrl: "https://github.com/TonyStark-19/C-Coding/blob/main/c-coding/public/code/Level%203/Specificarea.c",
     },
     {
         title: "Specific operations (switch)",
@@ -139,6 +156,7 @@ export const programs = [
         slug: "Specificoperations2",
         path: "Level 3/Specificoperations2.c",
         link: "/levels/hard",
+        gitUrl: "https://github.com/TonyStark-19/C-Coding/blob/main/c-coding/public/code/Level%203/Specificoperations2.c",
     },
     {
         title: "Upper to lowercase (function)",
@@ -147,6 +165,7 @@ export const programs = [
         slug: "Uppertolowercase",
         path: "Level 3/Uppertolowercase.c",
         link: "/levels/hard",
+        gitUrl: "https://github.com/TonyStark-19/C-Coding/blob/main/c-coding/public/code/Level%203/Uppertolowercase.c",
     }
 ];
 
@@ -164,6 +183,7 @@ export default function EasyPage() {
         <div className='container'>
             <Navbar />
             <Hard />
+            <Footer />
         </div>
     )
 }
