@@ -2,7 +2,7 @@
 import './Program-page.css';
 
 // router
-import { useParams, Link, useNavigate } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 
 // use effect
 import { useEffect, useState } from 'react';
@@ -13,6 +13,9 @@ import { docco } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 
 // import navbar
 import { Navbar } from './Mainpage';
+
+// import footer
+import { Footer } from './Mainpage';
 
 // AOS animations
 import AOS from 'aos';
@@ -66,14 +69,11 @@ export default function ProgramPage() {
                 </SyntaxHighlighter>
 
                 <div className='buttons-wrap'>
-
                     <button onClick={() => navigate(program.link, { replace: true })} data-aos="zoom-in" data-aos-delay="400" data-aos-duration="800" className="back-button">Back to Programs</button>
-
-                    <Link to="/">
-                        <button data-aos="zoom-in" data-aos-delay="400" data-aos-duration="800" className="raw-button">Check code on Github</button>
-                    </Link>
+                    <button onClick={() => window.open(program.gitUrl, '_blank')} data-aos="zoom-in" data-aos-delay="400" data-aos-duration="800" className="raw-button">Check code on Github</button>
                 </div>
             </div>
+            <Footer />
         </>
     );
 }
