@@ -137,3 +137,77 @@
 .get-started:hover {
     cursor: pointer;
 }
+
+/* responsiveness */
+
+@media (max-width: 1250px) {
+
+    .level-card {
+        width: 1000px;
+    }
+}
+
+@media (max-width: 1050px) {
+
+    .level-card {
+        width: 800px;
+    }
+
+    .get-started {
+        position: unset;
+        margin-top: 15px;
+    }
+}
+
+@media (max-width: 850px) {
+
+    .levels-container h1 {
+        font-size: 45px;
+    }
+
+    .level-card {
+        width: 600px;
+    }
+}
+
+@media (max-width: 650px) {
+
+    .levels-container {
+        padding: 110px 0 50px;
+    }
+
+    .levels-container h1 {
+        font-size: 40px;
+    }
+
+    .level-card {
+        width: 400px;
+    }
+}
+
+@media (max-width: 450px) {
+
+    .levels-container h1 {
+        width: 350px;
+        text-align: center;
+    }
+
+    .level-card {
+        width: 350px;
+    }
+}
+
+@media (max-width: 400px) {
+
+    .levels-container {
+        padding: 80px 0 50px;
+    }
+
+    .levels-container h1 {
+        font-size: 35px;
+    }
+
+    .level-card {
+        width: 300px;
+    }
+}
