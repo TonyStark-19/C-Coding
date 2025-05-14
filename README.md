@@ -1,21 +1,68 @@
-# C Coding Repository 🚀
+# 🌐 C Coding Website (Now Built with React.js!) 🚀
 
-Welcome to my **C coding repository!** This repository is organized into three levels of programs, categorized by logic complexity and the number of lines of code. It's a great starting point for practicing, improving, and mastering **C programming**.
+Welcome to my **C Coding Website** – previously a C program repository, now transformed into a **fully responsive React.js website**. It showcases categorized C programs across three levels of complexity. Designed for learners to practice, revise, and improve their **C programming skills**.
 
 ---
 
-## 📝 Overview
+## 📸 Screenshot
 
-This repository contains a collection of **C programming exercises and projects** organized into levels based on complexity. Whether you're a **beginner, intermediate, or advanced programmer**, you'll find relevant programs to enhance your C skills.
+![C-coding app Screenshot](/c-coding/public/images/image.png)
+
+---
+
+## 🌐 Live Demo  
+
+The project is live and can be viewed here: [c-coding](https://c-programming-six.vercel.app/)
+
+---
+
+## 🏗️ Website Structure
+
+- **🏠 Home Page**  
+  - Welcome screen with intro and animations.
+- **🧱 Levels Page**  
+  - Displays **three level boxes** – Beginner, Intermediate, and Advanced.  
+  - Each box lists topics under that level.
+- **📄 Level-Wise Code Pages**  
+  - Each level box navigates to its own detailed page.  
+  - Every topic is displayed in a card/box with a **"Code" button**.  
+  - Clicking the button opens the **respective program/code**.
+
+> 🔁 Built with smooth **AOS animations** and navigation powered by **React Router**.
 
 ---
 
 ## 💡 Features
 
-✅ Covers various fundamental and advanced topics in **C programming**  
-✅ Includes **commented code** for better understanding  
-✅ Programs range from **simple to complex logic**  
-✅ Great for **practice, learning, and revision**
+✅ Fully responsive UI (desktop + mobile)  
+✅ Organized C programs by logic complexity  
+✅ Modern look with **AOS (Animate on Scroll)** effects  
+✅ Navigation using **React Router**  
+✅ Lifecycle handling using **`useEffect`**  
+✅ Easy-to-use and clean interface for beginners
+
+---
+
+## 🛠️ Tech Stack
+
+- **Framework:** React.js (CRA - Create React App)
+- **Routing:** React Router DOM
+- **Styling:** CSS3 + AOS animations
+- **Logic:** React Hooks (`useEffect`)
+- **Deployment:** Vercel
+
+---
+
+## 📁 Program Categories
+
+### 🟢 Level 1: Beginner
+Basic syntax and logic (e.g., addition, area, swapping).
+
+### 🟡 Level 2: Intermediate
+Arrays, loops, conditionals, strings, and more.
+
+### 🔴 Level 3: Advanced
+Recursion, matrices, advanced patterns, and more.
 
 ---
 
@@ -127,12 +174,46 @@ This repository contains a collection of **C programming exercises and projects*
 
 ---
 
-## 🔧 Prerequisites
+> -  **Total programs: 79**
+> - Level 1: 22 | Level 2: 41 | Level 3: 16
+> - All of these were created by me during my journey of learning the C language. 😊
 
-To run the programs in this repository, you need:
+---
 
-- A **C compiler** (e.g., GCC, Clang, or MSVC)  
-- Basic knowledge of **C programming**, pointers, etc.  
-- A **code editor** (e.g., VS Code, Code::Blocks, or Dev-C++)
+## 🧰 How to Run Locally
+
+```bash
+# 1. Clone the repo
+git clone https://github.com/TonyStark-19/C-Coding.git
+
+# 2. Move into the project folder
+cd c-coding
+
+# 3. Install dependencies
+npm install
+
+# 4. Start the development server
+npm start
+```
+
+---
+
+## 🤝 Contributing
+
+Pull requests are welcome!
+
+If you're currently learning **C programming** and have written some **C programs** that are **not already included in this repository**, feel free to contribute:
+
+1. **Create an Issue** – Briefly describe the program(s) you want to add. Mention the problem statement or logic.
+2. Once the issue is **reviewed and approved**, you can **add your program** to the appropriate level on the website via a pull request.
+3. Make sure your code is clean, commented, and placed in the correct category (Beginner / Intermediate / Advanced).
+
+This project is open to learners, so don't hesitate to participate and showcase your contributions!
+
+---
+
+## 🙌 Acknowledgments
+
+- Thanks to the entire coding community. This website is made for C programming learners and enthusiasts.
 
 ---
