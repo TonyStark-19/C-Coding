@@ -142,7 +142,7 @@ pre {
 @media (max-width: 450px) {
 
     .program-page {
-        padding: 100px 50px 50px;
+        padding: 100px 20px 50px;
         justify-content: left;
         align-items: normal;
     }
@@ -178,15 +178,18 @@ pre {
 
 @media (max-width: 400px) {
 
-    .program-page {
-        padding: 100px 50px 50px;
-    }
-
     .program-page h1 {
         font-size: 30px;
     }
 
     pre {
-        width: 300px;
+        width: 320px;
+    }
+}
+
+@media (max-width: 350px) {
+
+    pre {
+        width: 280px;
     }
 }
