@@ -210,6 +210,18 @@ If you're currently learning **C programming** and have written some **C program
 
 This project is open to learners, so don't hesitate to participate and showcase your contributions!
 
+## 👇 Contribution Steps
+
+> Please read the CONTRIBUTING.md before you start.
+
+---
+
+## 📜 License
+
+This project is licensed under the MIT License.
+Feel free to use, modify, and share it – just give proper credit.
+Check the LICENSE file for more details.
+
 ---
 
 ## 🙌 Acknowledgments
