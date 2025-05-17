@@ -18,6 +18,9 @@ import { LiaTagSolid } from "react-icons/lia";
 // import navbar
 import { Navbar } from '../Mainpage';
 
+// import back to top button
+import { BackToTop } from './EasyPage';
+
 // import footer
 import { Footer } from '../Mainpage';
 
@@ -417,6 +420,7 @@ export default function EasyPage() {
 function Medium() {
     return (
         <div className='easy-level-container'>
+            <BackToTop />
             <h1 data-aos="fade-down">Level 2 : Intermediate</h1>
 
             <div className='programs-wrap'>

@@ -9,11 +9,12 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 // import use effect
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
 // react icons
 import { FaCode } from "react-icons/fa6";
 import { LiaTagSolid } from "react-icons/lia";
+import { FaAngleDoubleUp } from "react-icons/fa";
 
 // import navbar
 import { Navbar } from '../Mainpage';
@@ -246,6 +247,8 @@ export default function EasyPage() {
 function Easy() {
     return (
         <div className='easy-level-container'>
+            <BackToTop />
+
             <h1 data-aos="fade-down">Level 1 : Beginner</h1>
 
             <div className='programs-wrap'>
@@ -273,4 +276,37 @@ function Easy() {
             </div>
         </div>
     )
+}
+
+// back to top button
+export function BackToTop() {
+    const [visible, setVisible] = useState(false);
+
+    useEffect(() => {
+        const toggleVisibility = () => {
+            if (window.scrollY > 100) {
+                setVisible(true);
+            } else {
+                setVisible(false);
+            }
+        };
+
+        window.addEventListener('scroll', toggleVisibility);
+
+        return () => {
+            window.removeEventListener('scroll', toggleVisibility);
+        };
+    }, []);
+
+    const scrollToTop = () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
+
+    return (
+        visible && (
+            <button className='back-to-top' onClick={scrollToTop}>
+                <FaAngleDoubleUp className='top-btn' />
+            </button>
+        )
+    );
 }
