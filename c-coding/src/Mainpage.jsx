@@ -37,10 +37,12 @@ export default function MainPage() {
 export function Navbar() {
     return (
         <div className='navbar'>
-            <div className='nav-element-wrap'>
-                <p>C-Coding</p>
-                <FaLaptopCode className='nav-icon' />
-            </div>
+            <Link to="/">
+                <div className='nav-element-wrap'>
+                    <p>C-Coding</p>
+                    <FaLaptopCode className='nav-icon' />
+                </div>
+            </Link>
 
             <div className="star-btn">
                 <a href="https://github.com/TonyStark-19/C-Coding"><button><span>Star on
