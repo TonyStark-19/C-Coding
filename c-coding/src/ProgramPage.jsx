@@ -8,11 +8,14 @@ import { useParams, useNavigate } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 
 // react syntax highlighter
-import { Light as SyntaxHighlighter } from 'react-syntax-highlighter';
-import { docco } from 'react-syntax-highlighter/dist/esm/styles/hljs';
+import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
+import { vscDarkPlus } from 'react-syntax-highlighter/dist/esm/styles/prism';
 
 // import navbar
 import { Navbar } from './Mainpage';
+
+// import back to top button
+import { BackToTop } from './Levels/EasyPage';
 
 // import footer
 import { Footer } from './Mainpage';
@@ -60,11 +63,12 @@ export default function ProgramPage() {
         <>
             <Navbar />
             <div className="program-page">
+                <BackToTop />
                 <h1 data-aos="fade-down">Code for the program</h1>
                 <h2 data-aos="fade-up">Program name : {program.title}</h2>
                 <p data-aos="fade-up">Description : {program.description}</p>
 
-                <SyntaxHighlighter data-aos="fade-up" language="c" style={docco}>
+                <SyntaxHighlighter data-aos="fade-up" language="c" style={vscDarkPlus}>
                     {code}
                 </SyntaxHighlighter>
 
