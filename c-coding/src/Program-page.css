@@ -172,7 +172,12 @@ pre {
     .buttons-wrap {
         flex-direction: column;
         gap: 10px;
-        width: 200px;
+        width: 180px;
+    }
+
+    .back-button,
+    .raw-button {
+        font-size: 14px;
     }
 }
 

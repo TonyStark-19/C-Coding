@@ -11,6 +11,26 @@ body {
     overflow-x: hidden;
 }
 
+/* scrollbar */
+
+::-webkit-scrollbar {
+    height: 8px;
+    scrollbar-width: thin;
+}
+
+::-webkit-scrollbar-track {
+    background: #000e12;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(0, 200, 255, 0.1);
+    border-radius: 25px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #2a3248
+}
+
 /* container */
 
 .container {
@@ -36,6 +56,11 @@ body {
     position: fixed;
     z-index: 2;
     width: 100%;
+}
+
+.navbar a {
+    text-decoration: none;
+    margin-top: 5px;
 }
 
 /* nav element wrap */
