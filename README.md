@@ -1,4 +1,4 @@
-# 🌐 C Coding Website (Now Built with React.js!) 🚀
+# 🌐 C Coding Website (Built with React.js!) 🚀
 
 Welcome to my **C Coding Website** – previously a C program repository, now transformed into a **fully responsive React.js website**. It showcases categorized C programs across three levels of complexity. Designed for learners to practice, revise, and improve their **C programming skills**.
 
@@ -25,8 +25,8 @@ The project is live and can be viewed here: [c-coding](https://c-programming-six
   - Each box lists topics under that level.
 - **📄 Level-Wise Code Pages**  
   - Each level box navigates to its own detailed page.  
-  - Every topic is displayed in a card/box with a **"Code" button**.  
-  - Clicking the button opens the **respective program/code**.
+  - Every topic is displayed in a card/box with a **"View Code" button**.  
+  - Clicking the button opens the **respective program/code page**.
 
 > 🔁 Built with smooth **AOS animations** and navigation powered by **React Router**.
 
@@ -49,6 +49,7 @@ The project is live and can be viewed here: [c-coding](https://c-programming-six
 - **Routing:** React Router DOM
 - **Styling:** CSS3 + AOS animations
 - **Logic:** React Hooks (`useEffect`)
+- **Icons by React icons**
 - **Deployment:** Vercel
 
 ---
@@ -70,7 +71,7 @@ Recursion, matrices, advanced patterns, and more.
 
 ### Level 1: Beginner 🌱  
 > **Description:** Simple programs to get started with C programming.  
-> **Difficulty:** Low  
+> **Difficulty:** Easy  
 
 #### 🔹 Basic Programs
 
@@ -229,3 +230,5 @@ Check the LICENSE file for more details.
 - Thanks to the entire coding community. This website is made for C programming learners and enthusiasts.
 
 ---
+
+Made with ❤️ by Aditya chandel
