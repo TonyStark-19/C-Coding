@@ -45,7 +45,7 @@ export const programs = [
     {
         title: "Area of circle",
         description: "Calculate area of a circle",
-        topics: ["Math.PI", "Multiplication"],
+        topics: ["Math.PI", "Multiplication", "Variables"],
         slug: "Areaofcircle",
         path: "Level 1/Areaofcircle.c",
         link: "/levels/easy",
@@ -54,7 +54,7 @@ export const programs = [
     {
         title: "Area of rectangle",
         description: "Calculate area of a rectangle",
-        topics: ["Multiplication", "Variables"],
+        topics: ["Math.PI", "Multiplication", "Variables"],
         slug: "Areaofrectangle",
         path: "Level 1/Areaofrectangle.c",
         link: "/levels/easy",
@@ -63,7 +63,7 @@ export const programs = [
     {
         title: "Area of square",
         description: "Calculate area of a square",
-        topics: ["Multiplication", "Variables"],
+        topics: ["Math.PI", "Multiplication", "Variables"],
         slug: "Areaofsquare",
         path: "Level 1/Areaofsquare.c",
         link: "/levels/easy",
@@ -81,7 +81,7 @@ export const programs = [
     {
         title: "Cube of a number",
         description: "Cube using simple logic",
-        topics: ["Multiplication", "Input"],
+        topics: ["Multiplication", "Input", "Variables"],
         slug: "cubeofanynumber",
         path: "Level 1/cubeofanynumber.c",
         link: "/levels/easy",
@@ -90,7 +90,7 @@ export const programs = [
     {
         title: "Cube using pow()",
         description: "Cube using pow function",
-        topics: ["Math.pow()", "Input"],
+        topics: ["Math.pow()", "Input", "Variables"],
         slug: "cubeofanynumber2",
         path: "Level 1/cubeofanynumber2.c",
         link: "/levels/easy",
@@ -99,7 +99,7 @@ export const programs = [
     {
         title: "License eligibility",
         description: "Check if eligible for a driving license",
-        topics: ["Conditional Statements", "Age Check"],
+        topics: ["Conditional Statements", "Age Check", "Input"],
         slug: "eligibleforlicense",
         path: "Level 1/eligibleforlicense.c",
         link: "/levels/easy",
@@ -117,7 +117,7 @@ export const programs = [
     {
         title: "Average (int)",
         description: "Average using integer",
-        topics: ["Integer Division", "Input"],
+        topics: ["Integer Division", "Input", "Variables"],
         slug: "intavg",
         path: "Level 1/intavg.c",
         link: "/levels/easy",
@@ -126,7 +126,7 @@ export const programs = [
     {
         title: "Odd or Even",
         description: "Check if a number is odd or even",
-        topics: ["Modulo Operator", "Conditionals"],
+        topics: ["Modulo Operator", "Conditionals", "Input"],
         slug: "oddeven",
         path: "Level 1/oddeven.c",
         link: "/levels/easy",
@@ -135,7 +135,7 @@ export const programs = [
     {
         title: "Pass or Fail",
         description: "Determine pass/fail status",
-        topics: ["If-Else", "Comparison"],
+        topics: ["If-Else", "Comparison", "Input"],
         slug: "Passorfail1",
         path: "Level 1/Passorfail1.c",
         link: "/levels/easy",
@@ -144,7 +144,7 @@ export const programs = [
     {
         title: "Pass or Fail (ternary)",
         description: "Using ternary operator",
-        topics: ["Ternary", "Conditionals"],
+        topics: ["Ternary", "Conditionals", "Input"],
         slug: "PassorFail2",
         path: "Level 1/PassorFail2.c",
         link: "/levels/easy",
@@ -153,7 +153,7 @@ export const programs = [
     {
         title: "Quotient and Remainder",
         description: "Basic division results",
-        topics: ["Division", "Modulo"],
+        topics: ["Division", "Modulo", "Input"],
         slug: "QandR",
         path: "Level 1/QandR.c",
         link: "/levels/easy",
@@ -162,7 +162,7 @@ export const programs = [
     {
         title: "Rectangle perimeter",
         description: "Calculate perimeter of rectangle",
-        topics: ["Addition", "Multiplication"],
+        topics: ["Math.PI", "Addition", "Multiplication"],
         slug: "rectangleperimeter",
         path: "Level 1/rectangleperimeter.c",
         link: "/levels/easy",
@@ -171,7 +171,7 @@ export const programs = [
     {
         title: "Remainder only",
         description: "Show remainder",
-        topics: ["Modulo", "Input"],
+        topics: ["Modulo", "Input", "Variables"],
         slug: "Remainder",
         path: "Level 1/Remainder.c",
         link: "/levels/easy",
@@ -180,7 +180,7 @@ export const programs = [
     {
         title: "Smallest number",
         description: "Compare two numbers",
-        topics: ["Conditionals", "Comparison"],
+        topics: ["Conditionals", "Comparison", "Input"],
         slug: "smallestnum",
         path: "Level 1/smallestnum.c",
         link: "/levels/easy",
@@ -189,7 +189,7 @@ export const programs = [
     {
         title: "Sum calculation",
         description: "Simple addition",
-        topics: ["Addition", "Input/Output"],
+        topics: ["Addition", "Input/Output", "Variables"],
         slug: "Sumcal",
         path: "Level 1/Sumcal.c",
         link: "/levels/easy",
@@ -198,7 +198,7 @@ export const programs = [
     {
         title: "Swapping",
         description: "Swap two numbers",
-        topics: ["Temp Variable", "Input"],
+        topics: ["Variables", "Input", "Logic"],
         slug: "swapping",
         path: "Level 1/swapping.c",
         link: "/levels/easy",
@@ -207,7 +207,7 @@ export const programs = [
     {
         title: "Multiplication table",
         description: "Print table of a number",
-        topics: ["Loops", "Multiplication"],
+        topics: ["Loops", "Multiplication", "Input"],
         slug: "Tables",
         path: "Level 1/Tables.c",
         link: "/levels/easy",
@@ -216,7 +216,7 @@ export const programs = [
     {
         title: "Upper or Lower case",
         description: "Check case of a character",
-        topics: ["If-else", "Conditionals"],
+        topics: ["If-else", "Character", "Input"],
         slug: "Upperorlowercase",
         path: "Level 1/Upperorlowercase.c",
         link: "/levels/easy",
