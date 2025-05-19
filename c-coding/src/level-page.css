@@ -58,7 +58,7 @@
     background-color: rgba(31, 32, 42, 0.6);
     padding: 20px 30px;
     border-radius: 10px;
-    width: 1000px;
+    width: 1100px;
     position: relative;
 }
 
@@ -69,6 +69,7 @@
 
 .program-box p {
     margin: 2px 0;
+    font-size: 15px;
 }
 
 /* code button */
@@ -116,6 +117,13 @@
 
 /* responsivenesss */
 
+@media (max-width: 1200px) {
+
+    .program-box {
+        width: 1000px;
+    }
+}
+
 @media (max-width: 1050px) {
 
     .program-box {
@@ -132,6 +140,11 @@
     .program-box {
         width: 600px;
     }
+
+    .program-box p,
+    .topics {
+        width: 400px;
+    }
 }
 
 @media (max-width: 650px) {
@@ -142,6 +155,11 @@
 
     .program-box {
         width: 400px;
+    }
+
+    .program-box p,
+    .topics {
+        width: unset;
     }
 
     .code-btn {
