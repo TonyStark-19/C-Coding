@@ -95,7 +95,7 @@ body {
 }
 
 .star-btn button {
-    padding: 10px 15px;
+    padding: 8px 15px;
     font-size: 16px;
     border-radius: 15px;
     cursor: pointer;
@@ -147,6 +147,7 @@ body {
 .content h1 {
     font-size: 40px;
     text-align: center;
+    letter-spacing: 1px;
 }
 
 .content h2 {
@@ -252,6 +253,7 @@ body {
 
     .content h1 {
         font-size: 35px;
+        letter-spacing: normal;
     }
 
     .content h2 {

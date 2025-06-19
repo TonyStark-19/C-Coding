@@ -36,13 +36,18 @@
 
 .levels-container h1 {
     color: #ffffff;
-    font-size: 50px;
+    font-size: 60px;
     margin: 0 0 30px;
+    text-transform: uppercase;
+}
+
+.levels-container h2 {
     text-transform: uppercase;
 }
 
 .levels-container p {
     margin: 2px 0;
+    font-size: 16px;
 }
 
 /* levels grid */
@@ -100,7 +105,7 @@
 
 .topics-head {
     background-color: rgb(53, 53, 58);
-    padding: 4px 8px;
+    padding: 4px 10px;
     border-radius: 5px;
     font-size: 13px;
     margin-right: 5px;
@@ -117,7 +122,7 @@
     border: 1px solid #ffffff;
     border-radius: 5px;
     padding: 4px 8px;
-    font-size: 12px;
+    font-size: 13px;
 }
 
 /* get started */
@@ -148,6 +153,10 @@
 }
 
 @media (max-width: 1050px) {
+
+    .levels-container h1 {
+        font-size: 55px;
+    }
 
     .level-card {
         width: 800px;

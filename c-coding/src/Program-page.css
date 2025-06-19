@@ -40,6 +40,7 @@
 .program-page p {
     margin: 0 0 20px;
     letter-spacing: 1px;
+    text-align: center;
 }
 
 /* code block */
@@ -117,10 +118,6 @@ pre {
     .program-page h2 {
         text-align: center;
         font-size: 22px;
-    }
-
-    .program-page p {
-        text-align: center;
     }
 
     pre {
