@@ -9,9 +9,13 @@ import MediumPage from './Levels/MediumPage';
 import HardPage from './Levels/HardPage';
 import ProgramPage from './ProgramPage';
 
+// scroll to top
+import ScrollToTop from './ScrollToTop';
+
 export default function App() {
     return (
         <Router>
+            <ScrollToTop />
             <Routes>
                 <Route path="/" element={<MainPage />} />
                 <Route path="/levels" element={<LevelPage />} />
