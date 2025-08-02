@@ -2,15 +2,15 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 // pages
-import MainPage from './Mainpage';
-import LevelPage from './Levels';
+import MainPage from './pages/Mainpage';
+import LevelPage from './pages/Levels';
 import EasyPage from './Levels/EasyPage';
 import MediumPage from './Levels/MediumPage';
 import HardPage from './Levels/HardPage';
-import ProgramPage from './ProgramPage';
+import ProgramPage from './pages/ProgramPage';
 
 // scroll to top
-import ScrollToTop from './ScrollToTop';
+import ScrollToTop from './pages/ScrollToTop';
 
 export default function App() {
     return (

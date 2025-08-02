@@ -1,5 +1,5 @@
 // css
-import './Program-page.css';
+import '../css/Program-page.css';
 
 // router
 import { useParams, useNavigate } from 'react-router-dom';
@@ -11,27 +11,24 @@ import { useEffect, useState } from 'react';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { vscDarkPlus } from 'react-syntax-highlighter/dist/esm/styles/prism';
 
-// import navbar
-import { Navbar } from './Mainpage';
+// import navbar and footer
+import { Navbar, Footer } from '../pages/Mainpage';
 
 // import back to top button
-import { BackToTop } from './Levels/EasyPage';
-
-// import footer
-import { Footer } from './Mainpage';
+import { BackToTop } from '../Levels/EasyPage';
 
 // AOS animations
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 // import programs
-import { programs as easyPrograms } from './Levels/EasyPage';
-import { programs as mediumPrograms } from './Levels/MediumPage';
-import { programs as hardPrograms } from './Levels/HardPage';
+import { programs as easyPrograms } from '../Levels/EasyPage';
+import { programs as mediumPrograms } from '../Levels/MediumPage';
+import { programs as hardPrograms } from '../Levels/HardPage';
 
 // program page
 export default function ProgramPage() {
-
+    // AOS Animations
     useEffect(() => {
         AOS.init({
             duration: 1000,

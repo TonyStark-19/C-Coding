@@ -1,5 +1,5 @@
 // css
-import './App.css';
+import '../css/App.css';
 
 // router
 import { Link } from 'react-router-dom';
@@ -16,7 +16,7 @@ import { useEffect } from 'react';
 
 // main page
 export default function MainPage() {
-
+    // AOS Animations
     useEffect(() => {
         AOS.init({
             duration: 1000,

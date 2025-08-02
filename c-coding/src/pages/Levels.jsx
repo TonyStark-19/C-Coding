@@ -1,5 +1,5 @@
 // css
-import './levels.css';
+import '../css/levels.css';
 
 // AOS animations
 import AOS from 'aos';
@@ -14,15 +14,12 @@ import { LiaTagSolid } from "react-icons/lia";
 // router
 import { Link } from 'react-router-dom';
 
-// import navbar
-import { Navbar } from './Mainpage';
-
-// import footer
-import { Footer } from './Mainpage';
+// import navbar and footer
+import { Navbar, Footer } from '../pages/Mainpage';
 
 // main page
 export default function LevelPage() {
-
+    // AOS Animations
     useEffect(() => {
         AOS.init({
             duration: 1000,

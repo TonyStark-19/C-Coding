@@ -1,5 +1,5 @@
 // css
-import '../level-page.css';
+import '../css/level-page.css';
 
 // router
 import { Link } from 'react-router-dom';
@@ -15,14 +15,11 @@ import { useEffect } from 'react';
 import { FaCode } from "react-icons/fa6";
 import { LiaTagSolid } from "react-icons/lia";
 
-// import navbar
-import { Navbar } from '../Mainpage';
+// import navbar and footer
+import { Navbar, Footer } from '../pages/Mainpage';
 
 // import back to top button
 import { BackToTop } from './EasyPage';
-
-// import footer
-import { Footer } from '../Mainpage';
 
 // program array
 export const programs = [
@@ -174,7 +171,7 @@ export const programs = [
 
 // main page
 export default function EasyPage() {
-
+    // AOS Animations
     useEffect(() => {
         AOS.init({
             duration: 1000,

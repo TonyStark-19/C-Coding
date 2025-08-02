@@ -1,5 +1,5 @@
 // css
-import '../level-page.css';
+import '../css/level-page.css';
 
 // router
 import { Link } from 'react-router-dom';
@@ -16,11 +16,8 @@ import { FaCode } from "react-icons/fa6";
 import { LiaTagSolid } from "react-icons/lia";
 import { FaAngleDoubleUp } from "react-icons/fa";
 
-// import navbar
-import { Navbar } from '../Mainpage';
-
-// import footer
-import { Footer } from '../Mainpage';
+// import navbar and footer
+import { Navbar, Footer } from '../pages/Mainpage';
 
 // programs array
 export const programs = [
@@ -226,7 +223,7 @@ export const programs = [
 
 // main page
 export default function EasyPage() {
-
+    // AOS Animations
     useEffect(() => {
         AOS.init({
             duration: 1000,
@@ -248,7 +245,6 @@ function Easy() {
     return (
         <div className='easy-level-container'>
             <BackToTop />
-
             <h1 data-aos="fade-down">Level 1 : Beginner</h1>
 
             <div className='programs-wrap'>

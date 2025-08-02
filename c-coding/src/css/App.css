@@ -177,7 +177,7 @@ body {
         radial-gradient(circle at bottom right, rgba(255, 0, 150, 0.1), transparent 50%),
         radial-gradient(circle at top left, rgba(0, 200, 255, 0.1), transparent 60%),
         #000000;
-    padding: 30px;
+    padding: 40px 30px;
     border-top: 1px solid #fff;
     color: #ffffff;
 }
@@ -212,6 +212,10 @@ body {
 
 .footer-section ul {
     list-style-type: none;
+}
+
+.footer-section ul li {
+    margin-bottom: 5px;
 }
 
 /* footer bottom */
