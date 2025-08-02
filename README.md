@@ -12,7 +12,7 @@ Welcome to my **C Coding Website** – previously a C program repository, now tr
 
 ## 🌐 Live Demo  
 
-The project is live and can be viewed here: [c-coding](https://c-programming-six.vercel.app/)
+The project is live and can be viewed here: [C-Coding](https://c-programming-six.vercel.app/)
 
 ---
 
@@ -188,7 +188,7 @@ Recursion, matrices, advanced patterns, and more.
 git clone https://github.com/TonyStark-19/C-Coding.git
 
 # 2. Move into the project folder
-cd c-coding
+cd C-Coding
 
 # 3. Install dependencies
 npm install
