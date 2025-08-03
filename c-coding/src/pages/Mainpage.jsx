@@ -55,7 +55,10 @@ export function Navbar() {
 // home section
 function Home() {
     return (
-        <div className='home-container'>
+        <div className='home-container'
+            style={{
+                background: "radial-gradient(ellipse 80% 60% at 50% 0%, rgba(6, 182, 212, 0.25), transparent 70%), #000000",
+            }}>
             <div className='content'>
                 <h1 data-aos="fade-down">Practice C programming concepts via various programs made by me :)</h1>
                 <h2 data-aos="fade-down">Welcome to my C coding website! This website is organized into three levels of programs,

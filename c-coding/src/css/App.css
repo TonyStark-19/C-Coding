@@ -124,11 +124,6 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background:
-        radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.05), transparent 70%),
-        radial-gradient(circle at bottom right, rgba(255, 0, 150, 0.1), transparent 50%),
-        radial-gradient(circle at top left, rgba(0, 200, 255, 0.1), transparent 60%),
-        #000000;
     padding-top: 80px;
     width: 100%;
 }
