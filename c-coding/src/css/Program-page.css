@@ -11,11 +11,6 @@
 
 .program-page {
     color: #ffffff;
-    background:
-        radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.05), transparent 70%),
-        radial-gradient(circle at bottom right, rgba(255, 0, 150, 0.1), transparent 50%),
-        radial-gradient(circle at top left, rgba(0, 200, 255, 0.1), transparent 60%),
-        #000000;
     min-height: 100vh;
     padding: 130px 50px 50px;
     display: flex;
@@ -30,7 +25,11 @@
     text-transform: uppercase;
     text-align: center;
     font-size: 50px;
-    margin-bottom: 20px;
+    margin: 80px 0 30px;
+    border-bottom: 2px solid white;
+    text-align: center;
+    width: 70%;
+    padding-bottom: 10px;
 }
 
 .program-page h2 {
