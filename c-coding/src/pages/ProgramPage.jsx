@@ -12,7 +12,8 @@ import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { vscDarkPlus } from 'react-syntax-highlighter/dist/esm/styles/prism';
 
 // import navbar and footer
-import { Navbar, Footer } from '../pages/Mainpage';
+import { Navbar } from '../components/Navbar';
+import { Footer } from '../components/Footer';
 
 // import back to top button
 import { BackToTop } from '../Levels/EasyPage';
@@ -57,7 +58,10 @@ export default function ProgramPage() {
     if (!program) return <p>Loading program...</p>;
 
     return (
-        <>
+        <div
+            style={{
+                background: "radial-gradient(ellipse 80% 60% at 50% 0%, rgba(226, 232, 240, 0.15), transparent 70%), #000000",
+            }}>
             <Navbar />
             <div className="program-page">
                 <BackToTop />
@@ -70,11 +74,15 @@ export default function ProgramPage() {
                 </SyntaxHighlighter>
 
                 <div className='buttons-wrap'>
-                    <button onClick={() => navigate(program.link, { replace: true })} data-aos="zoom-in" data-aos-delay="400" data-aos-duration="800" className="back-button">Back to Programs</button>
-                    <button onClick={() => window.open(program.gitUrl, '_blank')} data-aos="zoom-in" data-aos-delay="400" data-aos-duration="800" className="raw-button">Check code on Github</button>
+                    <button onClick={() => navigate(program.link, { replace: true })}
+                        data-aos="zoom-in" data-aos-delay="400" data-aos-duration="800"
+                        className="back-button">Back to Programs</button>
+                    <button onClick={() => window.open(program.gitUrl, '_blank')}
+                        data-aos="zoom-in" data-aos-delay="400" data-aos-duration="800"
+                        className="raw-button">Check code on Github</button>
                 </div>
             </div>
             <Footer />
-        </>
+        </div>
     );
 }

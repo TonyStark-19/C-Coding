@@ -16,7 +16,8 @@ import { FaCode } from "react-icons/fa6";
 import { LiaTagSolid } from "react-icons/lia";
 
 // import navbar and footer
-import { Navbar, Footer } from '../pages/Mainpage';
+import { Navbar } from '../components/Navbar';
+import { Footer } from '../components/Footer';
 
 // import back to top button
 import { BackToTop } from './EasyPage';
@@ -405,7 +406,10 @@ export default function EasyPage() {
     }, []);
 
     return (
-        <div className='container'>
+        <div className='container'
+            style={{
+                background: "radial-gradient(ellipse 80% 60% at 50% 0%, rgba(226, 232, 240, 0.15), transparent 70%), #000000",
+            }}>
             <Navbar />
             <Medium />
             <Footer />
@@ -425,6 +429,7 @@ function Medium() {
                     <div className="program-box" data-aos="fade-up" key={idx}>
                         <h3>{prog.title}</h3>
                         <p>{prog.description}</p>
+
                         <div className="topics">
                             <div className="topics-head">
                                 Topics
@@ -434,6 +439,7 @@ function Medium() {
                                 <div className="topics-box" key={i}>{tags}</div>
                             ))}
                         </div>
+
                         <Link to={`/programs/${prog.slug}`}>
                             <button className="code-btn">
                                 View code

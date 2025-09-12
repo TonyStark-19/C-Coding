@@ -15,7 +15,8 @@ import { LiaTagSolid } from "react-icons/lia";
 import { Link } from 'react-router-dom';
 
 // import navbar and footer
-import { Navbar, Footer } from '../pages/Mainpage';
+import { Navbar } from '../components/Navbar';
+import { Footer } from '../components/Footer';
 
 // main page
 export default function LevelPage() {
@@ -28,7 +29,10 @@ export default function LevelPage() {
     }, []);
 
     return (
-        <div className='container'>
+        <div className='container'
+            style={{
+                background: "radial-gradient(ellipse 80% 60% at 50% 0%, rgba(226, 232, 240, 0.15), transparent 70%), #000000",
+            }}>
             <Navbar />
             <Levels />
             <Footer />
