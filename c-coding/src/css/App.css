@@ -92,7 +92,7 @@ body {
 .star-btn button {
     padding: 8px 15px;
     font-size: 16px;
-    border-radius: 15px;
+    border-radius: 12px;
     cursor: pointer;
     color: #fff;
     border: 1px solid #fff;
@@ -217,6 +217,15 @@ body {
 
 /* responsiveness */
 
+@media (max-width: 1200px) {
+
+    /* Navbar */
+
+    .navbar {
+        justify-content: space-around;
+    }
+}
+
 @media (max-width: 1050px) {
 
     /* footer */
@@ -303,12 +312,21 @@ body {
     }
 }
 
+@media (max-width: 600px) {
+
+    /* Navbar */
+
+    .navbar {
+        justify-content: space-between;
+    }
+}
+
 @media (max-width: 550px) {
 
     /* navbar */
 
     .navbar {
-        padding: 15px 20px;
+        padding: 30px 20px;
     }
 
     .nav-element-wrap p {
@@ -345,7 +363,7 @@ body {
     /* navbar */
 
     .navbar {
-        padding: 15px;
+        padding: 20px;
     }
 
     .nav-element-wrap p {
@@ -371,10 +389,6 @@ body {
 @media (max-width: 400px) {
 
     /* navbar */
-
-    .navbar {
-        padding: 10px 15px;
-    }
 
     .star-btn button {
         padding: 8px 10px;

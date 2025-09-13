@@ -16,7 +16,7 @@ import { Navbar } from '../components/Navbar';
 import { Footer } from '../components/Footer';
 
 // import back to top button
-import { BackToTop } from '../Levels/EasyPage';
+import { BackToTop } from '../components/Backtotop';
 
 // AOS animations
 import AOS from 'aos';
@@ -55,6 +55,7 @@ export default function ProgramPage() {
         }
     }, [slug]);
 
+    // loading
     if (!program) return <p>Loading program...</p>;
 
     return (

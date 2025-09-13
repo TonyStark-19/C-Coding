@@ -56,7 +56,10 @@
 .levels-grid {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     gap: 30px;
+    width: 90%;
 }
 
 .levels-grid a {
@@ -65,16 +68,16 @@
 
 /* level card */
 
-.level-card {
+.levels-grid a {
     position: relative;
     color: #ffffff;
     background-color: rgba(226, 232, 240, 0.10);
     padding: 20px 30px;
     border-radius: 10px;
-    width: 1200px;
+    width: 1100px;
 }
 
-.level-card:hover {
+.levels-grid a:hover {
     cursor: pointer;
     background-color: rgba(226, 232, 240, 0.15);
 }
@@ -91,7 +94,7 @@
     color: #ff516b;
 }
 
-.level-card p {
+.levels-grid a p {
     margin-top: 5px;
 }
 
@@ -152,8 +155,8 @@
 
 @media (max-width: 1250px) {
 
-    .level-card {
-        width: 1000px;
+    .levels-grid a {
+        width: 100%;
     }
 }
 
@@ -161,10 +164,6 @@
 
     .levels-container h1 {
         font-size: 55px;
-    }
-
-    .level-card {
-        width: 800px;
     }
 
     .get-started {
@@ -177,10 +176,7 @@
 
     .levels-container h1 {
         font-size: 45px;
-    }
-
-    .level-card {
-        width: 600px;
+        margin: 40px 0 30px;
     }
 }
 
@@ -193,9 +189,12 @@
     .levels-container h1 {
         font-size: 40px;
     }
+}
 
-    .level-card {
-        width: 400px;
+@media (max-width: 600px) {
+
+    .levels-container h1 {
+        font-size: 35px;
     }
 }
 
@@ -204,10 +203,6 @@
     .levels-container h1 {
         width: 350px;
         text-align: center;
-    }
-
-    .level-card {
-        width: 350px;
     }
 }
 
@@ -218,10 +213,7 @@
     }
 
     .levels-container h1 {
-        font-size: 35px;
-    }
-
-    .level-card {
-        width: 300px;
+        font-size: 30px;
+        width: 280px;
     }
 }

@@ -84,7 +84,11 @@ pre {
 @media (max-width: 1050px) {
 
     pre {
-        width: 800px;
+        width: 100%;
+    }
+
+    .program-page h1 {
+        width: 90%;
     }
 }
 
@@ -96,10 +100,10 @@ pre {
 
     .program-page h1 {
         font-size: 45px;
+        margin: 40px 0 30px;
     }
 
     pre {
-        width: 600px;
         font-size: 15px;
     }
 }
@@ -117,10 +121,6 @@ pre {
     .program-page h2 {
         text-align: center;
         font-size: 22px;
-    }
-
-    pre {
-        width: 400px;
     }
 }
 
@@ -161,10 +161,6 @@ pre {
         font-size: 15px;
     }
 
-    pre {
-        width: 350px;
-    }
-
     .buttons-wrap {
         flex-direction: column;
         gap: 10px;
@@ -181,16 +177,5 @@ pre {
 
     .program-page h1 {
         font-size: 30px;
-    }
-
-    pre {
-        width: 320px;
-    }
-}
-
-@media (max-width: 350px) {
-
-    pre {
-        width: 280px;
     }
 }

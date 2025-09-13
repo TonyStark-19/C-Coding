@@ -20,7 +20,7 @@ import { Navbar } from '../components/Navbar';
 import { Footer } from '../components/Footer';
 
 // import back to top button
-import { BackToTop } from './EasyPage';
+import { BackToTop } from '../components/Backtotop';
 
 // programs array
 export const programs = [

@@ -47,8 +47,8 @@ function Levels() {
             <h1 data-aos="fade-down">Choose Your Level</h1>
 
             <div className="levels-grid">
-                <Link to="/levels/easy">
-                    <div className="level-card beginner" data-aos="fade-up">
+                <Link to="/levels/easy" data-aos="fade-up">
+                    <div className="level-card beginner">
                         <h2>Beginner</h2>
                         <p>Start with basic syntax, arithmetic operations, conditionals, and simple I/O.</p>
                         <p>Number of Programs: 22</p>
@@ -70,8 +70,8 @@ function Levels() {
                     </div>
                 </Link>
 
-                <Link to="/levels/medium">
-                    <div className="level-card intermediate" data-aos="fade-up">
+                <Link to="/levels/medium" data-aos="fade-up">
+                    <div className="level-card intermediate">
                         <h2>Intermediate</h2>
                         <p>Explore arrays, strings, functions, recursion, loops, and switch-case logic.</p>
                         <p>Number of Programs: 41</p>
@@ -95,8 +95,8 @@ function Levels() {
                     </div>
                 </Link>
 
-                <Link to="/levels/hard">
-                    <div className="level-card advanced" data-aos="fade-up">
+                <Link to="/levels/hard" data-aos="fade-up">
+                    <div className="level-card advanced">
                         <h2>Advanced</h2>
                         <p>Dive into complex logic, data structures, memory management, and algorithmic challenges.</p>
                         <p>Number of Programs: 16</p>

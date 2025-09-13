@@ -9,16 +9,18 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 // import use effect
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 
 // react icons
 import { FaCode } from "react-icons/fa6";
 import { LiaTagSolid } from "react-icons/lia";
-import { FaAngleDoubleUp } from "react-icons/fa";
 
 // import navbar and footer
 import { Navbar } from '../components/Navbar';
 import { Footer } from '../components/Footer';
+
+// import back to top button
+import { BackToTop } from '../components/Backtotop';
 
 // programs array
 export const programs = [
@@ -278,37 +280,4 @@ function Easy() {
             </div>
         </div>
     )
-}
-
-// back to top button
-export function BackToTop() {
-    const [visible, setVisible] = useState(false);
-
-    useEffect(() => {
-        const toggleVisibility = () => {
-            if (window.scrollY > 100) {
-                setVisible(true);
-            } else {
-                setVisible(false);
-            }
-        };
-
-        window.addEventListener('scroll', toggleVisibility);
-
-        return () => {
-            window.removeEventListener('scroll', toggleVisibility);
-        };
-    }, []);
-
-    const scrollToTop = () => {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-    };
-
-    return (
-        visible && (
-            <button className='back-to-top' onClick={scrollToTop}>
-                <FaAngleDoubleUp className='top-btn' />
-            </button>
-        )
-    );
 }
