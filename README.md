@@ -4,15 +4,29 @@ Welcome to my **C Coding Website** – previously a C program repository, now tr
 
 ---
 
-## 📸 Screenshot
-
-![C-coding app Screenshot](/c-coding/public/images/image.png)
-
----
-
 ## 🌐 Live Demo  
 
 The project is live and can be viewed here: [C-Coding](https://c-programming-six.vercel.app/)
+
+---
+
+## 📸 Screenshot
+
+### Home Page
+
+![C-coding app Screenshot](/c-coding/public/images/home.png)
+
+### Level Category Page
+
+![C-coding app Screenshot](/c-coding/public/images/Level.png)
+
+### Level Page
+
+![C-coding app Screenshot](/c-coding/public/images/Specific.png)
+
+### Code Page
+
+![C-coding app Screenshot](/c-coding/public/images/Code.png)
 
 ---
 
