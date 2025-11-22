@@ -1,4 +1,15 @@
-# 🌐 C Coding Website (Built with React.js!) 🚀
+# 🌐 C Coding Website (Built with React.js!)
+
+![Repo Size](https://img.shields.io/github/repo-size/TonyStark-19/C-Coding?color=yellow)
+![Stars](https://img.shields.io/github/stars/TonyStark-19/C-Coding?color=blue)
+![Last Commit](https://img.shields.io/github/last-commit/TonyStark-19/C-Coding?color=brightgreen)
+
+![React](https://img.shields.io/badge/React.js-61DAFB?logo=react&logoColor=black)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=black)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?logo=css3&logoColor=white)
+![AOS](https://img.shields.io/badge/Animations-AOS-purple)
+![Router](https://img.shields.io/badge/React%20Router-D00000?logo=reactrouter&logoColor=white)
+![C-Language](https://img.shields.io/badge/C%20Programs-79-blue)
 
 Welcome to my **C Coding Website** – previously a C program repository, now transformed into a **fully responsive React.js website**. It showcases categorized C programs across three levels of complexity. Designed for learners to practice, revise, and improve their **C programming skills**.
 
@@ -51,6 +62,14 @@ The project is live and can be viewed here: [C-Coding](https://c-programming-six
 
 ## 🛠️ Tech Stack
 
+![React](https://img.shields.io/badge/Framework-React.js-61DAFB?logo=react&logoColor=black)
+![ReactRouter](https://img.shields.io/badge/Routing-React%20Router-CA4245?logo=reactrouter&logoColor=white)
+![CSS3](https://img.shields.io/badge/Styling-CSS3-1572B6?logo=css3&logoColor=white)
+![AOS](https://img.shields.io/badge/Animations-AOS-orange)
+![Hooks](https://img.shields.io/badge/React%20Hooks-useEffect-blueviolet)
+![Icons](https://img.shields.io/badge/Icons-React%20Icons-yellow)
+![Vercel](https://img.shields.io/badge/Deployed%20On-Vercel-black?logo=vercel)
+
 - **Framework:** React.js (CRA - Create React App)
 - **Routing:** React Router DOM
 - **Styling:** CSS3 + AOS animations
@@ -61,6 +80,11 @@ The project is live and can be viewed here: [C-Coding](https://c-programming-six
 ---
 
 ## 📁 Program Categories
+
+![Total Programs](https://img.shields.io/badge/Total_Programs-79-blue)
+![Level 1](https://img.shields.io/badge/Beginner-22-green)
+![Level 2](https://img.shields.io/badge/Intermediate-41-yellow)
+![Level 3](https://img.shields.io/badge/Advanced-16-red)
 
 ### 🟢 Level 1: Beginner
 Basic syntax and logic (e.g., addition, area, swapping).
