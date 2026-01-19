@@ -15,6 +15,9 @@ import { vscDarkPlus } from 'react-syntax-highlighter/dist/esm/styles/prism';
 import { Navbar } from '../components/Navbar';
 import { Footer } from '../components/Footer';
 
+// import icons
+import { FaGithub, FaChevronLeft, FaRegCopy, FaCheck } from "react-icons/fa6";
+
 // import back to top button
 import { BackToTop } from '../components/Backtotop';
 
@@ -27,62 +30,99 @@ import { programs as easyPrograms } from '../Levels/EasyPage';
 import { programs as mediumPrograms } from '../Levels/MediumPage';
 import { programs as hardPrograms } from '../Levels/HardPage';
 
-// program page
+// Program Page Component
 export default function ProgramPage() {
-    // AOS Animations
-    useEffect(() => {
-        AOS.init({
-            duration: 1000,
-            once: true
-        });
-    }, []);
-
     const { slug } = useParams();
     const [code, setCode] = useState('');
     const [program, setProgram] = useState(null);
+    const [copied, setCopied] = useState(false);
     const navigate = useNavigate();
 
+    // Fetch program details and source code
     useEffect(() => {
+        AOS.init({ duration: 1000, once: true });
         const allPrograms = [...easyPrograms, ...mediumPrograms, ...hardPrograms];
         const prog = allPrograms.find(p => p.slug === slug);
         setProgram(prog);
 
+        // Fetch source code from public directory
         if (prog) {
             fetch(`/code/${prog.path}`)
                 .then(res => res.text())
                 .then(setCode)
-                .catch(() => setCode("// Code not found"));
+                .catch(() => setCode("// Error: Source file not found in public directory."));
         }
     }, [slug]);
 
-    // loading
-    if (!program) return <p>Loading program...</p>;
+    // Handle copy to clipboard
+    const handleCopy = () => {
+        navigator.clipboard.writeText(code);
+        setCopied(true);
+        setTimeout(() => setCopied(false), 2000);
+    };
+
+    // Render loading state if program data is not yet available
+    if (!program) return <div className="loading">Loading Source...</div>;
 
     return (
-        <div
-            style={{
-                background: "radial-gradient(ellipse 80% 60% at 50% 0%, rgba(226, 232, 240, 0.15), transparent 70%), #000000",
-            }}>
+        <div className='main-wrapper'>
+            <div className="gradient-bg"></div>
             <Navbar />
-            <div className="program-page">
+
+            <main className="program-display-container">
                 <BackToTop />
-                <h1 data-aos="fade-down">Code for the program</h1>
-                <h2 data-aos="fade-up">Program name : {program.title}</h2>
-                <p data-aos="fade-up">Description : {program.description}</p>
 
-                <SyntaxHighlighter data-aos="fade-up" language="c" style={vscDarkPlus}>
-                    {code}
-                </SyntaxHighlighter>
-
-                <div className='buttons-wrap'>
-                    <button onClick={() => navigate(program.link, { replace: true })}
-                        data-aos="zoom-in" data-aos-delay="400" data-aos-duration="800"
-                        className="back-button">Back to Programs</button>
-                    <button onClick={() => window.open(program.gitUrl, '_blank')}
-                        data-aos="zoom-in" data-aos-delay="400" data-aos-duration="800"
-                        className="raw-button">Check code on Github</button>
+                {/* 1. Header & Navigation */}
+                <div className="program-header" data-aos="fade-down">
+                    <button onClick={() => navigate(-1)} className="breadcrumb-back">
+                        <FaChevronLeft /> Back to {program.link.split('/').pop()}
+                    </button>
+                    <h1 className="program-title">{program.title}</h1>
+                    <p className="program-desc">{program.description}</p>
                 </div>
-            </div>
+
+                {/* 2. Code Editor Window */}
+                <div className="editor-window" data-aos="fade-up">
+                    <div className="editor-toolbar">
+                        <div className="window-dots">
+                            <span className="dot red"></span>
+                            <span className="dot yellow"></span>
+                            <span className="dot green"></span>
+                            <span className="file-label">{program.path.split('/').pop()}</span>
+                        </div>
+                        <button className="copy-btn" onClick={handleCopy}>
+                            {copied ? <><FaCheck /> Copied</> : <><FaRegCopy /> Copy Code</>}
+                        </button>
+                    </div>
+
+                    <div className="syntax-wrapper">
+                        <SyntaxHighlighter
+                            language="c"
+                            style={vscDarkPlus}
+                            customStyle={{
+                                margin: 0,
+                                padding: '25px',
+                                background: 'transparent',
+                                fontSize: '15px',
+                                lineHeight: '1.5'
+                            }}
+                        >
+                            {code}
+                        </SyntaxHighlighter>
+                    </div>
+                </div>
+
+                {/* 3. External Actions */}
+                <div className='footer-actions' data-aos="zoom-in">
+                    <button
+                        onClick={() => window.open(program.gitUrl, '_blank')}
+                        className="github-button"
+                    >
+                        <FaGithub /> View Raw Source on GitHub
+                    </button>
+                </div>
+            </main>
+
             <Footer />
         </div>
     );

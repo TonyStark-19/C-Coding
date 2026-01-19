@@ -12,7 +12,7 @@ import 'aos/dist/aos.css';
 import { useEffect } from 'react';
 
 // react icons
-import { FaCode } from "react-icons/fa6";
+import { FaCode, FaArrowRight } from "react-icons/fa6";
 import { LiaTagSolid } from "react-icons/lia";
 
 // import navbar and footer
@@ -224,60 +224,59 @@ export const programs = [
     }
 ];
 
-// main page
+// easy page component
 export default function EasyPage() {
-    // AOS Animations
     useEffect(() => {
-        AOS.init({
-            duration: 1000,
-            once: true
-        });
+        AOS.init({ duration: 1000, once: true });
     }, []);
 
     return (
-        <div className='container'
-            style={{
-                background: "radial-gradient(ellipse 80% 60% at 50% 0%, rgba(226, 232, 240, 0.15), transparent 70%), #000000",
-            }}>
+        <div className='main-wrapper'>
+            {/* Added blue-glow class here */}
+            <div className="gradient-bg blue-glow"></div>
             <Navbar />
-            <Easy />
+
+            <div className='easy-level-container'>
+                <BackToTop />
+
+                <header className="level-header-title" data-aos="fade-down">
+                    {/* Added blue class to badge */}
+                    <span className="level-badge blue">Level 01</span>
+                    <h1>Beginner Fundamentals</h1>
+                    <p>Foundational C programs focusing on syntax, variables, and basic logic.</p>
+                </header>
+
+                <div className='programs-grid-list'>
+                    {programs.map((prog, idx) => (
+                        <div className="program-card-premium" data-aos="fade-up" key={idx}>
+                            <div className="card-left">
+                                {/* Added beginner-accent to icon box */}
+                                <div className="card-icon-mini beginner-accent">
+                                    <FaCode />
+                                </div>
+                                <div className="card-text">
+                                    <h3>{prog.title}</h3>
+                                    <p>{prog.description}</p>
+                                    <div className="topics-pill-container">
+                                        <LiaTagSolid className="tag-icon" />
+                                        {prog.topics.map((tag, i) => (
+                                            <span className="topic-pill" key={i}>{tag}</span>
+                                        ))}
+                                    </div>
+                                </div>
+                            </div>
+
+                            <Link to={`/programs/${prog.slug}`} className="view-btn-link">
+                                {/* Added beginner-btn class */}
+                                <button className="action-view-btn beginner-btn">
+                                    View Code <FaArrowRight />
+                                </button>
+                            </Link>
+                        </div>
+                    ))}
+                </div>
+            </div>
             <Footer />
         </div>
-    )
-}
-
-// easy page content
-function Easy() {
-    return (
-        <div className='easy-level-container'>
-            <BackToTop />
-            <h1 data-aos="fade-down">Level 1 : Beginner</h1>
-
-            <div className='programs-wrap'>
-                {programs.map((prog, idx) => (
-                    <div className="program-box" data-aos="fade-up" key={idx}>
-                        <h3>{prog.title}</h3>
-                        <p>{prog.description}</p>
-
-                        <div className="topics">
-                            <div className="topics-head">
-                                Topics
-                                <LiaTagSolid />
-                            </div>
-                            {prog.topics.map((tags, i) => (
-                                <div className="topics-box" key={i}>{tags}</div>
-                            ))}
-                        </div>
-
-                        <Link to={`/programs/${prog.slug}`}>
-                            <button className="code-btn">
-                                View code
-                                <FaCode className="code-icon" />
-                            </button>
-                        </Link>
-                    </div>
-                ))}
-            </div>
-        </div>
-    )
+    );
 }

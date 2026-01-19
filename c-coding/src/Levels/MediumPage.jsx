@@ -12,7 +12,7 @@ import 'aos/dist/aos.css';
 import { useEffect } from 'react';
 
 // react icons
-import { FaCode } from "react-icons/fa6";
+import { FaCode, FaArrowRight, FaTerminal } from "react-icons/fa6";
 import { LiaTagSolid } from "react-icons/lia";
 
 // import navbar and footer
@@ -395,60 +395,57 @@ export const programs = [
     }
 ];
 
-// main page
-export default function EasyPage() {
-    // AOS Animation
+// medium page component
+export default function MediumPage() {
     useEffect(() => {
-        AOS.init({
-            duration: 1000,
-            once: true
-        });
+        AOS.init({ duration: 1000, once: true });
     }, []);
 
     return (
-        <div className='container'
-            style={{
-                background: "radial-gradient(ellipse 80% 60% at 50% 0%, rgba(226, 232, 240, 0.15), transparent 70%), #000000",
-            }}>
+        <div className='main-wrapper'>
+            {/* Reusing the fixed background gradient logic */}
+            <div className="gradient-bg"></div>
             <Navbar />
-            <Medium />
-            <Footer />
-        </div>
-    )
-}
 
-// medium page content
-function Medium() {
-    return (
-        <div className='easy-level-container'>
-            <BackToTop />
-            <h1 data-aos="fade-down">Level 2 : Intermediate</h1>
+            <div className='easy-level-container'>
+                <BackToTop />
 
-            <div className='programs-wrap'>
-                {programs.map((prog, idx) => (
-                    <div className="program-box" data-aos="fade-up" key={idx}>
-                        <h3>{prog.title}</h3>
-                        <p>{prog.description}</p>
+                <header className="level-header-title" data-aos="fade-down">
+                    <span className="level-badge orange">Level 02</span>
+                    <h1>Intermediate Logic</h1>
+                    <p>Deepen your understanding with recursion, pointers, arrays, and string manipulation.</p>
+                </header>
 
-                        <div className="topics">
-                            <div className="topics-head">
-                                Topics
-                                <LiaTagSolid />
+                <div className='programs-grid-list'>
+                    {programs.map((prog, idx) => (
+                        <div className="program-card-premium" data-aos="fade-up" key={idx}>
+                            <div className="card-left">
+                                <div className="card-icon-mini medium-accent">
+                                    <FaTerminal />
+                                </div>
+                                <div className="card-text">
+                                    <h3>{prog.title}</h3>
+                                    <p>{prog.description}</p>
+                                    <div className="topics-pill-container">
+                                        <LiaTagSolid className="tag-icon" />
+                                        {/* Supporting both 'tags' and 'topics' keys */}
+                                        {(prog.tags || prog.topics).map((tag, i) => (
+                                            <span className="topic-pill" key={i}>{tag}</span>
+                                        ))}
+                                    </div>
+                                </div>
                             </div>
-                            {prog.tags.map((tags, i) => (
-                                <div className="topics-box" key={i}>{tags}</div>
-                            ))}
-                        </div>
 
-                        <Link to={`/programs/${prog.slug}`}>
-                            <button className="code-btn">
-                                View code
-                                <FaCode className="code-icon" />
-                            </button>
-                        </Link>
-                    </div>
-                ))}
+                            <Link to={`/programs/${prog.slug}`} className="view-btn-link">
+                                <button className="action-view-btn">
+                                    Analyze <FaArrowRight />
+                                </button>
+                            </Link>
+                        </div>
+                    ))}
+                </div>
             </div>
+            <Footer />
         </div>
     )
 }

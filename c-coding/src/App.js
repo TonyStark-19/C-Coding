@@ -10,7 +10,7 @@ import HardPage from './Levels/HardPage';
 import ProgramPage from './pages/ProgramPage';
 
 // scroll to top
-import ScrollToTop from './pages/ScrollToTop';
+import ScrollToTop from './components/ScrollToTop';
 
 export default function App() {
     return (

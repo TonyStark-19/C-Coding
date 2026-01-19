@@ -12,7 +12,7 @@ import 'aos/dist/aos.css';
 import { useEffect } from 'react';
 
 // react icons
-import { FaCode } from "react-icons/fa6";
+import { FaCode, FaArrowRight, FaMicrochip } from "react-icons/fa6";
 import { LiaTagSolid } from "react-icons/lia";
 
 // import navbar and footer
@@ -170,60 +170,55 @@ export const programs = [
     }
 ];
 
-// main page
-export default function EasyPage() {
-    // AOS Animations
+// hard page component
+export default function HardPage() {
     useEffect(() => {
-        AOS.init({
-            duration: 1000,
-            once: true
-        });
+        AOS.init({ duration: 1000, once: true });
     }, []);
 
     return (
-        <div className='container'
-            style={{
-                background: "radial-gradient(ellipse 80% 60% at 50% 0%, rgba(226, 232, 240, 0.15), transparent 70%), #000000",
-            }}>
+        <div className='main-wrapper'>
+            <div className="gradient-bg purple-glow"></div>
             <Navbar />
-            <Hard />
-            <Footer />
-        </div>
-    )
-}
 
-// hard page content
-function Hard() {
-    return (
-        <div className='easy-level-container'>
-            <BackToTop />
-            <h1 data-aos="fade-down">Level 3 : Advanced</h1>
+            <div className='easy-level-container'>
+                <BackToTop />
 
-            <div className='programs-wrap'>
-                {programs.map((prog, idx) => (
-                    <div className="program-box" data-aos="fade-up" key={idx}>
-                        <h3>{prog.title}</h3>
-                        <p>{prog.description}</p>
+                <header className="level-header-title" data-aos="fade-down">
+                    <span className="level-badge purple">Level 03</span>
+                    <h1>Advanced Mastery</h1>
+                    <p>Tackle complex algorithms, advanced matrix operations, and recursive logic challenges.</p>
+                </header>
 
-                        <div className="topics">
-                            <div className="topics-head">
-                                Topics
-                                <LiaTagSolid />
+                <div className='programs-grid-list'>
+                    {programs.map((prog, idx) => (
+                        <div className="program-card-premium" data-aos="fade-up" key={idx}>
+                            <div className="card-left">
+                                <div className="card-icon-mini hard-accent">
+                                    <FaMicrochip />
+                                </div>
+                                <div className="card-text">
+                                    <h3>{prog.title}</h3>
+                                    <p>{prog.description}</p>
+                                    <div className="topics-pill-container">
+                                        <LiaTagSolid className="tag-icon" />
+                                        {prog.topics.map((tag, i) => (
+                                            <span className="topic-pill" key={i}>{tag}</span>
+                                        ))}
+                                    </div>
+                                </div>
                             </div>
-                            {prog.topics.map((tags, i) => (
-                                <div className="topics-box" key={i}>{tags}</div>
-                            ))}
-                        </div>
 
-                        <Link to={`/programs/${prog.slug}`}>
-                            <button className="code-btn">
-                                View code
-                                <FaCode className="code-icon" />
-                            </button>
-                        </Link>
-                    </div>
-                ))}
+                            <Link to={`/programs/${prog.slug}`} className="view-btn-link">
+                                <button className="action-view-btn hard-btn">
+                                    Master Code <FaArrowRight />
+                                </button>
+                            </Link>
+                        </div>
+                    ))}
+                </div>
             </div>
+            <Footer />
         </div>
     )
 }

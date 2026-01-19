@@ -1,0 +1,117 @@
+.footer {
+    background: var(--bg-dark);
+    /* Uses the variable from your App.css */
+    padding: 80px 0 30px;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    color: #ffffff;
+    position: relative;
+    z-index: 2;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    /* Better distribution than space-evenly */
+    gap: 40px;
+    margin-bottom: 60px;
+}
+
+/* Typography Improvements */
+.footer-section h3 {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.footer-section p {
+    color: #94a3b8;
+    /* Dimmed text for better hierarchy */
+    line-height: 1.6;
+    font-size: 15px;
+    max-width: 400px;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 12px;
+}
+
+.footer-section a {
+    color: #94a3b8;
+    text-decoration: none;
+    font-size: 15px;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.footer-section a:hover {
+    color: #60a5fa;
+    /* Glows blue on hover */
+    transform: translateX(3px);
+}
+
+.footer-icon {
+    font-size: 18px;
+}
+
+/* Footer Bottom Section */
+.footer-bottom {
+    padding-top: 30px;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-bottom p {
+    color: #64748b;
+    font-size: 14px;
+}
+
+.author-name {
+    color: #fff;
+    font-weight: 500;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 900px) {
+    .footer-content {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .footer-section.about {
+        grid-column: span 2;
+    }
+}
+
+@media (max-width: 600px) {
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .footer-section.about {
+        grid-column: span 1;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+}

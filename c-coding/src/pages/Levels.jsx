@@ -10,6 +10,7 @@ import { useEffect } from 'react';
 
 // react icons
 import { LiaTagSolid } from "react-icons/lia";
+import { FaCode, FaLayerGroup, FaMicrochip } from "react-icons/fa6";
 
 // router
 import { Link } from 'react-router-dom';
@@ -18,109 +19,86 @@ import { Link } from 'react-router-dom';
 import { Navbar } from '../components/Navbar';
 import { Footer } from '../components/Footer';
 
-// main page
+// level page component
 export default function LevelPage() {
-    // AOS Animations
     useEffect(() => {
-        AOS.init({
-            duration: 1000,
-            once: true
-        });
+        AOS.init({ duration: 1000, once: true });
     }, []);
 
     return (
-        <div className='container'
-            style={{
-                background: "radial-gradient(ellipse 80% 60% at 50% 0%, rgba(226, 232, 240, 0.15), transparent 70%), #000000",
-            }}>
+        <div className='main-wrapper'>
+            <div className="gradient-bg"></div>
             <Navbar />
-            <Levels />
+            <div className="levels-section">
+                <header className="levels-header" data-aos="fade-down">
+                    <h1>Curriculum Pathway</h1>
+                    <p>Select a difficulty level to view categorized C programs and challenges.</p>
+                </header>
+                <LevelsList />
+            </div>
             <Footer />
         </div>
     )
 }
 
-// levels
-function Levels() {
+// levels list component
+function LevelsList() {
+    const levels = [
+        {
+            path: "/levels/easy",
+            title: "Beginner",
+            icon: <FaCode />,
+            desc: "Master the fundamentals: basic syntax, operators, and control flow.",
+            count: 22,
+            topics: ["Variables", "Operators", "I/O", "Conditionals", "Loops"],
+            color: "beginner"
+        },
+        {
+            path: "/levels/medium",
+            title: "Intermediate",
+            icon: <FaLayerGroup />,
+            desc: "Deep dive into modular programming, memory addresses, and data structures.",
+            count: 41,
+            topics: ["Arrays", "Strings", "Recursion", "Functions", "Pointers", "Structures"],
+            color: "intermediate"
+        },
+        {
+            path: "/levels/hard",
+            title: "Advanced",
+            icon: <FaMicrochip />,
+            desc: "Complex algorithmic logic and low-level system programming concepts.",
+            count: 16,
+            topics: ["Advanced Pointers", "Matrices", "Bitwise", "File I/O", "Quizzes"],
+            color: "advanced"
+        }
+    ];
+
     return (
-        <div className="levels-container">
-            <h1 data-aos="fade-down">Choose Your Level</h1>
+        <div className="levels-stack">
+            {levels.map((lvl, index) => (
+                <Link to={lvl.path} key={index} className={`level-card-wide ${lvl.color}`} data-aos="fade-up" data-aos-delay={index * 100}>
+                    <div className="card-icon">{lvl.icon}</div>
 
-            <div className="levels-grid">
-                <Link to="/levels/easy" data-aos="fade-up">
-                    <div className="level-card beginner">
-                        <h2>Beginner</h2>
-                        <p>Start with basic syntax, arithmetic operations, conditionals, and simple I/O.</p>
-                        <p>Number of Programs: 22</p>
-
-                        <div className='topics'>
-                            <div className="topics-head">
-                                Topics
-                                <LiaTagSolid className='topic-icon' />
-                            </div>
-
-                            <div className='topics-box'>Variables</div>
-                            <div className='topics-box'>Operators</div>
-                            <div className='topics-box'>Input/Output</div>
-                            <div className='topics-box'>Conditionals</div>
-                            <div className='topics-box'>Loops</div>
+                    <div className="card-main-content">
+                        <div className="card-top">
+                            <h2>{lvl.title}</h2>
+                            <span className="prog-count">{lvl.count} Programs</span>
                         </div>
+                        <p>{lvl.desc}</p>
 
-                        <button className='get-started'>Get Started</button>
+                        <div className='topics-wrapper'>
+                            <span className='topics-label'><LiaTagSolid /> Topics:</span>
+                            <div className='topics-flex'>
+                                {lvl.topics.map(t => <span key={t} className="topic-tag">{t}</span>)}
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="card-action">
+                        <button className='btn-arrow'>Explore →</button>
                     </div>
                 </Link>
-
-                <Link to="/levels/medium" data-aos="fade-up">
-                    <div className="level-card intermediate">
-                        <h2>Intermediate</h2>
-                        <p>Explore arrays, strings, functions, recursion, loops, and switch-case logic.</p>
-                        <p>Number of Programs: 41</p>
-
-                        <div className='topics'>
-                            <div className="topics-head">
-                                Topics
-                                <LiaTagSolid className='topic-icon' />
-                            </div>
-
-                            <div className='topics-box'>Arrays</div>
-                            <div className='topics-box'>Strings</div>
-                            <div className='topics-box'>Recursion</div>
-                            <div className='topics-box'>Functions</div>
-                            <div className='topics-box'>Matrix</div>
-                            <div className='topics-box'>Pointers</div>
-                            <div className='topics-box'>Structures</div>
-                        </div>
-
-                        <button className='get-started'>Get Started</button>
-                    </div>
-                </Link>
-
-                <Link to="/levels/hard" data-aos="fade-up">
-                    <div className="level-card advanced">
-                        <h2>Advanced</h2>
-                        <p>Dive into complex logic, data structures, memory management, and algorithmic challenges.</p>
-                        <p>Number of Programs: 16</p>
-
-                        <div className='topics'>
-                            <div className="topics-head">
-                                Topics
-                                <LiaTagSolid className='topic-icon' />
-                            </div>
-
-                            <div className='topics-box'>Recursion</div>
-                            <div className='topics-box'>Functions</div>
-                            <div className='topics-box'>Matrices</div>
-                            <div className='topics-box'>Pointers</div>
-                            <div className='topics-box'>Character Frequency</div>
-                            <div className='topics-box'>Quizzes</div>
-                            <div className='topics-box'>Number Systems</div>
-                        </div>
-
-                        <button className='get-started'>Get Started</button>
-                    </div>
-                </Link>
-            </div>
-
+            ))}
         </div>
     );
 }

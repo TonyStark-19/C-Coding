@@ -1,0 +1,83 @@
+.back-to-top-glass {
+    /* Hidden by default with transition */
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+
+    /* Positioning */
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 9999;
+
+    /* Styling */
+    width: 45px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    color: #60a5fa;
+    /* Your accent blue */
+    font-size: 20px;
+    cursor: pointer;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.4);
+}
+
+/* Visibility Trigger */
+.back-to-top-glass.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.back-to-top-glass:hover {
+    background: #60a5fa;
+    color: #ffffff;
+    border-color: #60a5fa;
+    box-shadow: 0 0 20px rgba(96, 165, 250, 0.4);
+    transform: translateY(-5px);
+}
+
+/* Icon Animation */
+.top-icon-anim {
+    transition: transform 0.3s ease;
+}
+
+.back-to-top-glass:hover .top-icon-anim {
+    animation: bounceUp 1.5s infinite;
+}
+
+@keyframes bounceUp {
+
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translateY(0);
+    }
+
+    40% {
+        transform: translateY(-5px);
+    }
+
+    60% {
+        transform: translateY(-3px);
+    }
+}
+
+/* Mobile Adjustments */
+@media (max-width: 550px) {
+    .back-to-top-glass {
+        bottom: 20px;
+        right: 20px;
+        width: 40px;
+        height: 40px;
+    }
+}

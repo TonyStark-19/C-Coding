@@ -1,209 +1,238 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
-}
-
-/* container */
-
-.container {
-    min-height: 100vh;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-}
-
-/* easy level container */
-
 .easy-level-container {
-    z-index: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    padding: 130px 0 50px;
-}
-
-.easy-level-container h1 {
-    color: #ffffff;
-    font-size: 60px;
-    margin: 80px 0 30px;
-    text-transform: uppercase;
-    padding-bottom: 10px;
-    border-bottom: 2px solid white;
-    text-align: center;
-    width: 70%;
-}
-
-.easy-level-container a {
-    text-decoration: none;
-}
-
-/* programs wrap */
-
-.programs-wrap {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 90%;
-    gap: 30px;
-}
-
-/* program box */
-
-.program-box {
-    color: #ffffff;
-    background-color: rgba(226, 232, 240, 0.10);
-    padding: 20px 30px;
-    border-radius: 10px;
-    width: 1100px;
+    padding: 60px 20px 100px;
+    max-width: 1100px;
+    margin: 0 auto;
     position: relative;
+    z-index: 1;
 }
 
-.program-box:hover {
-    cursor: pointer;
-    background-color: rgba(226, 232, 240, 0.15);
+.level-header-title {
+    text-align: center;
+    margin: 40px 0 60px;
 }
 
-.program-box h3 {
+.level-badge {
+    background: rgba(96, 165, 250, 0.1);
+    color: #60a5fa;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.level-header-title h1 {
+    color: #fff;
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    margin: 15px 0;
+}
+
+.level-header-title p {
+    color: #94a3b8;
+    font-size: 1.1rem;
+}
+
+/* Programs List Stack */
+.programs-grid-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.program-card-premium {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    padding: 25px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.program-card-premium:hover {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(96, 165, 250, 0.3);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.card-left {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.card-icon-mini {
+    width: 50px;
+    height: 50px;
+    background: rgba(96, 165, 250, 0.1);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #60a5fa;
     font-size: 20px;
 }
 
-.program-box p {
-    margin: 5px 0;
-    font-size: 15px;
+.card-text h3 {
+    color: #fff;
+    font-size: 1.25rem;
+    margin-bottom: 5px;
 }
 
-/* code button */
+.card-text p {
+    color: #94a3b8;
+    font-size: 0.95rem;
+    margin-bottom: 12px;
+    max-width: 600px;
+}
 
-.code-btn {
-    position: absolute;
-    right: 30px;
-    bottom: 20px;
-    margin: 15px 0 0;
-    padding: 6px 12px;
-    font-size: 14px;
+/* Topics as Horizontal Pills */
+.topics-pill-container {
     display: flex;
-    justify-content: center;
     align-items: center;
-    gap: 5px;
-    border-radius: 5px;
-    border: 0;
-    color: #000000;
-    background-color: #12c14f;
-    cursor: pointer;
+    gap: 8px;
+    flex-wrap: wrap;
 }
 
-/* back to top button */
+.tag-icon {
+    color: #64748b;
+    margin-right: 5px;
+}
 
-.back-to-top {
-    padding: 10px;
-    border-radius: 10px;
+.topic-pill {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #cbd5e1;
+    padding: 2px 10px;
+    border-radius: 6px;
+    font-size: 0.8rem;
+}
+
+/* Action Button */
+.action-view-btn {
+    background: #fff;
+    color: #000;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: 600;
     display: flex;
-    justify-content: center;
     align-items: center;
-    border: 1px solid #ccc;
-    font-size: 18px;
-    color: #ffffff;
-    background-color: rgba(31, 32, 42);
+    gap: 10px;
     cursor: pointer;
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    z-index: 3;
+    transition: 0.2s;
+    white-space: nowrap;
 }
 
-.back-to-top:hover {
-    background-color: rgb(35, 36, 46);
+.action-view-btn:hover {
+    background: #60a5fa;
+    color: #fff;
 }
 
-/* responsivenesss */
-
-@media (max-width: 1200px) {
-
-    .program-box {
-        width: 90%;
-    }
+/* Color distinction for Beginner Level (Blue) */
+.level-badge.blue {
+    background: rgba(59, 130, 246, 0.1);
+    color: #3b82f6;
 }
 
-@media (max-width: 1050px) {
-
-    .easy-level-container h1 {
-        font-size: 55px;
-    }
-
-    .program-box {
-        width: 100%;
-    }
+.beginner-accent {
+    background: rgba(59, 130, 246, 0.15) !important;
+    color: #3b82f6 !important;
 }
 
+/* Blue Glow for the Background */
+.blue-glow {
+    background: 
+        radial-gradient(circle at 50% -10%, rgba(59, 130, 246, 0.15), transparent 60%),
+        radial-gradient(circle at 100% 0%, rgba(30, 64, 175, 0.05), transparent 40%) !important;
+}
+
+/* Beginner Button specific styling */
+.beginner-btn:hover {
+    background: #3b82f6 !important;
+    color: #fff !important;
+    box-shadow: 0 0 15px rgba(59, 130, 246, 0.4);
+}
+
+/* Highlight the card border on hover for Level 1 */
+.program-card-premium:hover {
+    border-color: rgba(59, 130, 246, 0.4) !important;
+}
+
+/* Color distinction for Medium Level */
+.level-badge.orange {
+    background: rgba(245, 158, 11, 0.1);
+    color: #f59e0b;
+}
+
+.medium-accent {
+    background: rgba(245, 158, 11, 0.1) !important;
+    color: #f59e0b !important;
+}
+
+/* Hover effect update for Level 2 */
+.program-card-premium:hover {
+    border-color: rgba(245, 158, 11, 0.3);
+}
+
+/* Ensure consistent card heights for programs with long descriptions */
+.card-text p {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Color distinction for Hard Level (Purple/Crimson) */
+.level-badge.purple {
+    background: rgba(168, 85, 247, 0.1);
+    color: #a855f7;
+}
+
+.hard-accent {
+    background: rgba(168, 85, 247, 0.15) !important;
+    color: #a855f7 !important;
+}
+
+/* Purple Glow for the Background */
+.purple-glow {
+    background:
+        radial-gradient(circle at 50% -10%, rgba(168, 85, 247, 0.15), transparent 60%),
+        radial-gradient(circle at 0% 0%, rgba(239, 68, 68, 0.05), transparent 40%) !important;
+}
+
+/* Hard Button specific styling */
+.hard-btn:hover {
+    background: #a855f7 !important;
+    color: #fff !important;
+    box-shadow: 0 0 15px rgba(168, 85, 247, 0.4);
+}
+
+/* Highlight the card border on hover for Level 3 */
+.program-card-premium:hover {
+    border-color: rgba(168, 85, 247, 0.4) !important;
+}
+
+/* Responsiveness */
 @media (max-width: 850px) {
-
-    .easy-level-container h1 {
-        font-size: 45px;
-        margin: 40px 0 30px;
+    .program-card-premium {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
     }
 
-    .program-box p,
-    .topics {
-        width: 400px;
-    }
-}
-
-@media (max-width: 650px) {
-
-    .easy-level-container h1 {
-        font-size: 40px;
+    .card-left {
+        gap: 15px;
     }
 
-    .program-box p,
-    .topics {
-        width: unset;
-    }
-
-    .code-btn {
-        position: unset;
-        margin-top: 30px;
-    }
-}
-
-@media (max-width: 600px) {
-
-    .easy-level-container h1 {
-        font-size: 35px;
-    }
-}
-
-@media (max-width: 550px) {
-
-    .back-to-top {
-        font-size: 16px;
-        padding: 8px;
-        right: 10px;
-        bottom: 15px;
-    }
-}
-
-@media (max-width: 450px) {
-
-    .easy-level-container h1 {
-        width: 350px;
-        text-align: center;
-    }
-}
-
-@media (max-width: 400px) {
-
-    .easy-level-container {
-        padding: 80px 0 50px;
-    }
-
-    .easy-level-container h1 {
-        font-size: 30px;
-        width: 280px;
+    .action-view-btn {
+        width: 100%;
+        justify-content: center;
     }
 }

@@ -1,219 +1,162 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
-}
-
-/* container */
-
-.container {
-    min-height: 100vh;
-    height: 100%;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-}
-
-/* levels-container */
-
-.levels-container {
+.levels-section {
+    padding: 100px 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+    position: relative;
     z-index: 1;
-    background-color: transparent;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    padding: 130px 0 70px;
 }
 
-/* heading */
-
-.levels-container h1 {
-    color: #ffffff;
-    font-size: 60px;
-    margin: 80px 0 30px;
-    padding-bottom: 10px;
-    text-transform: uppercase;
-    border-bottom: 2px solid white;
-    width: 70%;
+.levels-header {
     text-align: center;
+    margin-bottom: 60px;
 }
 
-.levels-container h2 {
-    text-transform: uppercase;
+.levels-header h1 {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    color: #fff;
+    margin-bottom: 10px;
 }
 
-.levels-container p {
-    margin: 2px 0;
-    font-size: 16px;
+.levels-header p {
+    color: #94a3b8;
+    font-size: 1.1rem;
 }
 
-/* levels grid */
-
-.levels-grid {
+/* Stack Layout (Column Wise) */
+.levels-stack {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    gap: 25px;
+}
+
+.level-card-wide {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    padding: 30px;
+    display: flex;
     align-items: center;
     gap: 30px;
-    width: 90%;
-}
-
-.levels-grid a {
     text-decoration: none;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* level card */
-
-.levels-grid a {
-    position: relative;
-    color: #ffffff;
-    background-color: rgba(226, 232, 240, 0.10);
-    padding: 20px 30px;
-    border-radius: 10px;
-    width: 1100px;
+.level-card-wide:hover {
+    background: rgba(255, 255, 255, 0.06);
+    border-color: var(--accent);
+    transform: translateX(10px);
 }
 
-.levels-grid a:hover {
-    cursor: pointer;
-    background-color: rgba(226, 232, 240, 0.15);
-}
-
-.beginner h2 {
-    color: #20d761;
-}
-
-.intermediate h2 {
-    color: #db7100;
-}
-
-.advanced h2 {
-    color: #ff516b;
-}
-
-.levels-grid a p {
-    margin-top: 5px;
-}
-
-/* topics */
-
-.topics {
+/* Card Visual Components */
+.card-icon {
+    font-size: 40px;
+    color: var(--accent);
+    background: rgba(96, 165, 250, 0.1);
+    width: 80px;
+    height: 80px;
     display: flex;
-    flex-direction: row;
     align-items: center;
-    margin: 20px 0 0;
-    gap: 10px;
-    flex-wrap: wrap;
+    justify-content: center;
+    border-radius: 12px;
 }
 
-/* topics head */
+.card-main-content {
+    flex: 1;
+}
 
-.topics-head {
-    background-color: rgb(53, 53, 58);
-    padding: 4px 10px;
-    border-radius: 5px;
-    font-size: 13px;
-    margin-right: 5px;
+.card-top {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.card-top h2 {
+    color: #fff;
+    font-size: 1.5rem;
+}
+
+.prog-count {
+    color: var(--accent);
+    font-size: 0.9rem;
+    font-weight: 600;
+    background: rgba(96, 165, 250, 0.1);
+    padding: 4px 12px;
+    border-radius: 20px;
+}
+
+.card-main-content p {
+    color: #94a3b8;
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+
+/* Topics Styling */
+.topics-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.topics-label {
+    color: #64748b;
+    font-size: 0.85rem;
+    display: flex;
     align-items: center;
     gap: 5px;
+    white-space: nowrap;
 }
 
-/* topics box */
-
-.topics-box {
-    background-color: transparent;
-    border: 1px solid #ffffff;
-    border-radius: 5px;
-    padding: 4px 8px;
-    font-size: 13px;
+.topics-flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
 }
 
-/* get started */
-
-.get-started {
-    position: absolute;
-    bottom: 20px;
-    right: 30px;
-    padding: 5px 10px;
-    border: 1px solid #ffffff;
-    border-radius: 5px;
-    background-color: transparent;
-    color: #ffffff;
-    font-size: 15px;
+.topic-tag {
+    font-size: 0.75rem;
+    color: #cbd5e1;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 3px 10px;
+    border-radius: 4px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.get-started:hover {
+/* Button inside card */
+.btn-arrow {
+    background: transparent;
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 10px 20px;
+    border-radius: 8px;
     cursor: pointer;
+    font-weight: 500;
+    transition: all 0.2s;
 }
 
-/* responsiveness */
-
-@media (max-width: 1250px) {
-
-    .levels-grid a {
-        width: 100%;
-    }
+.level-card-wide:hover .btn-arrow {
+    background: #fff;
+    color: #000;
 }
 
-@media (max-width: 1050px) {
-
-    .levels-container h1 {
-        font-size: 55px;
+/* Responsive */
+@media (max-width: 768px) {
+    .level-card-wide {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px;
+        gap: 20px;
     }
 
-    .get-started {
-        position: unset;
-        margin-top: 15px;
-    }
-}
-
-@media (max-width: 850px) {
-
-    .levels-container h1 {
-        font-size: 45px;
-        margin: 40px 0 30px;
-    }
-}
-
-@media (max-width: 650px) {
-
-    .levels-container {
-        padding: 110px 0 50px;
+    .card-top {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
     }
 
-    .levels-container h1 {
-        font-size: 40px;
-    }
-}
-
-@media (max-width: 600px) {
-
-    .levels-container h1 {
-        font-size: 35px;
-    }
-}
-
-@media (max-width: 450px) {
-
-    .levels-container h1 {
-        width: 350px;
-        text-align: center;
-    }
-}
-
-@media (max-width: 400px) {
-
-    .levels-container {
-        padding: 80px 0 50px;
-    }
-
-    .levels-container h1 {
-        font-size: 30px;
-        width: 280px;
+    .level-card-wide:hover {
+        transform: translateY(-5px);
     }
 }

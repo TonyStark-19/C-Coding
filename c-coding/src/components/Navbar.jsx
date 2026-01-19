@@ -1,24 +1,34 @@
-// react icons
+// import icons
 import { FaLaptopCode } from "react-icons/fa6";
 
-// router
+// import link
 import { Link } from 'react-router-dom';
 
-// navbar components
+// import css
+import '../css/Navbar.css';
+
 export function Navbar() {
     return (
-        <div className='navbar'>
-            <Link to="/">
-                <div className='nav-element-wrap'>
-                    <p>C-Coding</p>
-                    <FaLaptopCode className='nav-icon' />
-                </div>
-            </Link>
+        <nav className='navbar'>
+            <div className="nav-container">
+                <Link to="/" className="nav-logo">
+                    <div className='nav-element-wrap'>
+                        <FaLaptopCode className='nav-icon' />
+                        <p>C-Coding</p>
+                    </div>
+                </Link>
 
-            <div className="star-btn">
-                <a href="https://github.com/TonyStark-19/C-Coding"><button><span>Star on
-                    Github</span>⭐</button></a>
+                <div className="nav-actions">
+                    <div className="star-btn">
+                        <a href="https://github.com/TonyStark-19/C-Coding" target="_blank" rel="noreferrer">
+                            <button>
+                                <span>Star on GitHub</span>
+                                <span className="star-emoji">⭐</span>
+                            </button>
+                        </a>
+                    </div>
+                </div>
             </div>
-        </div>
+        </nav>
     )
 }
