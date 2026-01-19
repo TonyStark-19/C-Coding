@@ -12,7 +12,7 @@ import 'aos/dist/aos.css';
 import { useEffect } from 'react';
 
 // react icons
-import { FaCode, FaArrowRight, FaTerminal } from "react-icons/fa6";
+import { FaArrowRight, FaTerminal } from "react-icons/fa6";
 import { LiaTagSolid } from "react-icons/lia";
 
 // import navbar and footer
