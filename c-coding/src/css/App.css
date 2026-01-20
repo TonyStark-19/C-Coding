@@ -42,7 +42,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 80px 20px 100px;
+    padding: 160px 20px 100px;
     /* Space for Sticky Navbar */
     text-align: center;
     position: relative;
@@ -142,6 +142,12 @@
     text-align: left;
     box-shadow: 0 40px 80px -15px rgba(0, 0, 0, 0.6);
     overflow: hidden;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.code-card:hover {
+    transform: translateY(-6px) scale(1.01);
+    box-shadow: 0 60px 100px -20px rgba(0, 0, 0, 0.8);
 }
 
 .code-header {
@@ -183,6 +189,18 @@
     opacity: 0.8;
 }
 
+/* Prism.js Code Formatting Fixes */
+pre[class*="language-"],
+code[class*="language-"] {
+    background: transparent !important;
+    box-shadow: none !important;
+}
+
+pre[class*="language-"] {
+    padding: 0 !important;
+    margin: 0;
+}
+
 /* --- Code Formatting Fixes --- */
 .code-body {
     padding: 24px;
@@ -197,19 +215,6 @@
     white-space: pre;
     /* Essential for spacing */
     tab-size: 4;
-}
-
-.keyword {
-    color: #f472b6;
-    font-weight: 500;
-}
-
-.func {
-    color: #60a5fa;
-}
-
-.string {
-    color: #4ade80;
 }
 
 /* --- Responsiveness --- */

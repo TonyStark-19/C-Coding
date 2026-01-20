@@ -418,7 +418,7 @@ export default function MediumPage() {
 
                 <div className='programs-grid-list'>
                     {programs.map((prog, idx) => (
-                        <div className="program-card-premium" data-aos="fade-up" key={idx}>
+                        <div className="program-card-premium medium" data-aos="fade-up" key={idx}>
                             <div className="card-left">
                                 <div className="card-icon-mini medium-accent">
                                     <FaTerminal />
@@ -437,8 +437,8 @@ export default function MediumPage() {
                             </div>
 
                             <Link to={`/programs/${prog.slug}`} className="view-btn-link">
-                                <button className="action-view-btn">
-                                    Analyze <FaArrowRight />
+                                <button className="action-view-btn medium-btn">
+                                    View Code <FaArrowRight />
                                 </button>
                             </Link>
                         </div>

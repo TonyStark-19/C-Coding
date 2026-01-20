@@ -20,11 +20,14 @@ export function Navbar() {
 
                 <div className="nav-actions">
                     <div className="star-btn">
-                        <a href="https://github.com/TonyStark-19/C-Coding" target="_blank" rel="noreferrer">
-                            <button>
-                                <span>Star on GitHub</span>
-                                <span className="star-emoji">⭐</span>
-                            </button>
+                        <a
+                            href="https://github.com/TonyStark-19/C-Coding"
+                            target="_blank"
+                            rel="noreferrer"
+                            className="star-btn-link"
+                        >
+                            <span>Star on GitHub</span>
+                            <span className="star-emoji">⭐</span>
                         </a>
                     </div>
                 </div>

@@ -1,3 +1,4 @@
+/* Footer Styles */
 .footer {
     background: var(--bg-dark);
     /* Uses the variable from your App.css */
@@ -6,6 +7,20 @@
     color: #ffffff;
     position: relative;
     z-index: 2;
+}
+
+/* Gradient border effect */
+.footer::before {
+    content: "";
+    position: absolute;
+    top: -1px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(to right,
+            transparent,
+            rgba(96, 165, 250, 0.4),
+            transparent);
 }
 
 .footer-container {

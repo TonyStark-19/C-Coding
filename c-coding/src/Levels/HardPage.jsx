@@ -192,7 +192,7 @@ export default function HardPage() {
 
                 <div className='programs-grid-list'>
                     {programs.map((prog, idx) => (
-                        <div className="program-card-premium" data-aos="fade-up" key={idx}>
+                        <div className="program-card-premium hard" data-aos="fade-up" key={idx}>
                             <div className="card-left">
                                 <div className="card-icon-mini hard-accent">
                                     <FaMicrochip />
@@ -211,7 +211,7 @@ export default function HardPage() {
 
                             <Link to={`/programs/${prog.slug}`} className="view-btn-link">
                                 <button className="action-view-btn hard-btn">
-                                    Master Code <FaArrowRight />
+                                    View Code <FaArrowRight />
                                 </button>
                             </Link>
                         </div>

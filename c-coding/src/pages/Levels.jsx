@@ -50,7 +50,7 @@ function LevelsList() {
             icon: <FaCode />,
             desc: "Master the fundamentals: basic syntax, operators, and control flow.",
             count: 22,
-            topics: ["Variables", "Operators", "I/O", "Conditionals", "Loops"],
+            topics: ["Basic Arithmetic", "Operators", "Conditionals", "Loops", "Functions", "Type Casting", "Character Handling"],
             color: "beginner"
         },
         {
@@ -59,7 +59,7 @@ function LevelsList() {
             icon: <FaLayerGroup />,
             desc: "Deep dive into modular programming, memory addresses, and data structures.",
             count: 41,
-            topics: ["Arrays", "Strings", "Recursion", "Functions", "Pointers", "Structures"],
+            topics: ["Arrays", "2D Arrays & Matrices", "Strings", "Recursion", "Pointers", "Switch Case", "Structures", "Number Logic", "Patterns"],
             color: "intermediate"
         },
         {
@@ -68,7 +68,7 @@ function LevelsList() {
             icon: <FaMicrochip />,
             desc: "Complex algorithmic logic and low-level system programming concepts.",
             count: 16,
-            topics: ["Advanced Pointers", "Matrices", "Bitwise", "File I/O", "Quizzes"],
+            topics: ["Advanced Functions", "Recursion", "Matrix Operations", "Number Systems", "Algorithms", "Problem Solving", "Menu-Based Programs"],
             color: "advanced"
         }
     ];

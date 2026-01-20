@@ -37,22 +37,40 @@ export default function ProgramPage() {
     const [program, setProgram] = useState(null);
     const [copied, setCopied] = useState(false);
     const navigate = useNavigate();
+    const [loading, setLoading] = useState(true);
 
     // Fetch program details and source code
     useEffect(() => {
         AOS.init({ duration: 1000, once: true });
+        setLoading(true); // start loading on slug change
         const allPrograms = [...easyPrograms, ...mediumPrograms, ...hardPrograms];
         const prog = allPrograms.find(p => p.slug === slug);
         setProgram(prog);
 
-        // Fetch source code from public directory
         if (prog) {
             fetch(`/code/${prog.path}`)
                 .then(res => res.text())
-                .then(setCode)
-                .catch(() => setCode("// Error: Source file not found in public directory."));
+                .then(text => {
+                    setCode(text);
+                    setLoading(false); // done loading
+                })
+                .catch(() => {
+                    setCode("// Error: Source file not found in public directory.");
+                    setLoading(false); // done loading even on error
+                });
+        } else {
+            setLoading(false); // program not found
         }
     }, [slug]);
+
+    // Render loading state
+    if (loading) {
+        return (
+            <div className="loading">
+                <p>Loading program...</p>
+            </div>
+        );
+    }
 
     // Handle copy to clipboard
     const handleCopy = () => {
@@ -60,9 +78,6 @@ export default function ProgramPage() {
         setCopied(true);
         setTimeout(() => setCopied(false), 2000);
     };
-
-    // Render loading state if program data is not yet available
-    if (!program) return <div className="loading">Loading Source...</div>;
 
     return (
         <div className='main-wrapper'>
@@ -75,7 +90,7 @@ export default function ProgramPage() {
                 {/* 1. Header & Navigation */}
                 <div className="program-header" data-aos="fade-down">
                     <button onClick={() => navigate(-1)} className="breadcrumb-back">
-                        <FaChevronLeft /> Back to {program.link.split('/').pop()}
+                        <FaChevronLeft className='icon' /> Back to {program.link.split('/').pop()}
                     </button>
                     <h1 className="program-title">{program.title}</h1>
                     <p className="program-desc">{program.description}</p>

@@ -15,6 +15,9 @@ import 'aos/dist/aos.css';
 // import use effect
 import { useEffect } from 'react';
 
+// import CodeCard
+import CodeCard from '../components/CodeCard';
+
 // Main Page Component
 export default function MainPage() {
     useEffect(() => {
@@ -40,8 +43,8 @@ function HeroSection() {
                     Master <span className="text-gradient">C Programming</span> Through Practice
                 </h1>
                 <p className="hero-subtitle">
-                    Dive into a curated collection of C programs categorized by logic complexity.
-                    From basic syntax to advanced algorithms, level up your coding skills step-by-step.
+                    Learn C programming by solving real problems — categorized by difficulty,
+                    logic patterns, and interview relevance. Write, run, and master C step by step.
                 </p>
 
                 <div className='cta-group'>
@@ -52,28 +55,16 @@ function HeroSection() {
                 </div>
             </div>
 
-            {/* Final Fixed Code Card */}
-            <div className="code-card" data-aos="fade-up" data-aos-delay="400">
-                <div className="code-header">
-                    <div className="dot-group">
-                        <span className="dot red"></span>
-                        <span className="dot yellow"></span>
-                        <span className="dot green"></span>
-                    </div>
-                    <span className="file-name">hello_world.c</span>
-                </div>
-                <div className="code-body">
-                    <pre>
-                        <code>
-                            <span className="keyword">#include</span> <span className="string">&lt;stdio.h&gt;</span>{'\n'}
-                            <span className="keyword">int</span> <span className="func">main</span>() {'{'}{'\n'}
-                            <span className="func">printf</span>(<span className="string">"Hello, C World!"</span>);{'\n'}
-                            <span className="keyword">return</span> 0;{'\n'}
-                            {'}'}
-                        </code>
-                    </pre>
-                </div>
-            </div>
+            {/* Code Card */}
+            <CodeCard filename="hello_world.c">
+                {`#include <stdio.h>
+
+int main() {
+  printf("Hello, C World!");
+  return 0;
+}`}
+            </CodeCard>
+
         </main>
     )
 }

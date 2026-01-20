@@ -200,7 +200,7 @@ export const programs = [
         description: "Swap values of two variables.",
         topics: ["Variables", "Swapping Logic", "Input"],
         slug: "swap-two-numbers",
-        path: "Level 1/swapping.c",
+        path: "Level 1/swaping.c",
         link: "/levels/easy",
         gitUrl: "https://github.com/TonyStark-19/C-Coding/blob/main/c-coding/public/code/Level%201/swaping.c",
     },
@@ -248,7 +248,7 @@ export default function EasyPage() {
 
                 <div className='programs-grid-list'>
                     {programs.map((prog, idx) => (
-                        <div className="program-card-premium" data-aos="fade-up" key={idx}>
+                        <div className="program-card-premium beginner" data-aos="fade-up" key={idx}>
                             <div className="card-left">
                                 {/* Added beginner-accent to icon box */}
                                 <div className="card-icon-mini beginner-accent">

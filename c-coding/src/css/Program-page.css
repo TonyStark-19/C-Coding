@@ -1,7 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+/* =========================
+   PROGRAM PAGE LAYOUT
+========================= */
 
 .program-display-container {
-    padding: 120px 20px 80px;
+    padding: 140px 20px 80px;
     max-width: 1100px;
     margin: 0 auto;
     position: relative;
@@ -9,7 +11,6 @@
 }
 
 .program-header {
-    text-align: left;
     margin-bottom: 40px;
 }
 
@@ -26,6 +27,11 @@
     padding: 0;
 }
 
+.breadcrumb-back:hover .icon {
+    transform: translateX(-3px);
+    transition: 0.2s;
+}
+
 .program-title {
     font-size: clamp(1.8rem, 4vw, 2.8rem);
     color: #fff;
@@ -38,7 +44,20 @@
     max-width: 800px;
 }
 
-/* Code Editor Frame */
+/* =========================
+   CODE EDITOR WINDOW
+========================= */
+
+.loading {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #0f172a;
+    font-size: 1.2rem;
+    color: #fff;
+}
+
 .editor-window {
     background: #0f172a;
     border: 1px solid rgba(255, 255, 255, 0.1);
@@ -87,6 +106,10 @@
     font-size: 13px;
 }
 
+/* =========================
+   COPY BUTTON
+========================= */
+
 .copy-btn {
     background: rgba(255, 255, 255, 0.05);
     border: 1px solid rgba(255, 255, 255, 0.1);
@@ -106,12 +129,19 @@
     color: #fff;
 }
 
+/* =========================
+   SYNTAX VIEW
+========================= */
+
 .syntax-wrapper {
     max-height: 700px;
     overflow-y: auto;
 }
 
-/* GitHub Action Button */
+/* =========================
+   FOOTER ACTIONS
+========================= */
+
 .footer-actions {
     margin-top: 30px;
     display: flex;
@@ -136,7 +166,10 @@
     color: #000;
 }
 
-/* Responsiveness */
+/* =========================
+   RESPONSIVE
+========================= */
+
 @media (max-width: 768px) {
     .program-display-container {
         padding-top: 100px;

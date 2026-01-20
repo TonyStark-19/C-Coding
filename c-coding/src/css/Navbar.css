@@ -1,6 +1,6 @@
 /* --- Navbar Base --- */
 .navbar {
-    position: sticky;
+    position: fixed;
     top: 0;
     width: 100%;
     z-index: 1000;
@@ -64,7 +64,7 @@
     text-decoration: none;
 }
 
-.star-btn button {
+.star-btn-link {
     background: rgba(255, 255, 255, 0.05);
     color: #ffffff;
     border: 1px solid rgba(255, 255, 255, 0.15);
@@ -73,16 +73,16 @@
     font-weight: 600;
     border-radius: 8px;
     cursor: pointer;
-    display: flex;
+    display: inline-flex;
     align-items: center;
     gap: 8px;
+    text-decoration: none;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.star-btn button:hover {
+.star-btn-link:hover {
     background: #ffffff;
     color: #020617;
-    /* Navy dark background */
     border-color: #ffffff;
     box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
 }
