@@ -51,7 +51,12 @@ function HeroSection() {
                     <Link to="/levels">
                         <button className='btn-primary'>Get Started</button>
                     </Link>
-                    <button className='btn-secondary'>View Roadmap</button>
+                    <a
+                        href="https://github.com/TonyStark-19/C-Coding/blob/main/CONTRIBUTING.md"
+                        target="_blank"
+                        rel="noopener noreferrer">
+                        <button className='btn-secondary'>Contribute on GitHub</button>
+                    </a>
                 </div>
             </div>
 

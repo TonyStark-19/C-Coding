@@ -153,6 +153,7 @@
 
 /* Responsive */
 @media (max-width: 768px) {
+
     .level-card-wide {
         flex-direction: column;
         align-items: flex-start;
@@ -160,13 +161,22 @@
         gap: 20px;
     }
 
-    .card-top {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 5px;
+    .prog-count {
+        position: absolute;
+        top: 20px;
+        right: 20px;
     }
 
     .level-card-wide:hover {
         transform: translateY(-5px);
+    }
+
+    .topics-wrapper {
+        margin-bottom: 60px;
+    }
+
+    .card-action {
+        left: 20px;
+        bottom: 20px;
     }
 }

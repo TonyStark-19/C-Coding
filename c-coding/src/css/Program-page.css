@@ -48,14 +48,13 @@
    CODE EDITOR WINDOW
 ========================= */
 
-.loading {
-    height: 100vh;
+.program-loading {
+    min-height: 60vh;
     display: flex;
-    justify-content: center;
     align-items: center;
-    background: #0f172a;
-    font-size: 1.2rem;
-    color: #fff;
+    justify-content: center;
+    color: #e5e7eb;
+    font-size: 1.1rem;
 }
 
 .editor-window {
@@ -171,6 +170,7 @@
 ========================= */
 
 @media (max-width: 768px) {
+
     .program-display-container {
         padding-top: 100px;
     }

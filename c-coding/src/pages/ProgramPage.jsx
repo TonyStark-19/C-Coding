@@ -63,15 +63,6 @@ export default function ProgramPage() {
         }
     }, [slug]);
 
-    // Render loading state
-    if (loading) {
-        return (
-            <div className="loading">
-                <p>Loading program...</p>
-            </div>
-        );
-    }
-
     // Handle copy to clipboard
     const handleCopy = () => {
         navigator.clipboard.writeText(code);
@@ -87,55 +78,65 @@ export default function ProgramPage() {
             <main className="program-display-container">
                 <BackToTop />
 
-                {/* 1. Header & Navigation */}
-                <div className="program-header" data-aos="fade-down">
-                    <button onClick={() => navigate(-1)} className="breadcrumb-back">
-                        <FaChevronLeft className='icon' /> Back to {program.link.split('/').pop()}
-                    </button>
-                    <h1 className="program-title">{program.title}</h1>
-                    <p className="program-desc">{program.description}</p>
-                </div>
-
-                {/* 2. Code Editor Window */}
-                <div className="editor-window" data-aos="fade-up">
-                    <div className="editor-toolbar">
-                        <div className="window-dots">
-                            <span className="dot red"></span>
-                            <span className="dot yellow"></span>
-                            <span className="dot green"></span>
-                            <span className="file-label">{program.path.split('/').pop()}</span>
+                {loading ? (
+                    <div className="program-loading">
+                        <p>Loading program...</p>
+                    </div>
+                ) : (
+                    <>
+                        {/* 1. Header & Navigation */}
+                        <div className="program-header" data-aos="fade-down">
+                            <button onClick={() => navigate(-1)} className="breadcrumb-back">
+                                <FaChevronLeft className='icon' /> Back to {program.link.split('/').pop()}
+                            </button>
+                            <h1 className="program-title">{program.title}</h1>
+                            <p className="program-desc">{program.description}</p>
                         </div>
-                        <button className="copy-btn" onClick={handleCopy}>
-                            {copied ? <><FaCheck /> Copied</> : <><FaRegCopy /> Copy Code</>}
-                        </button>
-                    </div>
 
-                    <div className="syntax-wrapper">
-                        <SyntaxHighlighter
-                            language="c"
-                            style={vscDarkPlus}
-                            customStyle={{
-                                margin: 0,
-                                padding: '25px',
-                                background: 'transparent',
-                                fontSize: '15px',
-                                lineHeight: '1.5'
-                            }}
-                        >
-                            {code}
-                        </SyntaxHighlighter>
-                    </div>
-                </div>
+                        {/* 2. Code Editor Window */}
+                        <div className="editor-window" data-aos="fade-up">
+                            <div className="editor-toolbar">
+                                <div className="window-dots">
+                                    <span className="dot red"></span>
+                                    <span className="dot yellow"></span>
+                                    <span className="dot green"></span>
+                                    <span className="file-label">
+                                        {program.path.split('/').pop()}
+                                    </span>
+                                </div>
+                                <button className="copy-btn" onClick={handleCopy}>
+                                    {copied ? <><FaCheck /> Copied</> : <><FaRegCopy /> Copy Code</>}
+                                </button>
+                            </div>
 
-                {/* 3. External Actions */}
-                <div className='footer-actions' data-aos="zoom-in">
-                    <button
-                        onClick={() => window.open(program.gitUrl, '_blank')}
-                        className="github-button"
-                    >
-                        <FaGithub /> View Raw Source on GitHub
-                    </button>
-                </div>
+                            <div className="syntax-wrapper">
+                                <SyntaxHighlighter
+                                    language="c"
+                                    style={vscDarkPlus}
+                                    customStyle={{
+                                        margin: 0,
+                                        padding: '25px',
+                                        background: 'transparent',
+                                        fontSize: '15px',
+                                        lineHeight: '1.5'
+                                    }}
+                                >
+                                    {code}
+                                </SyntaxHighlighter>
+                            </div>
+                        </div>
+
+                        {/* 3. External Actions */}
+                        <div className='footer-actions' data-aos="zoom-in">
+                            <button
+                                onClick={() => window.open(program.gitUrl, '_blank')}
+                                className="github-button"
+                            >
+                                <FaGithub /> View Raw Source on GitHub
+                            </button>
+                        </div>
+                    </>
+                )}
             </main>
 
             <Footer />
