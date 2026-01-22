@@ -17,6 +17,8 @@ Please follow the guidelines below to ensure a smooth contribution process.
 git clone https://github.com/TonyStark-19/C-Coding.git
 ```
 
+---
+
 ## 🎨 For UI Improvements
 If you want to improve the UI or user experience:
 
