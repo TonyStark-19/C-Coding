@@ -139,7 +139,7 @@ export default function ProgramPage() {
                 )}
             </main>
 
-            <Footer />
+            {loading ? null : <Footer />}
         </div>
     );
 }
