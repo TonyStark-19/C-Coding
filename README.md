@@ -1,4 +1,4 @@
-# 🌐 C Coding Website (Built with React.js!)
+# 🌐 C Coding — Learn & Practice C Programming (React.js)
 
 ![Repo Size](https://img.shields.io/github/repo-size/TonyStark-19/C-Coding?color=yellow)
 ![Stars](https://img.shields.io/github/stars/TonyStark-19/C-Coding?color=blue)
@@ -11,7 +11,13 @@
 ![Router](https://img.shields.io/badge/React%20Router-D00000?logo=reactrouter&logoColor=white)
 ![C-Language](https://img.shields.io/badge/C%20Programs-79-blue)
 
-Welcome to my **C Coding Website** – previously a C program repository, now transformed into a **fully responsive React.js website**. It showcases categorized C programs across three levels of complexity. Designed for learners to practice, revise, and improve their **C programming skills**.
+---
+
+### 🚀 About the Project
+
+C Coding is a fully responsive React.js-based learning platform designed to help beginners and intermediate learners practice, revise, and master C programming.
+
+Originally started as a simple C programs repository, this project has now evolved into a structured web platform that categorizes 79 C programs into three difficulty levels with clean UI, animations, and smooth navigation.
 
 ---
 
@@ -21,9 +27,13 @@ Welcome to my **C Coding Website** – previously a C program repository, now tr
 |------------|------------|
 | ![Screenshot 1](/c-coding/public/images/home.png) | ![Screenshot 2](/c-coding/public/images/Level.png) |
 
-| 🎯 Level Page | 💻 Code Page |
+| 🟢 Easy Level Page | 🟡 Medium Level Page |
 |------------|------------|
-| ![Screenshot 3](/c-coding/public/images/Specific.png) | ![Screenshot 4](/c-coding/public/images/Code.png) |
+| ![Screenshot 3](/c-coding/public/images/Easy.png) | ![Screenshot 4](/c-coding/public/images/Medium.png) |
+
+| 🔴 Hard Level Page | Code Page |
+|------------|------------|
+| ![Screenshot 3](/c-coding/public/images/Hard.png) | ![Screenshot 4](/c-coding/public/images/Code.png) |
 
 ---
 
@@ -72,7 +82,8 @@ The project is live and can be viewed here: [C-Coding](https://c-programming-six
 
 - **Framework:** React.js (CRA - Create React App)
 - **Routing:** React Router DOM
-- **Styling:** CSS3 + AOS animations
+- **Styling:** CSS3
+- **Animations:** AOS (Animate On Scroll)
 - **Logic:** React Hooks (`useEffect`)
 - **Icons by React icons**
 - **Deployment:** Vercel
@@ -86,15 +97,17 @@ The project is live and can be viewed here: [C-Coding](https://c-programming-six
 ![Level 2](https://img.shields.io/badge/Intermediate-41-yellow)
 ![Level 3](https://img.shields.io/badge/Advanced-16-red)
 
-### 🟢 Level 1: Beginner
-Basic syntax and logic (e.g., addition, area, swapping).
+### 🟢 Beginner (22 Programs)
+Basic syntax and fundamental logic
+Examples: arithmetic operations, conditionals, swapping, tables
 
 ### 🟡 Level 2: Intermediate
-Arrays, loops, conditionals, strings, and more.
+Moderate logic involving arrays, strings, loops, recursion, and structures
 
 ### 🔴 Level 3: Advanced
-Recursion, matrices, advanced patterns, and more.
+Advanced concepts such as matrices, recursion-heavy problems, quizzes, and number systems
 
+> 📌 All programs were written during my personal C learning journey.
 ---
 
 ## 📁 Repository Structure
@@ -240,8 +253,6 @@ If you're currently learning **C programming** and have written some **C program
 3. Make sure your code is clean, commented, and placed in the correct category (Beginner / Intermediate / Advanced).
 
 This project is open to learners, so don't hesitate to participate and showcase your contributions!
-
-## 👇 Contribution Steps
 
 > Please read the CONTRIBUTING.md before you start.
 
