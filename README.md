@@ -45,15 +45,21 @@ The project is live and can be viewed here: [C-Coding](https://c-programming-six
 
 ## 🏗️ Website Structure
 
-- **🏠 Home Page**  
+- **🏠 Home Page**
+  
   - Welcome screen with intro and animations.
-- **🧱 Levels Page**  
+
+- **🧱 Levels Page**
+  
   - Displays **three level boxes** – Beginner, Intermediate, and Advanced.  
   - Each box lists topics under that level.
-- **📄 Level-Wise Code Pages**  
+  
+- **📄 Level-Wise Code Pages**
+
   - Each level box navigates to its own detailed page.  
   - Every topic is displayed in a card/box with a **"View Code" button**.  
   - Clicking the button opens the **respective program/code page**.
+
 
 > 🔁 Built with smooth **AOS animations** and navigation powered by **React Router**.
 
