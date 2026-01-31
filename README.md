@@ -56,12 +56,16 @@ The project is live and can be viewed here: [C-Coding](https://c-programming-six
   
 - **📄 Level-Wise Code Pages**
 
-  - Each level box navigates to its own detailed page.  
+  - Each level box navigates to its its own detailed page.  
   - Every topic is displayed in a card/box with a **"View Code" button**.  
   - Clicking the button opens the **respective program/code page**.
 
+- **💻 Program Page**
 
-> 🔁 Built with smooth **AOS animations** and navigation powered by **React Router**.
+  - Displays the selected program with proper formatting.  
+  - Code is rendered using **Prism React Syntax Highlighter** for clean syntax highlighting.  
+  - Includes a **"Copy Code" button** for quick copying.  
+  - Provides a **"View Raw on GitHub" button** to access the original source file.
 
 ---
 
@@ -124,28 +128,30 @@ Advanced concepts such as matrices, recursion-heavy problems, quizzes, and numbe
 
 #### 🔹 Basic Programs
 
-- [ ] **(a+b)^2** – Simple (a+b)^2 calculation  
-- [ ] **All arithmetic operations** – Perform all basic operations  
-- [ ] **Area of circle** – Calculate area of a circle  
-- [ ] **Area of rectangle** – Calculate area of a rectangle  
-- [ ] **Area of square** – Calculate area of a square  
-- [ ] **Average (float)** – Average using float  
-- [ ] **Cube of a number** – Cube using simple logic  
-- [ ] **Cube using pow()** – Cube using pow function  
-- [ ] **License eligibility** – Check if eligible for a driving license  
-- [ ] **Find your age** – Calculate age based on birth year  
-- [ ] **Average (int)** – Average using integer  
-- [ ] **Odd or Even** – Check if a number is odd or even  
-- [ ] **Pass or Fail** – Determine pass/fail status  
-- [ ] **Pass or Fail (ternary)** – Using ternary operator  
-- [ ] **Quotient and Remainder** – Basic division results  
-- [ ] **Rectangle perimeter** – Calculate perimeter  
-- [ ] **Remainder only** – Show remainder  
-- [ ] **Smallest number** – Compare two numbers  
-- [ ] **Sum calculation** – Simple addition  
-- [ ] **Swapping** – Swap two numbers  
-- [ ] **Multiplication table** – Print table of a number  
-- [ ] **Upper or Lower case** – Check case of a character
+| No. | Project                       | Description                                 |
+| --- | ----------------------------- | ------------------------------------------- |
+| 1   | **(a+b)^2**                   | Simple (a+b)^2 calculation                  |
+| 2   | **All arithmetic operations** | Perform all basic arithmetic operations     |
+| 3   | **Area of circle**            | Calculate area of a circle                  |
+| 4   | **Area of rectangle**         | Calculate area of a rectangle               |
+| 5   | **Area of square**            | Calculate area of a square                  |
+| 6   | **Average (float)**           | Find average using float values             |
+| 7   | **Cube of a number**          | Calculate cube using simple logic           |
+| 8   | **Cube using pow()**          | Calculate cube using `pow()` function       |
+| 9   | **License eligibility**       | Check eligibility for a driving license     |
+| 10  | **Find your age**             | Calculate age from birth year               |
+| 11  | **Average (int)**             | Find average using integers                 |
+| 12  | **Odd or Even**               | Check whether a number is odd or even       |
+| 13  | **Pass or Fail**              | Determine pass or fail status               |
+| 14  | **Pass or Fail (ternary)**    | Pass/fail using ternary operator            |
+| 15  | **Quotient and Remainder**    | Display quotient and remainder              |
+| 16  | **Rectangle perimeter**       | Calculate perimeter of a rectangle          |
+| 17  | **Remainder only**            | Display only the remainder                  |
+| 18  | **Smallest number**           | Find the smallest of two numbers            |
+| 19  | **Sum calculation**           | Simple addition of numbers                  |
+| 20  | **Swapping**                  | Swap two numbers                            |
+| 21  | **Multiplication table**      | Print multiplication table of a number      |
+| 22  | **Upper or Lower case**       | Check if a character is uppercase/lowercase |
 
 ---
 
@@ -155,47 +161,49 @@ Advanced concepts such as matrices, recursion-heavy problems, quizzes, and numbe
 
 #### 🔹 More Than Basic Programs
 
-- [ ] **2D Array** – Print multiplication tables using 2D array  
-- [ ] **Array (ascending order)** – Sort an array in ascending order  
-- [ ] **Matrix operations** – Basic matrix implementation  
-- [ ] **Combine strings** – Concatenate two strings  
-- [ ] **Days switch-case** – Day output using switch case  
-- [ ] **Details input** – General input program  
-- [ ] **Digits sum** – Sum of digits of a number  
-- [ ] **Discount check 1** – First version of discount logic  
-- [ ] **Discount check 2** – Second version of discount logic  
-- [ ] **Factorial (loop)** – Factorial using loops  
-- [ ] **Factorial (recursion)** – Factorial using recursion  
-- [ ] **Factors of a number** – Print all factors  
-- [ ] **GCD** – Greatest Common Divisor  
-- [ ] **Grades** – Grade categorization logic  
-- [ ] **Insert into array** – Insert element in array  
-- [ ] **Is digit or not** – Check if input is a digit  
-- [ ] **Language output** – Output based on input language  
-- [ ] **Largest in array** – Find largest element  
-- [ ] **Multiple results** – Perform multiple calculations  
-- [ ] **Sum of natural numbers** – Using loop  
-- [ ] **Sum (recursion)** – Natural sum using recursion  
-- [ ] **Odd input stopper** – Input until odd number entered  
-- [ ] **Palindrome check** – Check if a number is palindrome  
-- [ ] **Patterns** – Print square pattern  
-- [ ] **Petrol price calculator** – Price calculation  
-- [ ] **Pointer syntax** – Example of pointer usage  
-- [ ] **Power function** – Calculate x^n  
-- [ ] **Prime in range** – Print prime numbers in range  
-- [ ] **Prime check** – Check if number is prime  
-- [ ] **Remove spaces** – Remove spaces from string  
-- [ ] **Reverse array** – Reverse elements of array  
-- [ ] **Simple Interest** – Calculate simple interest  
-- [ ] **Specific operator** – Use switch for specific operations  
-- [ ] **Square root** – Calculate square root  
-- [ ] **Sum of matrices** – Add two matrices  
-- [ ] **Temperature conversion** – Celsius to Fahrenheit  
-- [ ] **Total price** – Price calculation of items  
-- [ ] **Transpose of matrix** – Matrix transpose  
-- [ ] **Uppercase conversion** – Convert to uppercase  
-- [ ] **Various input (struct)** – Input using structure  
-- [ ] **Vowel count** – Count vowels in string
+| No. | Project                     | Description                                |
+| --- | --------------------------- | ------------------------------------------ |
+| 1   | **2D Array**                | Print multiplication tables using 2D array |
+| 2   | **Array (ascending order)** | Sort an array in ascending order           |
+| 3   | **Matrix operations**       | Basic matrix implementation                |
+| 4   | **Combine strings**         | Concatenate two strings                    |
+| 5   | **Days switch-case**        | Display day using switch case              |
+| 6   | **Details input**           | General input handling program             |
+| 7   | **Digits sum**              | Sum of digits of a number                  |
+| 8   | **Discount check 1**        | First version of discount logic            |
+| 9   | **Discount check 2**        | Second version of discount logic           |
+| 10  | **Factorial (loop)**        | Factorial calculation using loops          |
+| 11  | **Factorial (recursion)**   | Factorial calculation using recursion      |
+| 12  | **Factors of a number**     | Print all factors of a number              |
+| 13  | **GCD**                     | Find Greatest Common Divisor               |
+| 14  | **Grades**                  | Grade categorization logic                 |
+| 15  | **Insert into array**       | Insert an element into an array            |
+| 16  | **Is digit or not**         | Check whether input is a digit             |
+| 17  | **Language output**         | Output based on selected language          |
+| 18  | **Largest in array**        | Find largest element in an array           |
+| 19  | **Multiple results**        | Perform multiple calculations              |
+| 20  | **Sum of natural numbers**  | Sum natural numbers using loop             |
+| 21  | **Sum (recursion)**         | Natural number sum using recursion         |
+| 22  | **Odd input stopper**       | Take input until an odd number is entered  |
+| 23  | **Palindrome check**        | Check if a number is a palindrome          |
+| 24  | **Patterns**                | Print square pattern                       |
+| 25  | **Petrol price calculator** | Calculate petrol price                     |
+| 26  | **Pointer syntax**          | Example demonstrating pointer usage        |
+| 27  | **Power function**          | Calculate xⁿ                               |
+| 28  | **Prime in range**          | Print prime numbers within a range         |
+| 29  | **Prime check**             | Check whether a number is prime            |
+| 30  | **Remove spaces**           | Remove spaces from a string                |
+| 31  | **Reverse array**           | Reverse elements of an array               |
+| 32  | **Simple Interest**         | Calculate simple interest                  |
+| 33  | **Specific operator**       | Use switch case for specific operations    |
+| 34  | **Square root**             | Calculate square root                      |
+| 35  | **Sum of matrices**         | Add two matrices                           |
+| 36  | **Temperature conversion**  | Convert Celsius to Fahrenheit              |
+| 37  | **Total price**             | Calculate total price of items             |
+| 38  | **Transpose of matrix**     | Find transpose of a matrix                 |
+| 39  | **Uppercase conversion**    | Convert string to uppercase                |
+| 40  | **Various input (struct)**  | Take input using structures                |
+| 41  | **Vowel count**             | Count vowels in a string                   |
 
 ---
 
@@ -205,22 +213,24 @@ Advanced concepts such as matrices, recursion-heavy problems, quizzes, and numbe
 
 #### 🔹 Advanced Programs
 
-- [ ] **Armstrong number** – Check if a number is Armstrong  
-- [ ] **Calculator v1** – Calculator using functions  
-- [ ] **Determinant** – Find determinant of matrix  
-- [ ] **Fibonacci (recursion)** – Fibonacci using recursion  
-- [ ] **Fibonacci (function)** – Fibonacci using function call  
-- [ ] **Highest char frequency** – Find most frequent character  
-- [ ] **Inverse of matrix** – Inverse of a matrix  
-- [ ] **Matrix multiplication (logic)** – Using loops  
-- [ ] **Matrix multiplication (arrays)** – Using arrays  
-- [ ] **Number system converter** – Decimal to other base conversions  
-- [ ] **Quiz v1** – Quiz logic version 1  
-- [ ] **Quiz v2** – Quiz logic version 2  
-- [ ] **Quiz v3** – Quiz logic version 3  
-- [ ] **Specific area calculator** – Area based on shape  
-- [ ] **Specific operations (switch)** – Menu-based operations  
-- [ ] **Upper to lowercase (function)** – Convert using function
+| No. | Project                            | Description                                   |
+| --- | ---------------------------------- | --------------------------------------------- |
+| 1   | **Armstrong number**               | Check whether a number is an Armstrong number |
+| 2   | **Calculator v1**                  | Calculator implementation using functions     |
+| 3   | **Determinant**                    | Find determinant of a matrix                  |
+| 4   | **Fibonacci (recursion)**          | Generate Fibonacci series using recursion     |
+| 5   | **Fibonacci (function)**           | Fibonacci series using function calls         |
+| 6   | **Highest char frequency**         | Find the most frequent character in a string  |
+| 7   | **Inverse of matrix**              | Calculate inverse of a matrix                 |
+| 8   | **Matrix multiplication (logic)**  | Matrix multiplication using loops             |
+| 9   | **Matrix multiplication (arrays)** | Matrix multiplication using arrays            |
+| 10  | **Number system converter**        | Convert decimal to other number systems       |
+| 11  | **Quiz v1**                        | Quiz program – version 1 logic                |
+| 12  | **Quiz v2**                        | Quiz program – version 2 logic                |
+| 13  | **Quiz v3**                        | Quiz program – version 3 logic                |
+| 14  | **Specific area calculator**       | Calculate area based on selected shape        |
+| 15  | **Specific operations (switch)**   | Menu-driven operations using switch case      |
+| 16  | **Upper to lowercase (function)**  |                                               |
 
 ---
 
@@ -258,9 +268,9 @@ If you're currently learning **C programming** and have written some **C program
 2. Once the issue is **reviewed and approved**, you can **add your program** to the appropriate level on the website via a pull request.
 3. Make sure your code is clean, commented, and placed in the correct category (Beginner / Intermediate / Advanced).
 
-This project is open to learners, so don't hesitate to participate and showcase your contributions!
+> This project is open to learners, so don't hesitate to participate and showcase your contributions!
 
-> Please read the CONTRIBUTING.md before you start.
+Please read the **[CONTRIBUTING.md](CONTRIBUTING.md)** before you start.
 
 ---
 
