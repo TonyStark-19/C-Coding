@@ -24,10 +24,13 @@ If you want to improve the UI or user experience:
 
 - Make changes to relevant UI components.
 - Ensure the design is:
+
   - Responsive
   - Consistent with the existing theme
+
 - Test your changes locally before submitting.
 - Create a Pull Request (PR) with a clear description of:
+
   - What was changed
   - Why it was changed Make your changes to the UI components.
 
@@ -38,16 +41,21 @@ If you’re contributing a new C program:
 
 - Navigate to the `public/code` directory.
 - You’ll find level-wise folders:
+
   - `level-1` → Beginner
   - `level-2` → Intermediate
   - `level-3` → Advanced
+
 - Add your program to the appropriate folder based on difficulty.
 - Follow these rules:
+
   - Use meaningful file names
   - Add proper comments for readability
+
   - Ensure the program runs without errors
 - Before pushing, compile and run your program.
 - Push both:
+
   - `.c` source file
   - `.exe` executable file
 
