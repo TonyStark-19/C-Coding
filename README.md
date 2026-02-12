@@ -230,7 +230,8 @@ Advanced concepts such as matrices, recursion-heavy problems, quizzes, and numbe
 | 13  | **Quiz v3**                        | Quiz program – version 3 logic                |
 | 14  | **Specific area calculator**       | Calculate area based on selected shape        |
 | 15  | **Specific operations (switch)**   | Menu-driven operations using switch case      |
-| 16  | **Upper to lowercase (function)**  |                                               |
+| 16  | **Upper to lowercase (function)** | Convert uppercase characters to lowercase using function |
+
 
 ---
 
