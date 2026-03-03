@@ -17,7 +17,7 @@
 .levels-header h1 {
     font-size: clamp(2rem, 5vw, 3.5rem);
     color: #fff;
-    margin-bottom: 10px;
+    margin-bottom: -5px;
 }
 
 .levels-header p {
@@ -142,7 +142,7 @@
     padding: 8px 20px;
     border-radius: 8px;
     cursor: pointer;
-    font-weight: 500;
+    font-weight: 600;
     transition: all 0.2s;
 }
 

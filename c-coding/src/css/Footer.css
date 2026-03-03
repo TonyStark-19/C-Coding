@@ -1,8 +1,7 @@
 /* Footer Styles */
 .footer {
     background: var(--bg-dark);
-    /* Uses the variable from your App.css */
-    padding: 80px 0 30px;
+    padding: 60px 0 30px;
     border-top: 1px solid rgba(255, 255, 255, 0.05);
     color: #ffffff;
     position: relative;
@@ -32,7 +31,6 @@
 .footer-content {
     display: grid;
     grid-template-columns: 2fr 1fr 1fr;
-    /* Better distribution than space-evenly */
     gap: 40px;
     margin-bottom: 60px;
 }
@@ -49,7 +47,6 @@
 
 .footer-section p {
     color: #94a3b8;
-    /* Dimmed text for better hierarchy */
     line-height: 1.6;
     font-size: 15px;
     max-width: 400px;
@@ -76,7 +73,6 @@
 
 .footer-section a:hover {
     color: #60a5fa;
-    /* Glows blue on hover */
     transform: translateX(3px);
 }
 
@@ -132,7 +128,7 @@
     }
 
     .footer-bottom p {
-    color: #64748b;
-    margin: 10px 0;
-}
+        color: #64748b;
+        margin: 10px 0;
+    }
 }

@@ -41,7 +41,7 @@ export function Footer() {
                             </li>
                             <li>
                                 <a href='https://youtu.be/irqbmMNs2Bo' target="_blank" rel="noreferrer">
-                                    <FaYoutube className="footer-icon" /> C Video Guide
+                                    <FaYoutube className="footer-icon" /> Tutorial for C language
                                 </a>
                             </li>
                         </ul>

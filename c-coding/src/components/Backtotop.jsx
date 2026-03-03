@@ -1,7 +1,13 @@
+// import use state and use effect
 import { useState, useEffect } from "react";
+
+// import icons
 import { FaAngleDoubleUp } from "react-icons/fa";
+
+// import css
 import '../css/Backtotop.css';
 
+// back to top button
 export function BackToTop() {
     const [visible, setVisible] = useState(false);
 

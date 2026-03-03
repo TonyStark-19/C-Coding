@@ -9,9 +9,10 @@ import MediumPage from './Levels/MediumPage';
 import HardPage from './Levels/HardPage';
 import ProgramPage from './pages/ProgramPage';
 
-// scroll to top
+// scroll to top on route change
 import ScrollToTop from './components/ScrollToTop';
 
+// routing component
 export default function App() {
     return (
         <Router>

@@ -7,6 +7,7 @@ import { Link } from 'react-router-dom';
 // import css
 import '../css/Navbar.css';
 
+// navbar component
 export function Navbar() {
     return (
         <nav className='navbar'>

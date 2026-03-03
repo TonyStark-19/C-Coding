@@ -231,16 +231,23 @@ export default function EasyPage() {
     }, []);
 
     return (
-        <div className='main-wrapper'>
-            {/* Added blue-glow class here */}
-            <div className="gradient-bg blue-glow"></div>
+        <div className='main-wrapper'
+            // background grid pattern
+            style={{
+                background: "#020617",
+                backgroundImage: `
+                linear-gradient(to right, rgba(71,85,105,0.15) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(71,85,105,0.15) 1px, transparent 1px),
+                radial-gradient(circle at 50% 60%, rgba(236,72,153,0.15) 0%, rgba(168,85,247,0.05) 40%, transparent 70%)`,
+                backgroundSize: "40px 40px, 40px 40px, 100% 100%",
+                backgroundAttachment: "fixed"
+            }}>
             <Navbar />
 
             <div className='easy-level-container'>
                 <BackToTop />
 
                 <header className="level-header-title" data-aos="fade-down">
-                    {/* Added blue class to badge */}
                     <span className="level-badge blue">Level 01</span>
                     <h1>Beginner Fundamentals</h1>
                     <p>Foundational C programs focusing on syntax, variables, and basic logic.</p>
@@ -250,7 +257,6 @@ export default function EasyPage() {
                     {programs.map((prog, idx) => (
                         <div className="program-card-premium beginner" data-aos="fade-up" key={idx}>
                             <div className="card-left">
-                                {/* Added beginner-accent to icon box */}
                                 <div className="card-icon-mini beginner-accent">
                                     <FaCode />
                                 </div>
@@ -267,7 +273,6 @@ export default function EasyPage() {
                             </div>
 
                             <Link to={`/programs/${prog.slug}`} className="view-btn-link">
-                                {/* Added beginner-btn class */}
                                 <button className="action-view-btn beginner-btn">
                                     View Code <FaArrowRight />
                                 </button>
