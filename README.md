@@ -90,13 +90,15 @@ The project is live and can be viewed here: [C-Coding](https://c-programming-six
 ![Icons](https://img.shields.io/badge/Icons-React%20Icons-yellow)
 ![Vercel](https://img.shields.io/badge/Deployed%20On-Vercel-black?logo=vercel)
 
-- **Framework:** React.js (CRA - Create React App)
-- **Routing:** React Router DOM
-- **Styling:** CSS3
-- **Animations:** AOS (Animate On Scroll)
-- **Logic:** React Hooks (`useEffect`)
-- **Icons by React icons**
-- **Deployment:** Vercel
+| Category | Technology / Library |
+| :--- | :--- |
+| **Framework** | React.js (Create React App) |
+| **Routing** | React Router DOM |
+| **Styling** | CSS3 |
+| **Animations** | AOS (Animate On Scroll) |
+| **Logic** | React Hooks (`useEffect`) |
+| **Icons** | React Icons |
+| **Deployment** | Vercel |
 
 ---
 
