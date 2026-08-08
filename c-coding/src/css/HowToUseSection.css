@@ -1,0 +1,186 @@
+/* ==========================================================================
+   HOW TO USE SECTION
+   ========================================================================== */
+
+.how-to-use-section {
+    padding: 100px 24px;
+    position: relative;
+    z-index: 2;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.how-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header */
+.how-header {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 60px;
+}
+
+.alt-badge {
+    background: rgba(168, 85, 247, 0.1) !important;
+    border-color: rgba(168, 85, 247, 0.25) !important;
+    color: #a855f7 !important;
+}
+
+.how-title {
+    font-size: clamp(2rem, 4vw, 3.25rem);
+    font-weight: 800;
+    color: #f8fafc;
+    line-height: 1.25;
+    letter-spacing: -0.02em;
+    margin-bottom: 16px;
+}
+
+.how-subtitle {
+    color: #94a3b8;
+    font-size: 1.075rem;
+    max-width: 640px;
+    line-height: 1.65;
+}
+
+/* ==========================================================================
+   STEPS GRID
+   ========================================================================== */
+
+.steps-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    margin-bottom: 48px;
+}
+
+.step-card {
+    background: rgba(15, 23, 42, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 18px;
+    padding: 28px 24px;
+    backdrop-filter: blur(12px);
+    position: relative;
+    transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.step-card:hover {
+    background: rgba(15, 23, 42, 0.85);
+    border-color: rgba(168, 85, 247, 0.3);
+    transform: translateY(-4px);
+}
+
+.step-card-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.step-number {
+    font-size: 1.25rem;
+    font-family: var(--font-mono, monospace);
+    font-weight: 800;
+    color: #a855f7;
+    background: rgba(168, 85, 247, 0.1);
+    border: 1px solid rgba(168, 85, 247, 0.2);
+    padding: 4px 10px;
+    border-radius: 8px;
+}
+
+.step-icon-box {
+    width: 42px;
+    height: 42px;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    color: #60a5fa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    transition: transform 0.3s ease;
+}
+
+.step-card:hover .step-icon-box {
+    transform: scale(1.1);
+    background: rgba(59, 130, 246, 0.12);
+    border-color: rgba(59, 130, 246, 0.3);
+}
+
+.step-title {
+    color: #f8fafc;
+    font-size: 1.15rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    line-height: 1.35;
+}
+
+.step-desc {
+    color: #94a3b8;
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+/* ==========================================================================
+   PRACTICE BANNER
+   ========================================================================== */
+
+.practice-banner {
+    background: linear-gradient(135deg, rgba(168, 85, 247, 0.08) 0%, rgba(59, 130, 246, 0.08) 100%);
+    border: 1px solid rgba(168, 85, 247, 0.2);
+    border-radius: 16px;
+    padding: 20px 28px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    backdrop-filter: blur(8px);
+}
+
+.banner-badge {
+    background: rgba(168, 85, 247, 0.2);
+    color: #f8fafc;
+    font-size: 0.825rem;
+    font-weight: 700;
+    padding: 6px 14px;
+    border-radius: 8px;
+    white-space: nowrap;
+}
+
+.practice-banner p {
+    color: #cbd5e1;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* ==========================================================================
+   RESPONSIVE DESIGN
+   ========================================================================== */
+
+@media (max-width: 1024px) {
+
+    .steps-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 640px) {
+
+    .how-to-use-section {
+        padding: 60px 18px;
+    }
+
+    .steps-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .practice-banner {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+}

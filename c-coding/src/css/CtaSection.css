@@ -1,0 +1,134 @@
+/* ==========================================================================
+   CALL TO ACTION (CTA) SECTION
+   ========================================================================== */
+
+.cta-section {
+    padding: 40px 24px 80px;
+    position: relative;
+    z-index: 2;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.cta-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    position: relative;
+}
+
+/* Card Box */
+.cta-box {
+    border-radius: 24px;
+    padding: 60px 40px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+}
+
+/* Badge */
+.cta-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 16px;
+    background: rgba(59, 130, 246, 0.1);
+    border: 1px solid rgba(59, 130, 246, 0.25);
+    border-radius: 9999px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #60a5fa;
+    margin-bottom: 24px;
+}
+
+.badge-icon {
+    font-size: 0.95rem;
+}
+
+/* Title & Description */
+.cta-title {
+    font-size: clamp(2.25rem, 4.5vw, 3.25rem);
+    font-weight: 800;
+    color: #f8fafc;
+    line-height: 1.2;
+    letter-spacing: -0.03em;
+    margin-bottom: 20px;
+}
+
+.cta-desc {
+    color: #94a3b8;
+    font-size: 1.075rem;
+    line-height: 1.7;
+    max-width: 680px;
+    margin-bottom: 36px;
+}
+
+/* Button & Actions */
+.cta-actions {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 28px;
+}
+
+.cta-btn-main {
+    padding: 16px 32px;
+    font-size: 1rem;
+    border-radius: 12px;
+    gap: 12px;
+}
+
+.btn-arrow {
+    font-size: 1.05rem;
+    transition: transform 0.25s ease;
+}
+
+.cta-btn-main:hover .btn-arrow {
+    transform: translateX(4px);
+}
+
+/* Footer Note */
+.cta-footer-note {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.875rem;
+    color: #64748b;
+    font-weight: 500;
+}
+
+.heart-icon {
+    color: #ef4444;
+    font-size: 0.95rem;
+}
+
+/* ==========================================================================
+   RESPONSIVE DESIGN
+   ========================================================================== */
+
+@media (max-width: 768px) {
+
+    .cta-section {
+        padding: 60px 18px 80px;
+    }
+
+    .cta-box {
+        padding: 40px 20px;
+    }
+
+    .cta-btn-main {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .cta-section {
+        padding: 30px 18px;
+    }
+
+    .heart-icon {
+        display: none;
+    }
+}

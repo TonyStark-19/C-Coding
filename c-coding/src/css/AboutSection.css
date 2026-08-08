@@ -1,0 +1,196 @@
+/* ==========================================================================
+   ABOUT SECTION LAYOUT
+   ========================================================================== */
+
+.about-section {
+    padding: 100px 24px;
+    position: relative;
+    z-index: 2;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.about-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 60px;
+    align-items: center;
+}
+
+/* Badge */
+.section-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 14px;
+    background: rgba(59, 130, 246, 0.1);
+    border: 1px solid rgba(59, 130, 246, 0.25);
+    border-radius: 9999px;
+    font-size: 0.825rem;
+    font-weight: 600;
+    color: #60a5fa;
+    margin-bottom: 20px;
+}
+
+.badge-icon {
+    font-size: 0.9rem;
+}
+
+/* Title & Content */
+.about-title {
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 800;
+    color: #f8fafc;
+    line-height: 1.25;
+    letter-spacing: -0.02em;
+    margin-bottom: 24px;
+}
+
+.story-content p {
+    color: #94a3b8;
+    font-size: 1.05rem;
+    line-height: 1.7;
+    margin-bottom: 18px;
+}
+
+.story-content strong {
+    color: #f8fafc;
+}
+
+.story-content em {
+    color: #3b82f6;
+    font-style: normal;
+    font-weight: 500;
+}
+
+/* Quote Box */
+.quote-box {
+    position: relative;
+    background: rgba(15, 23, 42, 0.6);
+    border-left: 3px solid #3b82f6;
+    border-radius: 0 12px 12px 0;
+    padding: 18px 24px;
+    margin: 24px 0;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #f8fafc;
+    backdrop-filter: blur(8px);
+}
+
+.quote-symbol {
+    color: #3b82f6;
+    font-size: 1.5rem;
+    margin-right: 6px;
+    line-height: 0;
+}
+
+/* ==========================================================================
+   RIGHT HIGHLIGHTS GRID
+   ========================================================================== */
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.about-card {
+    background: rgba(15, 23, 42, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    padding: 24px;
+    backdrop-filter: blur(12px);
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.about-card:hover {
+    background: rgba(15, 23, 42, 0.8);
+    border-color: rgba(59, 130, 246, 0.3);
+    transform: translateY(-4px);
+    box-shadow: 0 12px 30px -10px rgba(0, 0, 0, 0.5);
+}
+
+.card-icon-wrap {
+    width: 44px;
+    height: 44px;
+    border-radius: 10px;
+    background: rgba(59, 130, 246, 0.1);
+    border: 1px solid rgba(59, 130, 246, 0.2);
+    color: #60a5fa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    margin-bottom: 16px;
+}
+
+.card-info h3 {
+    color: #f8fafc;
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 6px;
+}
+
+.card-info p {
+    color: #94a3b8;
+    font-size: 0.875rem;
+    line-height: 1.5;
+}
+
+/* Banner Card */
+.about-banner-card {
+    grid-column: span 2;
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(168, 85, 247, 0.1) 100%);
+    border: 1px solid rgba(59, 130, 246, 0.25);
+    border-radius: 16px;
+    padding: 20px 24px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.banner-icon {
+    font-size: 1.6rem;
+    color: #10b981;
+    flex-shrink: 0;
+}
+
+.banner-text h4 {
+    color: #f8fafc;
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 2px;
+}
+
+.banner-text p {
+    color: #94a3b8;
+    font-size: 0.85rem;
+}
+
+/* ==========================================================================
+   RESPONSIVE DESIGN
+   ========================================================================== */
+
+@media (max-width: 1050px) {
+
+    .about-container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+}
+
+@media (max-width: 580px) {
+
+    .about-section {
+        padding: 60px 18px;
+    }
+
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about-banner-card {
+        grid-column: span 1;
+    }
+}
