@@ -1,19 +1,49 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500;600&display=swap');
 
 /* --- Global Variables & Theme Setup --- */
 :root {
-    --accent: #60a5fa;
-    --accent-purple: #a855f7;
-    --bg-dark: #020617;
-    --editor-bg: #0f172a;
+    --primary: #3b82f6;
+    --primary-glow: rgba(59, 130, 246, 0.25);
+    --accent: #a855f7;
+    --accent-glow: rgba(168, 85, 247, 0.2);
+
+    --bg-dark: #030712;
+    --bg-card: rgba(15, 23, 42, 0.65);
+    --editor-bg: #090d16;
+
     --glass: rgba(255, 255, 255, 0.03);
-    --border: rgba(255, 255, 255, 0.1);
-    --text-primary: #ffffff;
+    --glass-hover: rgba(255, 255, 255, 0.07);
+    --border: rgba(255, 255, 255, 0.08);
+    --border-hover: rgba(255, 255, 255, 0.18);
+
+    --text-primary: #f8fafc;
     --text-secondary: #94a3b8;
-    --glow-color: rgba(96, 165, 250, 0.15);
+    --text-muted: #64748b;
+
+    --radius-sm: 8px;
+    --radius-md: 12px;
+    --radius-lg: 18px;
+
+    --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    --font-mono: 'Fira Code', 'JetBrains Mono', Consolas, monospace;
 }
 
-/* --- Layout Wrapper --- */
+/* --- Reset & Global Base --- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-sans);
+    background-color: var(--bg-dark);
+    color: var(--text-primary);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* --- Layout Wrapper (Base background for entire app) --- */
 .main-wrapper {
     background-color: var(--bg-dark);
     min-height: 100vh;
@@ -22,136 +52,236 @@
     overflow-x: hidden;
 }
 
-/* --- Hero Section Layout --- */
+/* --- Hero Section Layout (Isolated Background Grid & Radial Glows Pushed Down) --- */
 .hero-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 160px 20px 100px;
+    padding: 140px 24px 100px;
     text-align: center;
+    width: 100%;
     position: relative;
-    z-index: 1;
+    z-index: 2;
+
+    /* Layer 1: Developer Grid Lines */
+    /* Layer 2, 3, 4: Multi-layered Radial Glows pushed lower down */
+    background-image:
+        linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+        radial-gradient(circle at 50% 130%, rgba(70, 85, 110, 0.5) 0%, transparent 60%),
+        radial-gradient(circle at 50% 130%, rgba(99, 102, 241, 0.4) 0%, transparent 70%),
+        radial-gradient(circle at 50% 130%, rgba(181, 184, 208, 0.3) 0%, transparent 80%);
+
+    /* Grid Tile Dimensions */
+    background-size: 40px 40px, 40px 40px, 100% 100%, 100% 100%, 100% 100%;
+    background-position: -1px -1px, -1px -1px, 0 0, 0 0, 0 0;
+}
+
+/* Fades grid subtly towards bottom edges of the Hero Section */
+.hero-container::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 50% 60%, transparent 20%, var(--bg-dark) 90%);
+    pointer-events: none;
+    z-index: -1;
 }
 
 .hero-content {
-    max-width: 900px;
-    margin-bottom: 50px;
+    max-width: 820px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 56px;
 }
 
-/* --- Components & Typography --- */
+/* --- Hero Badge Pill --- */
+.hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 16px;
+    background: var(--glass);
+    border: 1px solid var(--border);
+    border-radius: 9999px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+    backdrop-filter: blur(12px);
+    margin-bottom: 24px;
+}
+
+.badge-icon {
+    color: var(--primary);
+    font-size: 0.95rem;
+}
+
+/* --- Typography --- */
 .hero-title {
-    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    font-size: clamp(2.5rem, 5.5vw, 4.25rem);
     font-weight: 800;
-    line-height: 1.3;
+    line-height: 1.15;
     color: var(--text-primary);
-    letter-spacing: -0.02em;
-    margin-top: 10px;
+    letter-spacing: -0.03em;
+    margin-bottom: 20px;
 }
 
 .text-gradient {
-    background: linear-gradient(to right, #60a5fa, #a855f7, #60a5fa);
+    background: linear-gradient(135deg, #60a5fa 0%, #a855f7 50%, #3b82f6 100%);
     background-size: 200% auto;
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
-    animation: shine 5s linear infinite;
-    display: inline-block;
+    animation: shine 6s ease-in-out infinite;
 }
 
 @keyframes shine {
-    to {
-        background-position: 200% center;
+
+    0%,
+    100% {
+        background-position: 0% center;
+    }
+
+    50% {
+        background-position: 100% center;
     }
 }
 
 .hero-subtitle {
     font-size: 1.125rem;
     color: var(--text-secondary);
-    margin: -15px auto 40px;
-    max-width: 650px;
-    line-height: 1.6;
+    max-width: 680px;
+    line-height: 1.7;
+    font-weight: 400;
+    margin-bottom: 36px;
 }
 
-/* --- Call to Action (CTA) --- */
+/* --- Buttons & CTAs --- */
 .cta-group {
     display: flex;
-    gap: 16px;
+    align-items: center;
     justify-content: center;
+    gap: 16px;
+    margin-bottom: 40px;
+    width: 100%;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 14px 28px;
+    border-radius: var(--radius-md);
+    font-weight: 600;
+    font-size: 0.975rem;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-icon {
+    font-size: 1.1rem;
+    transition: transform 0.2s ease;
 }
 
 .btn-primary {
-    background: #ffffff;
-    color: #000000;
-    padding: 14px 32px;
-    border-radius: 10px;
-    font-weight: 600;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.1);
+    background: var(--text-primary);
+    color: #030712;
+    border: 1px solid #ffffff;
+    box-shadow: 0 4px 20px rgba(255, 255, 255, 0.15);
 }
 
-.btn-primary:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(255, 255, 255, 0.2);
-    background: #f8fafc;
+.btn-primary:hover .btn-icon {
+    transform: translateX(3px);
 }
 
 .btn-secondary {
     background: var(--glass);
     color: var(--text-primary);
-    padding: 14px 32px;
-    border-radius: 10px;
-    font-weight: 500;
-    font-size: 16px;
     border: 1px solid var(--border);
-    cursor: pointer;
-    transition: all 0.3s ease;
-    backdrop-filter: blur(8px);
+    backdrop-filter: blur(12px);
 }
 
 .btn-secondary:hover {
-    background: rgba(255, 255, 255, 0.08);
-    border-color: rgba(255, 255, 255, 0.2);
+    background: var(--glass-hover);
+    border-color: var(--border-hover);
+    transform: translateY(-2px);
 }
 
-/* --- Code Card (IDE Mockup) --- */
+/* --- Hero Feature Highlights Strip --- */
+.hero-highlights {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    padding-top: 16px;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.highlight-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.875rem;
+    color: var(--text-muted);
+    font-weight: 500;
+}
+
+.highlight-icon {
+    color: var(--primary);
+    font-size: 1rem;
+}
+
+/* --- Hero Visual & Code Card --- */
+.hero-visual {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
 .code-card {
     background: var(--editor-bg);
     border: 1px solid var(--border);
-    border-radius: 16px;
+    border-radius: var(--radius-lg);
     width: 100%;
-    max-width: 550px;
+    max-width: 900px;
     text-align: left;
-    box-shadow: 0 40px 80px -15px rgba(0, 0, 0, 0.6);
+    box-shadow:
+        0 25px 50px -12px rgba(0, 0, 0, 0.7),
+        0 0 0 1px rgba(255, 255, 255, 0.05);
     overflow: hidden;
-    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+    backdrop-filter: blur(8px);
 }
 
 .code-card:hover {
-    transform: translateY(-6px) scale(1.01);
-    box-shadow: 0 60px 100px -20px rgba(0, 0, 0, 0.8);
+    border-color: var(--border-hover);
+    transform: translateY(-4px);
+    box-shadow:
+        0 30px 60px -15px rgba(0, 0, 0, 0.85),
+        0 0 30px var(--primary-glow);
 }
 
 .code-header {
-    padding: 14px 20px;
-    background: rgba(255, 255, 255, 0.02);
+    padding: 12px 18px;
+    background: rgba(255, 255, 255, 0.03);
     border-bottom: 1px solid var(--border);
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
 }
 
 .dot-group {
     display: flex;
-    gap: 8px;
+    align-items: center;
+    gap: 7px;
+    width: 20%;
 }
 
 .dot {
-    height: 12px;
-    width: 12px;
+    height: 10px;
+    width: 10px;
     border-radius: 50%;
 }
 
@@ -167,68 +297,145 @@
     background: #27c93f;
 }
 
-.file-name {
+.file-info {
+    display: flex;
+    align-items: center;
+    gap: 6px;
     color: var(--text-secondary);
-    font-size: 13px;
-    font-family: 'JetBrains Mono', 'Fira Code', monospace;
-    opacity: 0.8;
+    font-size: 0.825rem;
+    font-family: var(--font-mono);
 }
 
-/* Prism.js Code Formatting Fixes */
-pre[class*="language-"],
-code[class*="language-"] {
-    background: transparent !important;
-    box-shadow: none !important;
+.file-icon {
+    color: var(--primary);
+    font-size: 0.9rem;
 }
 
-pre[class*="language-"] {
-    padding: 0 !important;
-    margin: 0;
+.file-name {
+    opacity: 0.9;
 }
 
-/* --- Code Formatting Fixes --- */
+.header-actions {
+    width: 20%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.copy-btn {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: transparent;
+    border: 1px solid transparent;
+    color: var(--text-muted);
+    font-size: 0.775rem;
+    font-family: var(--font-sans);
+    font-weight: 500;
+    padding: 4px 8px;
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.copy-btn:hover {
+    color: var(--text-primary);
+    background: var(--glass);
+    border-color: var(--border);
+}
+
+.copy-icon {
+    font-size: 0.85rem;
+}
+
+.copy-icon.success {
+    color: #10b981;
+}
+
+/* --- Code Editor Body & Prism Overrides --- */
 .code-body {
-    padding: 24px;
+    padding: 20px 24px;
     overflow-x: auto;
 }
 
 .code-body pre {
     margin: 0;
-    font-family: 'JetBrains Mono', 'Fira Code', 'Source Code Pro', monospace;
-    font-size: 14px;
-    line-height: 1.7;
-    white-space: pre;
-    /* Essential for spacing */
+    font-family: var(--font-mono);
+    font-size: 0.9rem;
+    line-height: 1.65;
     tab-size: 4;
 }
 
-/* --- Responsiveness --- */
+pre[class*="language-"],
+code[class*="language-"] {
+    background: transparent !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+    font-family: var(--font-mono) !important;
+}
+
+pre[class*="language-"] {
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+/* --- Custom Scrollbar for Code Block --- */
+.code-body::-webkit-scrollbar {
+    height: 6px;
+}
+
+.code-body::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.code-body::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+}
+
+.code-body::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* --- Responsive Layout --- */
 @media (max-width: 768px) {
 
     .hero-container {
-        padding-top: 100px;
+        padding-top: 110px;
+        padding-bottom: 60px;
     }
 
-    .hero-title {
-        font-size: 2.5rem;
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+
+    .hero-highlights {
+        display: none;
     }
 
     .code-card {
-        width: 100%;
-        border-radius: 12px;
+        max-width: 100%;
+        border-radius: var(--radius-md);
+        margin-top: -40px;
     }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 520px) {
 
     .cta-group {
         flex-direction: column;
-        gap: 12px;
+        width: 100%;
     }
 
-    .btn-primary,
-    .btn-secondary {
+    .btn {
         width: 100%;
-        padding: 14px 0;
+    }
+
+    .dot-group,
+    .header-actions {
+        width: auto;
+    }
+
+    .copy-text {
+        display: none;
     }
 }

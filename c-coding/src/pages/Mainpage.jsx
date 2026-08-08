@@ -1,85 +1,37 @@
-// css
-import '../css/App.css';
+// import useffect
+import { useEffect } from 'react';
 
-// router
-import { Link } from 'react-router-dom';
-
-// import Navbar and Footer
-import { Navbar } from '../components/Navbar';
-import { Footer } from '../components/Footer';
-
-// AOS animations
+// import aos animations
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
-// import use effect
-import { useEffect } from 'react';
+// Layout Components
+import { Navbar } from '../components/Navbar';
+import { Footer } from '../components/Footer';
 
-// import CodeCard
-import CodeCard from '../components/CodeCard';
+// import sections
+import HeroSection from '../sections/HeroSection';
+import AboutSection from '../sections/AboutSection';
+import HowToUseSection from '../sections/HowToUseSection';
+import CtaSection from '../sections/CtaSection';
 
-// Main Page Component
+// import css
+import '../css/App.css';
+
+// main page component
 export default function MainPage() {
     useEffect(() => {
-        AOS.init({ duration: 1000, once: true });
+        AOS.init({ duration: 800, once: true });
     }, []);
 
     return (
-        <div className='main-wrapper'
-            // background grid pattern
-            style={{
-                background: "#020617",
-                backgroundImage: `
-                linear-gradient(to right, rgba(71,85,105,0.15) 1px, transparent 1px),
-                linear-gradient(to bottom, rgba(71,85,105,0.15) 1px, transparent 1px),
-                radial-gradient(circle at 50% 60%, rgba(236,72,153,0.15) 0%, rgba(168,85,247,0.05) 40%, transparent 70%)`,
-                backgroundSize: "40px 40px, 40px 40px, 100% 100%",
-                backgroundAttachment: "fixed"
-            }}
-        >
+        <div className="main-wrapper">
             <Navbar />
             <HeroSection />
+            <AboutSection />
+            <HowToUseSection />
+            <CtaSection />
             <Footer />
         </div>
-    )
-}
-
-// Hero Section Component
-function HeroSection() {
-    return (
-        <main className='hero-container'>
-            <div className='hero-content' data-aos="zoom-out">
-                <h1 className="hero-title">
-                    Master <span className="text-gradient">C Programming</span> Through Practice
-                </h1>
-                <p className="hero-subtitle">
-                    Learn C programming by solving real problems — categorized by difficulty,
-                    logic patterns, and interview relevance. Write, run, and master C step by step.
-                </p>
-
-                <div className='cta-group'>
-                    <Link to="/levels">
-                        <button className='btn-primary'>Get Started</button>
-                    </Link>
-                    <a
-                        href="https://github.com/TonyStark-19/C-Coding/blob/main/CONTRIBUTING.md"
-                        target="_blank"
-                        rel="noopener noreferrer">
-                        <button className='btn-secondary'>Contribute on GitHub</button>
-                    </a>
-                </div>
-            </div>
-
-            {/* Code Card */}
-            <CodeCard filename="hello_world.c">
-                {`#include <stdio.h>
-
-int main() {
-  printf("Hello, C World!");
-  return 0;
-}`}
-            </CodeCard>
-
-        </main>
-    )
+    );
 }

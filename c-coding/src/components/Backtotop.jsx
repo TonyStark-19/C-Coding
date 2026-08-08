@@ -1,8 +1,8 @@
-// import use state and use effect
+// import hooks
 import { useState, useEffect } from "react";
 
 // import icons
-import { FaAngleDoubleUp } from "react-icons/fa";
+import { FiArrowUp } from "react-icons/fi";
 
 // import css
 import '../css/Backtotop.css';
@@ -13,7 +13,6 @@ export function BackToTop() {
 
     useEffect(() => {
         const toggleVisibility = () => {
-            // Increased threshold slightly for better UX
             if (window.scrollY > 300) {
                 setVisible(true);
             } else {
@@ -25,6 +24,7 @@ export function BackToTop() {
         return () => window.removeEventListener('scroll', toggleVisibility);
     }, []);
 
+    // scroll to top trigger
     const scrollToTop = () => {
         window.scrollTo({ top: 0, behavior: 'smooth' });
     };
@@ -35,7 +35,7 @@ export function BackToTop() {
             onClick={scrollToTop}
             aria-label="Scroll to top"
         >
-            <FaAngleDoubleUp className='top-icon-anim' />
+            <FiArrowUp className="top-icon-anim" />
         </button>
     );
 }

@@ -8,12 +8,11 @@ import { Link } from 'react-router-dom';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
-// import use effect
-import { useEffect } from 'react';
+// import hooks
+import { useEffect, useState } from 'react';
 
 // react icons
-import { FaArrowRight, FaTerminal } from "react-icons/fa6";
-import { LiaTagSolid } from "react-icons/lia";
+import { FiTerminal, FiTag, FiArrowRight, FiSearch } from 'react-icons/fi';
 
 // import navbar and footer
 import { Navbar } from '../components/Navbar';
@@ -397,62 +396,107 @@ export const programs = [
 
 // medium page component
 export default function MediumPage() {
+    const [searchTerm, setSearchTerm] = useState('');
+
     useEffect(() => {
-        AOS.init({ duration: 1000, once: true });
+        AOS.init({ duration: 800, once: true });
     }, []);
 
+    // filter programs
+    const filteredPrograms = programs.filter((prog) => {
+        return (
+            prog.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+            prog.description.toLowerCase().includes(searchTerm.toLowerCase())
+        );
+    });
+
     return (
-        <div className='main-wrapper'
-            // background grid pattern
-            style={{
-                background: "#020617",
-                backgroundImage: `
-                linear-gradient(to right, rgba(71,85,105,0.15) 1px, transparent 1px),
-                linear-gradient(to bottom, rgba(71,85,105,0.15) 1px, transparent 1px),
-                radial-gradient(circle at 50% 60%, rgba(236,72,153,0.15) 0%, rgba(168,85,247,0.05) 40%, transparent 70%)`,
-                backgroundSize: "40px 40px, 40px 40px, 100% 100%",
-                backgroundAttachment: "fixed"
-            }}>
+        <div className="main-wrapper">
+            {/* navbar */}
             <Navbar />
 
-            <div className='easy-level-container'>
+            <main className="level-page-container medium-theme">
+                {/* Scroll To Top Action */}
                 <BackToTop />
 
-                <header className="level-header-title" data-aos="fade-down">
-                    <span className="level-badge orange">Level 02</span>
+                <header
+                    className="level-header-title"
+                    data-aos="fade-down"
+                >
+                    <div className="header-meta">
+                        <span className="level-badge badge-medium">Level 02</span>
+                        <span className="count-pill">{programs.length} Programs</span>
+                    </div>
+
                     <h1>Intermediate Logic</h1>
-                    <p>Deepen your understanding with recursion, pointers, arrays, and string manipulation.</p>
+                    <p>Deepen your understanding with recursion, pointers, arrays, structures, and string manipulation.</p>
+
+                    <div className="search-box-wrapper">
+                        <FiSearch className="search-icon" />
+
+                        <input
+                            type="text"
+                            placeholder="Search intermediate programs..."
+                            value={searchTerm}
+                            onChange={(e) => setSearchTerm(e.target.value)}
+                            className="search-input"
+                        />
+                    </div>
                 </header>
 
-                <div className='programs-grid-list'>
-                    {programs.map((prog, idx) => (
-                        <div className="program-card-premium medium" data-aos="fade-up" key={idx}>
-                            <div className="card-left">
-                                <div className="card-icon-mini medium-accent">
-                                    <FaTerminal />
-                                </div>
-                                <div className="card-text">
-                                    <h3>{prog.title}</h3>
-                                    <p>{prog.description}</p>
-                                    <div className="topics-pill-container">
-                                        <LiaTagSolid className="tag-icon" />
-                                        {(prog.tags || prog.topics).map((tag, i) => (
-                                            <span className="topic-pill" key={i}>{tag}</span>
-                                        ))}
+                <div className="programs-grid-list">
+                    {filteredPrograms.length > 0 ? (
+                        filteredPrograms.map((prog, idx) => (
+                            <div
+                                className="program-card-premium tier-medium"
+                                data-aos="fade-up"
+                                key={prog.slug || idx}
+                            >
+                                <div className="card-left">
+                                    <div className="card-icon-mini medium-accent">
+                                        <FiTerminal />
+                                    </div>
+
+                                    <div className="card-text">
+                                        <h3>{prog.title}</h3>
+                                        <p>{prog.description}</p>
+
+                                        <div className="topics-pill-container">
+                                            <FiTag className="tag-icon" />
+
+                                            {(prog.topics || prog.tags || []).map((tag, i) => (
+                                                <span
+                                                    className="topic-pill"
+                                                    key={i}
+                                                >
+                                                    {tag}
+                                                </span>
+                                            ))}
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
 
-                            <Link to={`/programs/${prog.slug}`} className="view-btn-link">
-                                <button className="action-view-btn medium-btn">
-                                    View Code <FaArrowRight />
-                                </button>
-                            </Link>
+                                <Link
+                                    to={`/programs/${prog.slug}`}
+                                    className="view-btn-link"
+                                >
+                                    <button className="action-view-btn medium-btn">
+                                        <span>View Code</span>
+                                        <FiArrowRight className="btn-arrow-icon" />
+                                    </button>
+                                </Link>
+                            </div>
+                        ))
+                    ) : (
+                        <div className="no-results">
+                            <p>No intermediate programs matching "{searchTerm}".</p>
                         </div>
-                    ))}
+                    )}
                 </div>
-            </div>
+            </main>
+
+            {/* footer */}
             <Footer />
         </div>
-    )
+    );
 }

@@ -1,81 +1,72 @@
+/* --- Floating Glass Back To Top Button --- */
 .back-to-top-glass {
-    /* Hidden by default with transition */
+    /* Hidden by default with smooth cubic transition */
     opacity: 0;
     visibility: hidden;
-    transform: translateY(20px);
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    /* Positioning */
+    transform: translateY(16px) scale(0.92);
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+
+    /* Floating Layout */
     position: fixed;
-    bottom: 30px;
-    right: 30px;
+    bottom: 32px;
+    right: 32px;
     z-index: 9999;
-    /* Styling */
-    width: 45px;
-    height: 45px;
+
+    /* Glassmorphism Styling */
+    width: 46px;
+    height: 46px;
     display: flex;
     justify-content: center;
     align-items: center;
-    background: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(15, 23, 42, 0.75);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.12);
     border-radius: 12px;
     color: #60a5fa;
-    font-size: 20px;
+    font-size: 1.25rem;
     cursor: pointer;
-    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.4);
+    box-shadow:
+        0 10px 25px -5px rgba(0, 0, 0, 0.5),
+        0 0 0 1px rgba(255, 255, 255, 0.05);
 }
 
-/* Visibility Trigger */
+/* Visibility State Trigger */
 .back-to-top-glass.show {
     opacity: 1;
     visibility: visible;
-    transform: translateY(0);
+    transform: translateY(0) scale(1);
 }
 
+/* Hover Elevation & Glow */
 .back-to-top-glass:hover {
-    background: #60a5fa;
+    background: #3b82f6;
     color: #ffffff;
-    border-color: #60a5fa;
-    box-shadow: 0 0 20px rgba(96, 165, 250, 0.4);
-    transform: translateY(-5px);
+    border-color: #3b82f6;
+    transform: translateY(-4px);
 }
 
-/* Icon Animation */
+.back-to-top-glass:active {
+    transform: translateY(-1px) scale(0.96);
+}
+
+/* Icon Animation on Hover */
 .top-icon-anim {
-    transition: transform 0.3s ease;
+    transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .back-to-top-glass:hover .top-icon-anim {
-    animation: bounceUp 1.5s infinite;
+    transform: translateY(-3px);
 }
 
-@keyframes bounceUp {
-
-    0%,
-    20%,
-    50%,
-    80%,
-    100% {
-        transform: translateY(0);
-    }
-
-    40% {
-        transform: translateY(-5px);
-    }
-
-    60% {
-        transform: translateY(-3px);
-    }
-}
-
-/* Responsiveness */
-@media (max-width: 550px) {
+/* Mobile Responsiveness */
+@media (max-width: 600px) {
 
     .back-to-top-glass {
         bottom: 20px;
         right: 20px;
-        width: 40px;
-        height: 40px;
+        width: 42px;
+        height: 42px;
+        font-size: 1.15rem;
     }
 }

@@ -1,53 +1,59 @@
-// css
-import '../css/levels.css';
+// import useffect
+import { useEffect } from 'react';
 
-// AOS animations
+// import link
+import { Link } from 'react-router-dom';
+
+// import aos animations
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
-// import use effect
-import { useEffect } from 'react';
+// React Icons
+import { FiCode, FiLayers, FiCpu, FiTag, FiArrowRight } from 'react-icons/fi';
 
-// react icons
-import { LiaTagSolid } from "react-icons/lia";
-import { FaCode, FaLayerGroup, FaMicrochip } from "react-icons/fa6";
-
-// router
-import { Link } from 'react-router-dom';
-
-// import navbar and footer
+// Layout Components
 import { Navbar } from '../components/Navbar';
 import { Footer } from '../components/Footer';
 
-// level page component
+// import css
+import '../css/levels.css';
+
+// level page
 export default function LevelPage() {
+    // initialise aos animations
     useEffect(() => {
-        AOS.init({ duration: 1000, once: true });
+        AOS.init({ duration: 800, once: true });
     }, []);
 
     return (
-        <div className='main-wrapper'
-            // background grid pattern
-            style={{
-                background: "#020617",
-                backgroundImage: `
-                linear-gradient(to right, rgba(71,85,105,0.15) 1px, transparent 1px),
-                linear-gradient(to bottom, rgba(71,85,105,0.15) 1px, transparent 1px),
-                radial-gradient(circle at 50% 60%, rgba(236,72,153,0.15) 0%, rgba(168,85,247,0.05) 40%, transparent 70%)`,
-                backgroundSize: "40px 40px, 40px 40px, 100% 100%",
-                backgroundAttachment: "fixed"
-            }}>
+        <div className="main-wrapper">
+            {/* navbar */}
             <Navbar />
-            <div className="levels-section">
-                <header className="levels-header" data-aos="fade-down">
-                    <h1>Curriculum Pathway</h1>
-                    <p>Select a difficulty level to view categorized C programs and challenges.</p>
+
+            <main className="levels-section">
+                <header
+                    className="levels-header"
+                    data-aos="fade-down"
+                >
+                    <div className="header-badge">
+                        <FiLayers className="header-badge-icon" />
+                        <span>Structured Learning Pathway</span>
+                    </div>
+
+                    <h1 className="levels-title">Curriculum Pathway</h1>
+                    <p className="levels-subtitle">
+                        Select a difficulty level to view categorized C programs, core logic patterns, and challenges.
+                    </p>
                 </header>
+
+                {/* levels list */}
                 <LevelsList />
-            </div>
+            </main>
+
+            {/* footer */}
             <Footer />
         </div>
-    )
+    );
 }
 
 // levels list component
@@ -55,57 +61,110 @@ function LevelsList() {
     // levels items array
     const levels = [
         {
-            path: "/levels/easy",
-            title: "Beginner",
-            icon: <FaCode />,
-            desc: "Master the fundamentals: basic syntax, operators, and control flow.",
+            path: '/levels/easy',
+            title: 'Beginner',
+            icon: <FiCode />,
+            desc: 'Master the fundamentals: basic syntax, operators, variables, and essential control flow.',
             count: 22,
-            topics: ["Basic Arithmetic", "Operators", "Conditionals", "Loops", "Functions", "Type Casting", "Character Handling"],
-            color: "beginner"
+            topics: [
+                'Basic Arithmetic',
+                'Operators',
+                'Conditionals',
+                'Loops',
+                'Functions',
+                'Type Casting',
+                'Character Handling'
+            ],
+            tier: 'tier-beginner'
         },
         {
-            path: "/levels/medium",
-            title: "Intermediate",
-            icon: <FaLayerGroup />,
-            desc: "Deep dive into modular programming, memory addresses, and data structures.",
+            path: '/levels/medium',
+            title: 'Intermediate',
+            icon: <FiLayers />,
+            desc: 'Deep dive into modular programming, memory addresses, data structures, and core logic.',
             count: 41,
-            topics: ["Arrays", "2D Arrays & Matrices", "Strings", "Recursion", "Pointers", "Switch Case", "Structures", "Number Logic", "Patterns"],
-            color: "intermediate"
+            topics: [
+                'Arrays',
+                '2D Arrays & Matrices',
+                'Strings',
+                'Recursion',
+                'Pointers',
+                'Switch Case',
+                'Structures',
+                'Number Logic',
+                'Patterns'
+            ],
+            tier: 'tier-intermediate'
         },
         {
-            path: "/levels/hard",
-            title: "Advanced",
-            icon: <FaMicrochip />,
-            desc: "Complex algorithmic logic and low-level system programming concepts.",
+            path: '/levels/hard',
+            title: 'Advanced',
+            icon: <FiCpu />,
+            desc: 'Complex algorithmic logic, optimization, memory operations, and system-level programming.',
             count: 16,
-            topics: ["Advanced Functions", "Recursion", "Matrix Operations", "Number Systems", "Algorithms", "Problem Solving", "Menu-Based Programs"],
-            color: "advanced"
+            topics: [
+                'Advanced Functions',
+                'Recursion',
+                'Matrix Operations',
+                'Number Systems',
+                'Algorithms',
+                'Problem Solving',
+                'Menu-Based Programs'
+            ],
+            tier: 'tier-advanced'
         }
     ];
 
     return (
         <div className="levels-stack">
             {levels.map((lvl, index) => (
-                <Link to={lvl.path} key={index} className={`level-card-wide ${lvl.color}`} data-aos="fade-up" data-aos-delay={index * 100}>
-                    <div className="card-icon">{lvl.icon}</div>
+                <Link
+                    to={lvl.path}
+                    key={lvl.title}
+                    className={`level-card-wide ${lvl.tier}`}
+                    data-aos="fade-up"
+                    data-aos-delay={index * 100}
+                >
+                    {/* Left Icon Visual */}
+                    <div className="card-icon-box">{lvl.icon}</div>
 
+                    {/* Main Card Content */}
                     <div className="card-main-content">
-                        <div className="card-top">
-                            <h2>{lvl.title}</h2>
-                            <span className="prog-count">{lvl.count} Programs</span>
+                        <div className="card-header">
+                            <div className="card-title-group">
+                                <h2>{lvl.title}</h2>
+                                <span className="prog-count">{lvl.count} Programs</span>
+                            </div>
                         </div>
-                        <p>{lvl.desc}</p>
 
-                        <div className='topics-wrapper'>
-                            <span className='topics-label'><LiaTagSolid /> Topics:</span>
-                            <div className='topics-flex'>
-                                {lvl.topics.map(t => <span key={t} className="topic-tag">{t}</span>)}
+                        <p className="card-description">{lvl.desc}</p>
+
+                        {/* Topics Covered */}
+                        <div className="topics-wrapper">
+                            <div className="topics-label">
+                                <FiTag className="tag-icon" />
+                                <span>Topics:</span>
+                            </div>
+
+                            <div className="topics-flex">
+                                {lvl.topics.map((topic) => (
+                                    <span
+                                        key={topic}
+                                        className="topic-tag"
+                                    >
+                                        {topic}
+                                    </span>
+                                ))}
                             </div>
                         </div>
                     </div>
 
+                    {/* Action Trigger Arrow */}
                     <div className="card-action">
-                        <button className='btn-arrow'>Explore →</button>
+                        <span className="btn-explore">
+                            <span>Explore</span>
+                            <FiArrowRight className="arrow-icon" />
+                        </span>
                     </div>
                 </Link>
             ))}

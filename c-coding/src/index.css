@@ -16,13 +16,6 @@ code {
    GLOBAL CUSTOM SCROLLBAR
 ========================= */
 
-/* Firefox */
-* {
-  scrollbar-width: thin;
-  scrollbar-color: #475569 #0f172a;
-}
-
-/* Chrome, Edge, Safari */
 ::-webkit-scrollbar {
   width: 10px;
   height: 10px;

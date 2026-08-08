@@ -1,93 +1,180 @@
-/* =========================
-   LEVEL PAGE BASE LAYOUT
-========================= */
+/* ==========================================================================
+   LEVEL PAGE BASE LAYOUT & SEARCH
+   ========================================================================== */
 
-.easy-level-container {
-    padding: 120px 20px 100px;
-    max-width: 1100px;
+.level-page-container {
+    padding: 120px 24px 100px;
+    max-width: 1120px;
     margin: 0 auto;
     position: relative;
-    z-index: 1;
+    z-index: 2;
 }
 
+/* Header & Meta */
 .level-header-title {
     text-align: center;
-    margin: 40px 0 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.header-meta {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+.level-badge {
+    padding: 5px 14px;
+    border-radius: 9999px;
+    font-size: 0.8rem;
+    font-family: var(--font-mono, monospace);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.count-pill {
+    font-size: 0.825rem;
+    color: #94a3b8;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 4px 12px;
+    border-radius: 9999px;
+    font-weight: 500;
 }
 
 .level-header-title h1 {
-    color: #fff;
-    font-size: clamp(2rem, 5vw, 3.5rem);
-    margin: 15px 0 -5px;
+    color: #f8fafc;
+    font-size: clamp(2.25rem, 5vw, 3.5rem);
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    margin-bottom: 12px;
 }
 
 .level-header-title p {
     color: #94a3b8;
+    font-size: 1.075rem;
+    max-width: 640px;
+    line-height: 1.65;
+    margin-bottom: 32px;
+}
+
+/* Search Bar Wrapper */
+.search-box-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 520px;
+}
+
+.search-icon {
+    position: absolute;
+    left: 18px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #64748b;
     font-size: 1.1rem;
+    pointer-events: none;
+    transition: color 0.2s ease;
+    z-index: 100;
 }
 
-.level-badge {
-    padding: 5px 15px;
-    border-radius: 20px;
-    font-size: 14px;
-    font-weight: 600;
-    text-transform: uppercase;
+.search-input {
+    width: 100%;
+    padding: 14px 18px 14px 48px;
+    background: rgba(15, 23, 42, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    color: #f8fafc;
+    font-size: 0.95rem;
+    outline: none;
+    backdrop-filter: blur(12px);
+    transition: all 0.25s ease;
 }
 
-/* =========================
-   PROGRAM LIST & CARD
-========================= */
+.search-input::placeholder {
+    color: #64748b;
+}
+
+.search-input:focus {
+    border-color: var(--accent-color, #3b82f6);
+    box-shadow: 0 0 20px var(--accent-glow, rgba(59, 130, 246, 0.25));
+    background: rgba(15, 23, 42, 0.85);
+}
+
+.search-box-wrapper:focus-within .search-icon {
+    color: var(--accent-color, #3b82f6);
+}
+
+/* ==========================================================================
+   PROGRAM LIST STACK & CARDS
+   ========================================================================== */
 
 .programs-grid-list {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 18px;
 }
 
 .program-card-premium {
-    background: rgba(255, 255, 255, 0.02);
+    background: rgba(15, 23, 42, 0.5);
     border: 1px solid rgba(255, 255, 255, 0.08);
     border-radius: 16px;
-    padding: 25px 30px;
+    padding: 24px 28px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    transition: 0.3s ease;
+    gap: 24px;
+    backdrop-filter: blur(12px);
+    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .program-card-premium:hover {
-    background: rgba(255, 255, 255, 0.05);
-    transform: translateY(-3px);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    background: rgba(15, 23, 42, 0.8);
+    transform: translateY(-2px);
+    border-color: var(--accent-border);
 }
 
 .card-left {
     display: flex;
-    align-items: center;
-    gap: 25px;
+    align-items: flex-start;
+    gap: 20px;
+    flex: 1;
 }
 
 .card-icon-mini {
-    width: 50px;
-    height: 50px;
+    width: 48px;
+    height: 48px;
+    min-width: 48px;
     border-radius: 12px;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 20px;
+    font-size: 1.25rem;
+    margin-top: 2px;
+    border: 1px solid transparent;
+}
+
+.card-text {
+    flex: 1;
 }
 
 .card-text h3 {
-    color: #fff;
-    font-size: 1.25rem;
-    margin: 10px 0 5px;
+    color: #f8fafc;
+    font-size: 1.2rem;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    margin-bottom: 6px;
 }
 
 .card-text p {
     color: #94a3b8;
-    font-size: 0.95rem;
+    font-size: 0.925rem;
+    line-height: 1.6;
     margin-bottom: 12px;
-    max-width: 600px;
+    max-width: 680px;
     display: -webkit-box;
     -webkit-line-clamp: 2;
     line-clamp: 2;
@@ -95,9 +182,9 @@
     overflow: hidden;
 }
 
-/* =========================
+/* ==========================================================================
    TAG PILLS
-========================= */
+   ========================================================================== */
 
 .topics-pill-container {
     display: flex;
@@ -108,140 +195,211 @@
 
 .tag-icon {
     color: #64748b;
+    font-size: 0.85rem;
 }
 
 .topic-pill {
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
     color: #cbd5e1;
-    padding: 2px 10px;
+    padding: 3px 10px;
     border-radius: 6px;
-    font-size: 0.8rem;
+    font-size: 0.775rem;
+    font-weight: 400;
+    transition: all 0.2s ease;
 }
 
-/* =========================
-   ACTION BUTTON
-========================= */
+.program-card-premium:hover .topic-pill {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.15);
+}
 
-.program-card-premium a {
+/* ==========================================================================
+   ACTION BUTTON
+   ========================================================================== */
+
+.view-btn-link {
     text-decoration: none;
+    flex-shrink: 0;
 }
 
 .action-view-btn {
-    position: absolute;
-    right: 30px;
-    bottom: 30px;
-    background: #fff;
-    color: #000;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 8px;
-    font-weight: 600;
-    display: flex;
+    display: inline-flex;
     align-items: center;
-    gap: 10px;
+    gap: 8px;
+    background: rgba(255, 255, 255, 0.05);
+    color: #f8fafc;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    padding: 10px 18px;
+    border-radius: 10px;
+    font-size: 0.875rem;
+    font-weight: 600;
     cursor: pointer;
-    transition: 0.2s;
     white-space: nowrap;
+    transition: all 0.25s ease;
 }
 
-/* =========================
-   LEVEL THEMES
-========================= */
-
-/* EASY (BLUE) */
-.level-badge.blue {
-    background: rgba(59, 130, 246, 0.1);
-    color: #3b82f6;
+.btn-arrow-icon {
+    font-size: 0.9rem;
+    transition: transform 0.2s ease;
 }
 
-.beginner-accent {
-    background: rgba(59, 130, 246, 0.15);
-    color: #3b82f6;
+.program-card-premium:hover .action-view-btn {
+    background: var(--accent-color);
+    color: #ffffff;
+    border-color: var(--accent-color);
+    box-shadow: 0 4px 15px var(--accent-glow);
 }
 
-.program-card-premium.beginner:hover {
-    border-color: rgba(59, 130, 246, 0.4);
+.program-card-premium:hover .btn-arrow-icon {
+    transform: translateX(4px);
 }
 
-.beginner-btn:hover {
-    background: #3b82f6;
-    color: #fff;
+/* ==========================================================================
+   LEVEL SPECIFIC THEMES & ACCENTS
+   ========================================================================== */
+
+/* EASY THEME (GREEN / EMERALD) */
+.tier-easy {
+    --accent-color: #10b981;
+    --accent-border: rgba(16, 185, 129, 0.3);
+    --accent-glow: rgba(16, 185, 129, 0.2);
 }
 
-/* MEDIUM (ORANGE) */
-.level-badge.orange {
-    background: rgba(245, 158, 11, 0.1);
+.badge-easy {
+    background: rgba(16, 185, 129, 0.12);
+    color: #10b981;
+    border: 1px solid rgba(16, 185, 129, 0.25);
+}
+
+.easy-accent {
+    background: rgba(16, 185, 129, 0.1);
+    color: #10b981;
+    border-color: rgba(16, 185, 129, 0.2);
+}
+
+/* MEDIUM THEME (AMBER / ORANGE) */
+.tier-medium {
+    --accent-color: #f59e0b;
+    --accent-border: rgba(245, 158, 11, 0.3);
+    --accent-glow: rgba(245, 158, 11, 0.2);
+}
+
+.badge-medium {
+    background: rgba(245, 158, 11, 0.12);
     color: #f59e0b;
+    border: 1px solid rgba(245, 158, 11, 0.25);
 }
 
 .medium-accent {
     background: rgba(245, 158, 11, 0.1);
     color: #f59e0b;
+    border-color: rgba(245, 158, 11, 0.2);
 }
 
-.program-card-premium.medium:hover {
-    border-color: rgba(245, 158, 11, 0.3);
+/* HARD THEME (ROSE / PURPLE) */
+.tier-hard {
+    --accent-color: #f43f5e;
+    --accent-border: rgba(244, 63, 94, 0.3);
+    --accent-glow: rgba(244, 63, 94, 0.2);
 }
 
-.medium-btn:hover {
-    background: #f59e0b;
-    color: #fff;
-}
-
-/* HARD (PURPLE) */
-.level-badge.purple {
-    background: rgba(168, 85, 247, 0.1);
-    color: #a855f7;
+.badge-hard {
+    background: rgba(244, 63, 94, 0.12);
+    color: #f43f5e;
+    border: 1px solid rgba(244, 63, 94, 0.25);
 }
 
 .hard-accent {
-    background: rgba(168, 85, 247, 0.15);
-    color: #a855f7;
+    background: rgba(244, 63, 94, 0.1);
+    color: #f43f5e;
+    border-color: rgba(244, 63, 94, 0.2);
 }
 
-.program-card-premium.hard:hover {
-    border-color: rgba(168, 85, 247, 0.4);
+/* ==========================================================================
+   FLOATING BACK TO TOP BUTTON & UTILS
+   ========================================================================== */
+
+.back-to-top-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    background: rgba(15, 23, 42, 0.8);
+    color: #f8fafc;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    cursor: pointer;
+    z-index: 99;
+    backdrop-filter: blur(12px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+    transition: all 0.25s ease;
 }
 
-.hard-btn:hover {
-    background: #a855f7;
-    color: #fff;
+.back-to-top-btn:hover {
+    background: #f8fafc;
+    color: #030712;
+    transform: translateY(-3px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.7);
 }
 
-/* =========================
-   RESPONSIVE
-========================= */
+.no-results {
+    text-align: center;
+    padding: 60px 20px;
+    color: #64748b;
+    font-size: 1rem;
+    background: rgba(15, 23, 42, 0.3);
+    border: 1px dashed rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+}
+
+/* ==========================================================================
+   RESPONSIVE DESIGN
+   ========================================================================== */
 
 @media (max-width: 850px) {
 
-    .easy-level-container {
-        padding: 100px 15px 80px;
+    .level-page-container {
+        padding: 110px 18px 80px;
     }
 
     .program-card-premium {
         flex-direction: column;
         align-items: flex-start;
-        gap: 20px;
+        gap: 18px;
+        padding: 20px;
     }
 
-    .card-left {
-        gap: 15px;
+    .view-btn-link {
+        width: 100%;
     }
 
     .action-view-btn {
         width: 100%;
         justify-content: center;
-        position: unset;
-        padding: 8px 16px;
     }
 }
 
-@media (max-width: 700px) {
+@media (max-width: 600px) {
 
     .card-left {
         flex-direction: column;
-        align-items: flex-start;
-        gap: 15px;
+        gap: 14px;
+    }
+
+    .search-box-wrapper {
+        max-width: 100%;
+    }
+
+    .back-to-top-btn {
+        bottom: 20px;
+        right: 20px;
+        width: 40px;
+        height: 40px;
     }
 }

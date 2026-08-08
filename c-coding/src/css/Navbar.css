@@ -1,23 +1,21 @@
-/* --- Navbar Base --- */
+/* --- Floating Glass Header --- */
 .navbar {
     position: fixed;
     top: 0;
+    left: 0;
     width: 100%;
     z-index: 1000;
-    /* Glassmorphism */
-    background: rgba(2, 6, 23, 0.75);
-    /* Slight transparency */
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    /* Subtle border */
+    background: rgba(3, 7, 18, 0.7);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
     border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-    padding: 20px 0;
-    transition: background 0.3s ease;
+    padding: 14px 0;
+    transition: all 0.3s ease;
 }
 
-/* --- Centered Container --- */
+/* --- Container Alignment --- */
 .nav-container {
-    max-width: 1100px;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 0 24px;
     display: flex;
@@ -25,88 +23,99 @@
     align-items: center;
 }
 
-/* --- Logo Section --- */
+/* --- Logo & Branding --- */
 .nav-logo {
-    text-decoration: none;
-    transition: transform 0.2s ease;
-}
-
-.nav-logo:hover {
-    transform: scale(1.02);
-}
-
-.nav-element-wrap {
     display: flex;
     align-items: center;
     gap: 12px;
-}
-
-.nav-element-wrap .nav-icon {
-    color: #60a5fa;
-    font-size: 26px;
-}
-
-.nav-element-wrap p {
-    color: #ffffff;
-    font-size: 20px;
-    font-weight: 700;
-    letter-spacing: -0.5px;
-    margin: 0;
-}
-
-/* --- Star Button (GitHub) --- */
-.star-btn a {
     text-decoration: none;
+    transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.star-btn-link {
-    background: rgba(255, 255, 255, 0.05);
-    color: #ffffff;
-    border: 1px solid rgba(255, 255, 255, 0.15);
-    padding: 8px 16px;
-    font-size: 14px;
-    font-weight: 600;
-    border-radius: 8px;
-    cursor: pointer;
+.nav-logo:hover {
+    transform: translateY(-1px);
+}
+
+.nav-logo-icon {
+    color: #60a5fa;
+    font-size: 1.25rem;
+}
+
+.nav-logo-text {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.brand-name {
+    color: #f8fafc;
+    font-size: 1.15rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    font-family: var(--font-sans, system-ui, sans-serif);
+}
+
+/* --- Clean GitHub CTA Button --- */
+.nav-github-btn {
     display: inline-flex;
     align-items: center;
     gap: 8px;
+    padding: 8px 16px;
+    background: rgba(255, 255, 255, 0.04);
+    color: #f8fafc;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 10px;
+    font-size: 0.875rem;
+    font-weight: 600;
     text-decoration: none;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+    transition: all 0.25s ease;
+    backdrop-filter: blur(8px);
 }
 
-.star-btn-link:hover {
-    background: #ffffff;
-    color: #020617;
-    border-color: #ffffff;
-    box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+.btn-github-icon {
+    font-size: 1rem;
+    color: #94a3b8;
+    transition: color 0.2s ease;
 }
 
-.star-emoji {
-    font-size: 16px;
+.btn-star-icon {
+    font-size: 0.95rem;
+    color: #eab308;
+    transition: transform 0.2s ease;
+}
+
+.nav-github-btn:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+    transform: translateY(-1px);
+}
+
+.nav-github-btn:hover .btn-github-icon {
+    color: #ffffff;
+}
+
+.nav-github-btn:hover .btn-star-icon {
+    transform: scale(1.15) rotate(12deg);
 }
 
 /* --- Mobile Responsiveness --- */
-@media (max-width: 768px) {
+@media (max-width: 640px) {
 
     .navbar {
         padding: 10px 0;
     }
 
     .nav-container {
-        padding: 0 20px;
+        padding: 0 16px;
     }
 
-    .nav-element-wrap p {
-        font-size: 18px;
-    }
-
-    /* Hide text on very small screens to save space */
-    .star-btn button span:first-child {
+    .btn-text {
         display: none;
     }
 
-    .star-btn button {
+    .nav-github-btn {
         padding: 8px 12px;
     }
 }
