@@ -46,8 +46,10 @@ The project is live and can be viewed here: [C-Coding](https://c-programming-six
 ## 🏗️ Website Structure
 
 - **🏠 Home Page**
-  
-  - Welcome screen with intro and animations.
+  - **Hero Section**: Interactive intro with live C code editor preview and quick CTAs.
+  - **Origin Story**: Background on building 79 C programs during BCA and key milestones.
+  - **Learning Workflow**: 4-step practice guide encouraging self-solving before viewing code.
+  - **Open Source CTA**: Community section encouraging GitHub contributions for unique C codes.
 
 - **🧱 Levels Page**
   
