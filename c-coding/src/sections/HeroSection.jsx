@@ -79,8 +79,6 @@ int main() {
             {/* Right / Bottom Interactive Code Preview */}
             <div
                 className="hero-visual"
-                data-aos="fade-up"
-                data-aos-delay="100"
             >
                 <CodeCard
                     filename="hello_world.c"
