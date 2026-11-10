@@ -10,13 +10,16 @@ import HardPage from './Levels/HardPage';
 import ProgramPage from './pages/ProgramPage';
 
 // scroll to top on route change
-import ScrollToTop from './components/ScrollToTop';
+import ScrollToTop from './components/utils/ScrollToTop';
 
 // routing component
 export default function App() {
     return (
         <Router>
+            {/* scroll to top on route change */}
             <ScrollToTop />
+
+            {/* all routes */}
             <Routes>
                 <Route path="/" element={<MainPage />} />
                 <Route path="/levels" element={<LevelPage />} />

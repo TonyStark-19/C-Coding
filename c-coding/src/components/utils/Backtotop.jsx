@@ -5,7 +5,7 @@ import { useState, useEffect } from "react";
 import { FiArrowUp } from "react-icons/fi";
 
 // import css
-import '../css/Backtotop.css';
+import '../../css/Backtotop.css';
 
 // back to top button
 export function BackToTop() {

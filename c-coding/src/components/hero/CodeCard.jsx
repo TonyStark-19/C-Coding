@@ -10,7 +10,7 @@ import 'prismjs/components/prism-c';
 import { FiCopy, FiCheck, FiCode } from 'react-icons/fi';
 
 // import css
-import '../css/App.css';
+import '../../css/App.css';
 
 // code card component
 export default function CodeCard({ filename = 'main.c', code }) {

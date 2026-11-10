@@ -17,7 +17,6 @@ export function Footer() {
                     <div className="footer-section about">
                         <div className="footer-brand">
                             <FiTerminal className="footer-logo-icon" />
-
                             <span className="footer-brand-name">C-Coding</span>
                         </div>
 

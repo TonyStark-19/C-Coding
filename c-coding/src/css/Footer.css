@@ -163,7 +163,6 @@
 
 /* --- Responsiveness --- */
 @media (max-width: 900px) {
-
     .footer-content {
         grid-template-columns: 1fr 1fr;
         gap: 36px;
@@ -175,7 +174,6 @@
 }
 
 @media (max-width: 580px) {
-
     .footer {
         padding: 50px 0 28px;
     }

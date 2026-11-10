@@ -1,5 +1,5 @@
 // import hooks
-import { useEffect, useState } from 'react';
+import { act, useEffect, useState } from 'react';
 
 // import router
 import { useParams, useNavigate } from 'react-router-dom';
@@ -8,17 +8,16 @@ import { useParams, useNavigate } from 'react-router-dom';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
-// Syntax Highlighter
-import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
-import { vscDarkPlus } from 'react-syntax-highlighter/dist/esm/styles/prism';
-
 // React Icons
-import { FiArrowLeft, FiCopy, FiCheck, FiGithub, FiCode, FiTerminal, FiExternalLink } from 'react-icons/fi';
+import { FiArrowLeft } from 'react-icons/fi';
 
-// Layout Components
+// import Components
 import { Navbar } from '../components/Navbar';
 import { Footer } from '../components/Footer';
-import { BackToTop } from '../components/Backtotop';
+import { BackToTop } from '../components/utils/Backtotop';
+import Header from '../components/program page/Header';
+import CodeWindow from '../components/program page/CodeWindow';
+import ActionControls from '../components/program page/ActionControls';
 
 // import css
 import '../css/Program-page.css';
@@ -117,143 +116,24 @@ export default function ProgramPage() {
                 ) : (
                     <>
                         {/* Header & Breadcrumbs */}
-                        <header
-                            className="program-header"
-                            data-aos="fade-down"
-                        >
-                            <button
-                                onClick={() => navigate(-1)}
-                                className="breadcrumb-back"
-                            >
-                                <FiArrowLeft className="back-icon" />
-                                <span>Back to {getParentLevelName()}</span>
-                            </button>
-
-                            <div className="title-area">
-                                <h1 className="program-title">{program.title}</h1>
-                                <p className="program-desc">{program.description}</p>
-                            </div>
-
-                            {/* Topics / Tags */}
-                            {program.topics && (
-                                <div className="program-tags">
-                                    {program.topics.map((tag) => (
-                                        <span
-                                            key={tag}
-                                            className="tag-pill"
-                                        >
-                                            {tag}
-                                        </span>
-                                    ))}
-                                </div>
-                            )}
-                        </header>
+                        <Header
+                            navigate={navigate}
+                            program={program}
+                            getParentLevelName={getParentLevelName}
+                        />
 
                         {/* Code & Output Window */}
-                        <div className="editor-window" data-aos="fade-up">
-                            {/* Window Bar / Toolbar */}
-                            <div className="editor-toolbar">
-                                <div className="toolbar-left">
-                                    <div className="window-dots">
-                                        <span className="dot red"></span>
-                                        <span className="dot yellow"></span>
-                                        <span className="dot green"></span>
-                                    </div>
-
-                                    {/* Window Tabs */}
-                                    <div className="tab-group">
-                                        <button
-                                            className={`tab-btn ${activeTab === 'code' ? 'active' : ''}`}
-                                            onClick={() => setActiveTab('code')}
-                                        >
-                                            <FiCode className="tab-icon" />
-                                            <span>{program.path ? program.path.split('/').pop() : 'main.c'}</span>
-                                        </button>
-
-                                        {program.output && (
-                                            <button
-                                                className={`tab-btn ${activeTab === 'output' ? 'active' : ''}`}
-                                                onClick={() => setActiveTab('output')}
-                                            >
-                                                <FiTerminal className="tab-icon" />
-                                                <span>Terminal Output</span>
-                                            </button>
-                                        )}
-                                    </div>
-                                </div>
-
-                                <div className="toolbar-right">
-                                    <button
-                                        className="copy-btn"
-                                        onClick={handleCopy}
-                                        aria-label="Copy Code"
-                                    >
-                                        {copied ? (
-                                            <>
-                                                <FiCheck className="copy-icon success" />
-                                                <span>Copied!</span>
-                                            </>
-                                        ) : (
-                                            <>
-                                                <FiCopy className="copy-icon" />
-                                                <span>Copy Code</span>
-                                            </>
-                                        )}
-                                    </button>
-                                </div>
-                            </div>
-
-                            {/* Editor Content Area */}
-                            {activeTab === 'code' ? (
-                                <div className="syntax-wrapper">
-                                    <SyntaxHighlighter
-                                        language="c"
-                                        style={vscDarkPlus}
-                                        showLineNumbers={true}
-                                        customStyle={{
-                                            margin: 0,
-                                            padding: '24px 20px',
-                                            background: 'transparent',
-                                            fontSize: '0.925rem',
-                                            lineHeight: '1.65',
-                                            fontFamily: 'var(--font-mono, monospace)'
-                                        }}
-                                    >
-                                        {code}
-                                    </SyntaxHighlighter>
-                                </div>
-                            ) : (
-                                <div className="terminal-output-wrapper">
-                                    <div className="terminal-header-mini">
-                                        <FiTerminal className="term-icon" />
-                                        <span>Compiled Output (GCC)</span>
-                                    </div>
-
-                                    <pre className="terminal-content">
-                                        <code>{program.output}</code>
-                                    </pre>
-                                </div>
-                            )}
-                        </div>
+                        <CodeWindow
+                            activeTab={activeTab}
+                            code={code}
+                            copied={copied}
+                            handleCopy={handleCopy}
+                            program={program}
+                            setActiveTab={setActiveTab}
+                        />
 
                         {/* External Action Controls */}
-                        <div
-                            className="footer-actions"
-                            data-aos="zoom-in"
-                        >
-                            {program.gitUrl && (
-                                <a
-                                    href={program.gitUrl}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="github-source-btn"
-                                >
-                                    <FiGithub className="git-icon" />
-                                    <span>View Raw Source on GitHub</span>
-                                    <FiExternalLink className="ext-icon" />
-                                </a>
-                            )}
-                        </div>
+                        <ActionControls program={program} />
                     </>
                 )}
             </main>

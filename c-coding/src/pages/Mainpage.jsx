@@ -20,17 +20,29 @@ import '../css/App.css';
 
 // main page component
 export default function MainPage() {
+    // initialise AOS
     useEffect(() => {
         AOS.init({ duration: 800, once: true });
     }, []);
 
     return (
         <div className="main-wrapper">
+            {/* navbar */}
             <Navbar />
+
+            {/* hero section */}
             <HeroSection />
+
+            {/* about section */}
             <AboutSection />
+
+            {/* how to use section */}
             <HowToUseSection />
+
+            {/* cta section */}
             <CtaSection />
+
+            {/* footer */}
             <Footer />
         </div>
     );

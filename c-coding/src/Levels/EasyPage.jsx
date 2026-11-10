@@ -19,7 +19,7 @@ import { Navbar } from '../components/Navbar';
 import { Footer } from '../components/Footer';
 
 // import back to top button
-import { BackToTop } from '../components/Backtotop';
+import { BackToTop } from '../components/utils/Backtotop';
 
 // programs array
 export const programs = [

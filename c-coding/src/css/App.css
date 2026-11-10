@@ -398,7 +398,6 @@ pre[class*="language-"] {
 
 /* --- Responsive Layout --- */
 @media (max-width: 768px) {
-
     .hero-container {
         padding-top: 110px;
         padding-bottom: 60px;
@@ -420,7 +419,6 @@ pre[class*="language-"] {
 }
 
 @media (max-width: 520px) {
-
     .cta-group {
         flex-direction: column;
         width: 100%;

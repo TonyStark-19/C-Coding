@@ -8,7 +8,7 @@ import '../css/App.css';
 import { Link } from 'react-router-dom';
 
 // import components
-import CodeCard from '../components/CodeCard';
+import CodeCard from '../components/hero/CodeCard';
 
 // hero setion
 export default function HeroSection() {
