@@ -45,40 +45,31 @@ The project is live and can be viewed here: [C-Coding](https://c-programming-six
 
 ## 🏗️ Website Structure
 
-- **🏠 Home Page**
-  - **Hero Section**: Interactive intro with live C code editor preview and quick CTAs.
-  - **Origin Story**: Background on building 79 C programs during BCA and key milestones.
-  - **Learning Workflow**: 4-step practice guide encouraging self-solving before viewing code.
-  - **Open Source CTA**: Community section encouraging GitHub contributions for unique C codes.
-
-- **🧱 Levels Page**
-  
-  - Displays **three level boxes** – Beginner, Intermediate, and Advanced.  
-  - Each box lists topics under that level.
-  
-- **📄 Level-Wise Code Pages**
-
-  - Each level box navigates to its its own detailed page.  
-  - Every topic is displayed in a card/box with a **"View Code" button**.  
-  - Clicking the button opens the **respective program/code page**.
-
-- **💻 Program Page**
-
-  - Displays the selected program with proper formatting.  
-  - Code is rendered using **Prism React Syntax Highlighter** for clean syntax highlighting.  
-  - Includes a **"Copy Code" button** for quick copying.  
-  - Provides a **"View Raw on GitHub" button** to access the original source file.
+| Page | Section / Component | Description |
+|:---|:---|:---|
+| **🏠 Home Page** | **Hero Section** | Interactive introduction featuring a live C code editor preview and quick call-to-action buttons. |
+| | **Origin Story** | Shares the background behind building 79 C programs during BCA, along with key milestones. |
+| | **Learning Workflow** | Presents a 4-step practice guide that encourages users to solve problems independently before viewing the code. |
+| | **Open Source CTA** | Encourages community participation and GitHub contributions through unique C programs. |
+| **🧱 Levels Page** | **Three Difficulty Levels** | Displays three dedicated sections: Beginner, Intermediate, and Advanced, each listing relevant programming topics. |
+| **📄 Level-Wise Code Pages** | **Topic Cards** | Each level navigates to its own detailed page, where topics are organized into individual cards. |
+| | **View Code Button** | Allows users to open the respective program page for a selected topic. |
+| **💻 Program Page** | **Code Display** | Displays the selected C program with proper formatting and syntax highlighting using Prism React Syntax Highlighter. |
+| | **Copy Code Button** | Allows users to quickly copy the displayed source code. |
+| | **View Raw on GitHub** | Provides direct access to the original source file on GitHub. |
 
 ---
 
 ## 💡 Features
 
-✅ Fully responsive UI (desktop + mobile)  
-✅ Organized C programs by logic complexity  
-✅ Modern look with **AOS (Animate on Scroll)** effects  
-✅ Navigation using **React Router**  
-✅ Lifecycle handling using **`useEffect`**  
-✅ Easy-to-use and clean interface for beginners
+| Feature | Description |
+|:---|:---|
+| **Fully Responsive UI** | Optimized for seamless use across desktop and mobile devices. |
+| **Organized C Programs** | Categorizes C programs based on logic complexity and difficulty levels. |
+| **Modern UI & Animations** | Uses AOS (Animate on Scroll) effects for an engaging browsing experience. |
+| **React Router Navigation** | Enables smooth navigation between pages using React Router. |
+| **Lifecycle Management** | Uses React's `useEffect` hook for handling component lifecycle-related operations. |
+| **Beginner-Friendly Interface** | Provides a clean, intuitive, and easy-to-use interface for learners. |
 
 ---
 

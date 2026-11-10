@@ -1,5 +1,5 @@
 // import hooks
-import { act, useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 
 // import router
 import { useParams, useNavigate } from 'react-router-dom';
