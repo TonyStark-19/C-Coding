@@ -45,18 +45,18 @@ The project is live and can be viewed here: [C-Coding](https://c-programming-six
 
 ## 🏗️ Website Structure
 
-| Page | Section / Component | Description |
-|:---|:---|:---|
-| **🏠 Home Page** | **Hero Section** | Interactive introduction featuring a live C code editor preview and quick call-to-action buttons. |
-| | **Origin Story** | Shares the background behind building 79 C programs during BCA, along with key milestones. |
-| | **Learning Workflow** | Presents a 4-step practice guide that encourages users to solve problems independently before viewing the code. |
-| | **Open Source CTA** | Encourages community participation and GitHub contributions through unique C programs. |
-| **🧱 Levels Page** | **Three Difficulty Levels** | Displays three dedicated sections: Beginner, Intermediate, and Advanced, each listing relevant programming topics. |
-| **📄 Level-Wise Code Pages** | **Topic Cards** | Each level navigates to its own detailed page, where topics are organized into individual cards. |
-| | **View Code Button** | Allows users to open the respective program page for a selected topic. |
-| **💻 Program Page** | **Code Display** | Displays the selected C program with proper formatting and syntax highlighting using Prism React Syntax Highlighter. |
-| | **Copy Code Button** | Allows users to quickly copy the displayed source code. |
-| | **View Raw on GitHub** | Provides direct access to the original source file on GitHub. |
+| Section / Component | Description |
+|:---|:---|
+| **Hero Section** | Interactive introduction featuring a live C code editor preview and quick call-to-action buttons. |
+| **Origin Story** | Shares the background behind building 79 C programs during BCA, along with key milestones. |
+| **Learning Workflow** | Presents a 4-step practice guide that encourages users to solve problems independently before viewing the code. |
+| **Open Source CTA** | Encourages community participation and GitHub contributions through unique C programs. |
+| **Three Difficulty Levels** | Displays three dedicated sections: Beginner, Intermediate, and Advanced, each listing relevant programming topics. |
+| **Topic Cards** | Each level navigates to its own detailed page, where topics are organized into individual cards. |
+| **View Code Button** | Allows users to open the respective program page for a selected topic. |
+| **Code Display** | Displays the selected C program with proper formatting and syntax highlighting using Prism React Syntax Highlighter. |
+| **Copy Code Button** | Allows users to quickly copy the displayed source code. |
+| **View Raw on GitHub** | Provides direct access to the original source file on GitHub. |
 
 ---
 
